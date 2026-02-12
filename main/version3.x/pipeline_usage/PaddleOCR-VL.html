@@ -5090,8 +5090,8 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
     <td>🚧</td>
     <td>🚧</td>
     <td>✅</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr style="text-align: center;">
     <td>PaddlePaddle + SGLang</td>
@@ -5101,8 +5101,8 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
     <td>🚧</td>
     <td>🚧</td>
     <td>🚧</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr style="text-align: center;">
     <td>PaddlePaddle + FastDeploy</td>
@@ -5112,18 +5112,18 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
     <td>✅</td>
     <td>✅</td>
     <td>🚧</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr style="text-align: center;">
     <td>PaddlePaddle + MLX-VLM</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
     <td>✅</td>
   </tr>
   <tr style="text-align: center;">
@@ -5271,8 +5271,8 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <h2 id="2">2. 快速开始<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>此步骤主要介绍如何使用 PaddleOCR-VL，包括如何通过 CLI 命令行方式和 Python API 方式进行使用。</p>
 <p>PaddleOCR-VL 支持 CLI 命令行方式和 Python API 两种使用方式，其中 CLI 命令行方式更简单，适合快速验证功能，而 Python API 方式更灵活，适合集成到现有项目中。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>
 本节所介绍的方法主要用于快速验证，其推理速度、显存占用及稳定性表现未必能满足生产环境的要求。<strong>若需部署至生产环境，我们强烈建议使用专门的推理加速框架</strong> ，具体方法请参考下一节。</p>
 </div>
@@ -5711,9 +5711,9 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
 </span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">output</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">restructure_pages</span><span class="p">(</span><span class="n">pages_res</span><span class="p">)</span>
 </span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c1"># output = pipeline.restructure_pages(pages_res, merge_table=True) # 合并跨页表格</span>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="c1"># output = pipeline.restructure_pages(pages_res, merge_table=True, relevel_titles=True) # 合并跨页表格，重建多级标题</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="c1"># output = pipeline.restructure_pages(pages_res, merge_table=True, relevel_titles=True, merge_pages=True) # 合并跨页表格，重建多级标题，合并多页结果为一页</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c1"># output = pipeline.restructure_pages(pages_res, merge_tables=True) # 合并跨页表格</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="c1"># output = pipeline.restructure_pages(pages_res, merge_tables=True, relevel_titles=True) # 合并跨页表格，重建多级标题</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="c1"># output = pipeline.restructure_pages(pages_res, merge_tables=True, relevel_titles=True, concatenate_pages=True) # 合并跨页表格，重建多级标题，合并多页结果为一页</span>
 </span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
 </span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
 </span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span> <span class="c1">## 打印预测的结构化输出</span>
@@ -7179,7 +7179,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <tr>
 <td><code>mergeTables</code></td>
 <td><code>boolean</code></td>
-<td>请参阅PaddleOCR-VL对象中 <code>restructure_pages</code> 方法的 <code>merge_table</code> 参数相关说明。仅当<code>restructurePages</code>为<code>true</code>时生效。</td>
+<td>请参阅PaddleOCR-VL对象中 <code>restructure_pages</code> 方法的 <code>merge_tables</code> 参数相关说明。仅当<code>restructurePages</code>为<code>true</code>时生效。</td>
 <td>否</td>
 </tr>
 <tr>

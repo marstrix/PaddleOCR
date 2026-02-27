@@ -5043,11 +5043,12 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </li>
 <li>
 <p><strong>希望将 PaddleOCR-VL 部署为 API 服务</strong>：</p>
-<p>如果您想将 PaddleOCR-VL 部署为一个网络服务（API），这样其他设备或应用程序无需配置环境，仅通过一个特定的网址就可以来访问和调用它，我们提供两种方式：</p>
+<p>您可以将 PaddleOCR-VL 部署为一个网络服务（API），这样客户端应用程序无需配置环境，仅通过一个特定的网址就可以调用 PaddleOCR-VL 的能力。在对并发处理能力没有特别要求的情况下，可以选择以下两种方案之一：</p>
 <ul>
 <li>使用 Docker Compose 部署（一键启动，推荐使用）：请阅读 <a href="#41-方法一使用-docker-compose-部署推荐使用">4.1 方法一：使用 Docker Compose 部署</a> 和 <a href="#43-客户端调用方式">4.3 客户端调用方式</a>，或其他硬件文档中的对应章节。</li>
-<li>进行手动部署：请阅读 <a href="#1-环境准备">1. 环境准备</a>、 <a href="#42-方法二手动部署">4.2 方法二：手动部署</a> 和 <a href="#43-客户端调用方式">4.3 客户端调用方式</a>，或其他硬件文档中的对应章节。</li>
+<li>手动部署：请阅读 <a href="#1-环境准备">1. 环境准备</a>、 <a href="#42-方法二手动部署">4.2 方法二：手动部署</a> 和 <a href="#43-客户端调用方式">4.3 客户端调用方式</a>，或其他硬件文档中的对应章节。</li>
 </ul>
+<p>如需支持并发请求处理，请参考<a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/hps/README.md">高性能服务化部署方案</a>。</p>
 </li>
 <li>
 <p><strong>希望对 PaddleOCR-VL 进行微调以适配特定业务</strong>：</p>
@@ -6752,7 +6753,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </li>
 </ul>
 <h2 id="4">4. 服务化部署<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p>此步骤主要介绍如何将 PaddleOCR-VL 部署为服务并调用，有以下两种方式，任选一种即可：</p>
+<p>此步骤主要介绍如何将 PaddleOCR-VL 部署为服务并调用。如果不要求服务具备并发处理请求的能力，可选择以下两种方式中的任一种：</p>
 <ul>
 <li>
 <p>方法一：使用 Docker Compose 部署（推荐使用）。</p>
@@ -6761,8 +6762,9 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <p>方法二：手动部署。</p>
 </li>
 </ul>
+<p>上述两种方式一次仅能处理一个请求，如需支持并发请求，请参考<a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/hps/README.md">高性能服务化部署方案</a>。</p>
 <blockquote>
-<p>请注意，本节所介绍 PaddleOCR-VL 服务与上一节中的 VLM 推理服务有所区别：后者仅负责完整流程中的一个环节（即 VLM 推理），并作为前者的底层服务被调用。此外，根据本节所述方式启动的 PaddleOCR-VL 服务一次仅能处理一个请求，后续我们将补充说明支持并发调用的服务启动方式。</p>
+<p>请注意，本节所介绍 PaddleOCR-VL 服务与上一节中的 VLM 推理服务有所区别：后者仅负责完整流程中的一个环节（即 VLM 推理），并作为前者的底层服务被调用。</p>
 </blockquote>
 <h3 id="41-docker-compose">4.1 方法一：使用 Docker Compose 部署（推荐使用）<a class="headerlink" href="#41-docker-compose" title="Permanent link">&para;</a></h3>
 <p>您可以分别从 <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/gpu/compose.yaml">此处</a> 和 <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/gpu/.env">此处</a> 获取 Compose 文件与环境变量配置文件并下载到本地，然后在刚刚下载的文件所在目录下执行以下命令启动服务器，默认监听 <strong>8080</strong> 端口：</p>

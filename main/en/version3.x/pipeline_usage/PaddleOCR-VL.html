@@ -5800,6 +5800,7 @@ If MKL-DNN is not available or the model does not support acceleration via MKL-D
 </span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span> <span class="c1">## Print the structured prediction output</span>
 </span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## Save the current image&#39;s structured result in JSON format</span>
 </span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_markdown</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## Save the current image&#39;s result in Markdown format</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_word</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## Save the current image&#39;s result in Word format</span>
 </span></code></pre></div>
 <p>For PDF files, each page will be processed individually, and a separate Markdown file will be generated for each page. If you wish to perform cross-page table merging, reconstruct multi-level headings, or merge multi-page results, you can achieve this using the following method:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">PaddleOCRVL</span>
@@ -6489,6 +6490,14 @@ Setting it to <code>None</code> means using the instantiation parameter; otherwi
 <tr>
 <td><code>save_to_xlsx()</code></td>
 <td>Save the tables in the file as xlsx format files</td>
+<td><code>save_path</code></td>
+<td><code>str</code></td>
+<td>The file path for saving, supporting directory or file paths.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>save_to_word()</code></td>
+<td>Save the layout parsing results as a Word (.docx) format file</td>
 <td><code>save_path</code></td>
 <td><code>str</code></td>
 <td>The file path for saving, supporting directory or file paths.</td>

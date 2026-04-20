@@ -6188,6 +6188,7 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">推理模型</a>/<a href="https://padd
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span> <span class="c1">## 打印预测的结构化输出</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## 保存当前图像的结构化json结果</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_markdown</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## 保存当前图像的markdown格式的结果</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_word</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## 保存当前图像的Word格式的结果</span>
 </span></code></pre></div>
 <p>如果是 PDF 文件，会将 PDF 的每一页单独处理，每一页的 Markdown 文件也会对应单独的结果。如果希望整个 PDF 文件转换为 Markdown 文件，建议使用以下的方式运行：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
@@ -7162,6 +7163,14 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">推理模型</a>/<a href="https://padd
 <td><code>save_path</code></td>
 <td><code>str</code></td>
 <td>保存的文件路径，支持目录或文件路径。</td>
+<td>无</td>
+</tr>
+<tr>
+<td><code>save_to_word()</code></td>
+<td>将版面解析结果保存为Word (.docx) 格式的文件</td>
+<td><code>save_path</code></td>
+<td><code>str</code></td>
+<td>保存的文件路径，支持目录或文件路径</td>
 <td>无</td>
 </tr>
 <tr>

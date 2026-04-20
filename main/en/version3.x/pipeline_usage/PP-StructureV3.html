@@ -6218,6 +6218,7 @@ If MKL-DNN is unavailable or the model does not support it, acceleration will no
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span> <span class="c1">## Print the structured prediction output</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## Save the current image&#39;s structured result in JSON format</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_markdown</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## Save the current image&#39;s result in Markdown format</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_word</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;output&quot;</span><span class="p">)</span> <span class="c1">## Save the current image&#39;s result in Word format</span>
 </span></code></pre></div>
 <p>For PDF files, each page will be processed individually and generate a separate Markdown file. If you want to convert the entire PDF to a single Markdown file, use the following method:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
@@ -7270,6 +7271,14 @@ If enabled, the cell detection model will not be used, and only the table struct
 <tr>
 <td><code>save_to_img()</code></td>
 <td>Save intermediate visualization results as PNG image files</td>
+<td><code>save_path</code></td>
+<td><code>str</code></td>
+<td>Path to save the file, supports directory or file path.</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>save_to_word()</code></td>
+<td>Save the layout parsing results as a Word (.docx) format file</td>
 <td><code>save_path</code></td>
 <td><code>str</code></td>
 <td>Path to save the file, supports directory or file path.</td>

@@ -1724,6 +1724,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2158,6 +2160,34 @@ You're not viewing the latest version.
     
   
     Benchmark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inference_engine.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    推理引擎与配置说明
   
 
     
@@ -3313,7 +3343,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    配置 PaddleOCR 推理包日志系统
+    配置 paddleocr 包日志系统
   
 
     
@@ -4451,7 +4481,8 @@ You're not viewing the latest version.
 
 <!-- Page content -->
 <h1 id="npu">昇腾 NPU 飞桨安装教程<a class="headerlink" href="#npu" title="Permanent link">&para;</a></h1>
-<p>当前 PaddleOCR 支持昇腾 910B 芯片（更多型号还在支持中，如果您有其他型号的相关需求，请提交issue告知我们），昇腾驱动版本为 23.0.3。考虑到环境差异性，我们推荐使用<b>飞桨官方提供的昇腾开发镜像</b>完成环境准备。</p>
+<p>当前 PaddleOCR 支持昇腾 910B 芯片（更多型号还在支持中，如果您有其他型号的相关需求，请提交issue告知我们），昇腾驱动版本为 23.0.3。考虑到环境差异性，我们推荐使用<b>飞桨官方提供的昇腾开发镜像</b>完成环境准备。
+本文档主要介绍基于飞桨框架的环境安装与使用方式。若您计划使用其他推理引擎，请参考对应引擎的官方文档完成安装与配置。</p>
 <h2 id="1docker">1、docker环境准备<a class="headerlink" href="#1docker" title="Permanent link">&para;</a></h2>
 <ul>
 <li>拉取镜像，此镜像仅为开发环境，镜像中不包含预编译的飞桨安装包，镜像中已经默认安装了昇腾算子库 CANN-8.0.0。

@@ -1672,6 +1672,17 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#workflow-guide-for-this-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Guide for This Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-environment-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1784,10 +1795,21 @@ You're not viewing the latest version.
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#41-manual-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Manual Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#43-client-invocation-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 Client Invocation Methods
+        4.2 Client Invocation Methods
       
     </span>
   </a>
@@ -1798,7 +1820,7 @@ You're not viewing the latest version.
   <a href="#44-pipeline-configuration-adjustment-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4 Pipeline Configuration Adjustment Instructions
+        4.3 Pipeline Configuration Adjustment Instructions
       
     </span>
   </a>
@@ -4520,6 +4542,17 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#workflow-guide-for-this-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Guide for This Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-environment-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4632,10 +4665,21 @@ You're not viewing the latest version.
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#41-manual-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Manual Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#43-client-invocation-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 Client Invocation Methods
+        4.2 Client Invocation Methods
       
     </span>
   </a>
@@ -4646,7 +4690,7 @@ You're not viewing the latest version.
   <a href="#44-pipeline-configuration-adjustment-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4 Pipeline Configuration Adjustment Instructions
+        4.3 Pipeline Configuration Adjustment Instructions
       
     </span>
   </a>
@@ -4751,12 +4795,63 @@ Unless otherwise specified, the term "PaddleOCR-VL" in this tutorial refers to t
 <li>Apple M4</li>
 </ul>
 <p>PaddleOCR-VL has been verified for accuracy and speed on the Apple M4. However, due to hardware diversity, compatibility with other Apple Silicon has not yet been confirmed. We welcome the community to test on different hardware setups and share your results.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>
-Before reading this hardware-specific tutorial, we recommend first reading the <a href="PaddleOCR-VL.html#process-guide">Process Guide</a> in the main <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a> to determine which chapters apply to your goal, and then returning here to read the corresponding sections.</p>
-</div>
+<h2 id="workflow-guide-for-this-hardware">Workflow Guide for This Hardware<a class="headerlink" href="#workflow-guide-for-this-hardware" title="Permanent link">&para;</a></h2>
+<p>Use this guide for the workflows below.</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Support on this hardware</th>
+<th>Read this section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local direct inference</td>
+<td>Supported</td>
+<td>Read Section 1. Environment Preparation and Section 2. Quick Start.</td>
+</tr>
+<tr>
+<td>Client + VLM inference service</td>
+<td>Supported</td>
+<td>Complete local direct inference first, then read Section 3. Improving Inference Performance with VLM Inference Services.</td>
+</tr>
+<tr>
+<td>Full API service</td>
+<td>Supported with manual deployment only</td>
+<td>Complete Section 1. Environment Preparation first, then read Section 4.1 Manual Deployment; after that, continue with Section 4.2 Client Invocation Methods and Section 4.3 Pipeline Configuration Adjustment Instructions.</td>
+</tr>
+<tr>
+<td>Model fine-tuning</td>
+<td>Supported</td>
+<td>Read Section 5. Model Fine-Tuning.</td>
+</tr>
+</tbody>
+</table>
+<p>If you only need to confirm which inference methods are available on this hardware, refer to the <a href="PaddleOCR-VL.html#inference-device-support-for-paddleocr-vl">PaddleOCR-VL Inference Method and Hardware Support Matrix</a> in the main guide.</p>
 <h2 id="1-environment-preparation">1. Environment Preparation<a class="headerlink" href="#1-environment-preparation" title="Permanent link">&para;</a></h2>
+<p><strong>Environment Setup Methods Supported on This Hardware</strong></p>
+<table>
+<thead>
+<tr>
+<th>Environment setup method</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Official Docker image</td>
+<td>Not currently supported</td>
+<td>This hardware does not currently support this path.</td>
+</tr>
+<tr>
+<td>Manually install PaddlePaddle and PaddleOCR</td>
+<td>Supported with steps in this guide</td>
+<td>Continue reading this section.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>We strongly recommend installing PaddleOCR-VL in a virtual environment to avoid dependency conflicts.</strong> For example, use the Python venv standard library to create a virtual environment:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Create a virtual environment</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv_paddleocr
@@ -4775,6 +4870,38 @@ Before reading this hardware-specific tutorial, we recommend first reading the <
 <h2 id="3-improving-inference-performance-with-vlm-inference-services">3. Improving Inference Performance with VLM Inference Services<a class="headerlink" href="#3-improving-inference-performance-with-vlm-inference-services" title="Permanent link">&para;</a></h2>
 <p>The inference performance under default configurations is not fully optimized and may not meet actual production requirements. This section introduces how to improve PaddleOCR-VL inference performance through a VLM inference service. In this hardware-specific guide, the examples use MLX-VLM as the backend for the VLM inference service.</p>
 <h3 id="31-starting-the-vlm-inference-service">3.1 Starting the VLM Inference Service<a class="headerlink" href="#31-starting-the-vlm-inference-service" title="Permanent link">&para;</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>
+The service started according to this section is responsible only for the VLM inference stage in the PaddleOCR-VL workflow. It does not provide a complete end-to-end document parsing API. We strongly recommend that you do not call this service directly via HTTP requests or OpenAI clients to process document images. If you need to deploy a service with the full PaddleOCR-VL capabilities, refer to the service deployment section later in this document.</p>
+</div>
+<p><strong>Launch Methods Supported on This Hardware</strong></p>
+<table>
+<thead>
+<tr>
+<th>Launch method</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Official Docker image</td>
+<td>Not currently supported</td>
+<td>This hardware does not currently support this path.</td>
+</tr>
+<tr>
+<td>Install dependencies with the PaddleOCR CLI and launch the service</td>
+<td>Not currently supported</td>
+<td>This hardware does not currently support this path.</td>
+</tr>
+<tr>
+<td>Launch the service directly with the acceleration framework</td>
+<td>Supported with steps in this guide</td>
+<td>This section provides the MLX-VLM launch steps.</td>
+</tr>
+</tbody>
+</table>
 <p>Install the MLX-VLM inference framework (v0.3.11 or later):</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;mlx-vlm&gt;=0.3.11&quot;</span>
 </span></code></pre></div>
@@ -4802,10 +4929,33 @@ Before reading this hardware-specific tutorial, we recommend first reading the <
 <h3 id="33-performance-tuning">3.3 Performance Tuning<a class="headerlink" href="#33-performance-tuning" title="Permanent link">&para;</a></h3>
 <p>Please refer to <a href="PaddleOCR-VL.html#33-performance-tuning">PaddleOCR-VL Usage Tutorial - 3.3 Performance Tuning</a>.</p>
 <h2 id="4-service-deployment">4. Service Deployment<a class="headerlink" href="#4-service-deployment" title="Permanent link">&para;</a></h2>
-<p>Currently, only <strong>manual deployment</strong> is supported. Please refer to <strong>Section 4.2 Method 2: Manual Deployment</strong> in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
-<h3 id="43-client-invocation-methods">4.3 Client Invocation Methods<a class="headerlink" href="#43-client-invocation-methods" title="Permanent link">&para;</a></h3>
+<p><strong>Deployment Methods Supported on This Hardware</strong></p>
+<table>
+<thead>
+<tr>
+<th>Deployment method</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker Compose deployment</td>
+<td>Not currently supported</td>
+<td>This hardware currently supports only the manual deployment path.</td>
+</tr>
+<tr>
+<td>Manual deployment</td>
+<td>Supported; steps are in the main guide</td>
+<td>Complete Section 1. Environment Preparation first, then continue with Section 4.1 and follow the shared manual deployment guidance in the main guide.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="41-manual-deployment">4.1 Manual Deployment<a class="headerlink" href="#41-manual-deployment" title="Permanent link">&para;</a></h3>
+<p>Please complete Section 1. Environment Preparation first, then refer to <a href="PaddleOCR-VL.html#42-method-2-manual-deployment">PaddleOCR-VL Usage Tutorial - 4.2 Method 2: Manual Deployment</a>.</p>
+<h3 id="43-client-invocation-methods">4.2 Client Invocation Methods<a class="headerlink" href="#43-client-invocation-methods" title="Permanent link">&para;</a></h3>
 <p>Please refer to <a href="PaddleOCR-VL.html#43-client-side-invocation">PaddleOCR-VL Usage Tutorial - 4.3 Client Invocation Methods</a>.</p>
-<h3 id="44-pipeline-configuration-adjustment-instructions">4.4 Pipeline Configuration Adjustment Instructions<a class="headerlink" href="#44-pipeline-configuration-adjustment-instructions" title="Permanent link">&para;</a></h3>
+<h3 id="44-pipeline-configuration-adjustment-instructions">4.3 Pipeline Configuration Adjustment Instructions<a class="headerlink" href="#44-pipeline-configuration-adjustment-instructions" title="Permanent link">&para;</a></h3>
 <p>Please refer to <a href="PaddleOCR-VL.html#44-pipeline-configuration-adjustment-instructions">PaddleOCR-VL Usage Tutorial - 4.4 Pipeline Configuration Adjustment Instructions</a>.</p>
 <h2 id="5-model-fine-tuning">5. Model Fine-Tuning<a class="headerlink" href="#5-model-fine-tuning" title="Permanent link">&para;</a></h2>
 <p>Please refer to <a href="PaddleOCR-VL.html#5-model-fine-tuning">PaddleOCR-VL Usage Tutorial - 5. Model Fine-Tuning</a>.</p>

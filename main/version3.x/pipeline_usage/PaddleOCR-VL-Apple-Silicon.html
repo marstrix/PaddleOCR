@@ -1672,6 +1672,17 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本硬件支持的使用目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4531,6 +4542,17 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本硬件支持的使用目标
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4773,12 +4795,63 @@ You're not viewing the latest version.
 <li>Apple M4</li>
 </ul>
 <p>目前 PaddleOCR-VL 已在 Apple M4 上完成精度验证；鉴于硬件环境的多样性，其他 Apple Silicon 的兼容性尚未验证。我们诚挚欢迎社区用户在不同硬件上进行测试并反馈您的运行结果。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>
-建议先阅读 <a href="PaddleOCR-VL.html">PaddleOCR-VL 使用教程</a> 中的 <a href="PaddleOCR-VL.html#流程导览">流程导览</a>，根据您的使用目标确认应阅读哪些章节；再回到当前硬件教程阅读对应章节。</p>
-</div>
+<h2 id="_1">本硬件支持的使用目标<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>请在本硬件教程中按下表继续阅读。</p>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>本硬件上的支持情况</th>
+<th>从哪里开始阅读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本地直接推理</td>
+<td>支持</td>
+<td>阅读第 1 节“环境准备”和第 2 节“快速开始”。</td>
+</tr>
+<tr>
+<td>客户端 + VLM 推理服务</td>
+<td>支持</td>
+<td>先完成本地直接推理，再阅读第 3 节“使用 VLM 推理服务提升推理性能”。</td>
+</tr>
+<tr>
+<td>完整 API 服务</td>
+<td>仅支持手动部署</td>
+<td>先完成第 1 节“环境准备”，再阅读第 4.1 节“手动部署”；然后继续阅读第 4.2 节客户端调用部分和第 4.3 节产线配置调整部分。</td>
+</tr>
+<tr>
+<td>模型微调</td>
+<td>支持</td>
+<td>阅读第 5 节“模型微调”。</td>
+</tr>
+</tbody>
+</table>
+<p>如果你只是想先确认本硬件支持哪些推理方式，请参考主教程中的 <a href="PaddleOCR-VL.html#paddleocr-vl-对推理设备的支持情况">PaddleOCR-VL 推理方式与硬件支持矩阵</a>。</p>
 <h2 id="1">1. 环境准备<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p><strong>当前硬件支持的环境准备方式</strong></p>
+<table>
+<thead>
+<tr>
+<th>环境准备方式</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>官方 Docker 镜像</td>
+<td>当前不支持</td>
+<td>当前硬件不支持该路径。</td>
+</tr>
+<tr>
+<td>手动安装 PaddlePaddle 和 PaddleOCR</td>
+<td>支持并提供步骤</td>
+<td>请继续阅读本节。</td>
+</tr>
+</tbody>
+</table>
 <p><strong>我们强烈推荐您在虚拟环境中安装 PaddleOCR-VL，以避免发生依赖冲突。</strong> 例如，使用 Python venv 标准库创建虚拟环境：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 创建虚拟环境</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv_paddleocr
@@ -4797,6 +4870,38 @@ You're not viewing the latest version.
 <h2 id="3-vlm">3. 使用 VLM 推理服务提升推理性能<a class="headerlink" href="#3-vlm" title="Permanent link">&para;</a></h2>
 <p>默认配置下的推理性能未经过充分优化，可能无法满足实际生产需求。此步骤主要介绍如何通过 VLM 推理服务提升 PaddleOCR-VL 的推理性能。在当前硬件文档中，示例使用 MLX-VLM 作为 VLM 推理服务后端。</p>
 <h3 id="31-vlm">3.1 启动 VLM 推理服务<a class="headerlink" href="#31-vlm" title="Permanent link">&para;</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>
+按照本节说明启动的服务仅负责 PaddleOCR-VL 流程中的 VLM 推理环节，不提供完整的端到端文档解析 API。强烈不建议直接通过 HTTP 请求或使用 OpenAI 客户端调用该服务处理文档图像。若您需要部署具备 PaddleOCR-VL 完整能力的服务，请参考后文的服务化部署部分。</p>
+</div>
+<p><strong>当前硬件支持的启动方式</strong></p>
+<table>
+<thead>
+<tr>
+<th>启动方式</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>官方 Docker 镜像</td>
+<td>当前不支持</td>
+<td>当前硬件不支持该路径。</td>
+</tr>
+<tr>
+<td>通过 PaddleOCR CLI 安装依赖后启动</td>
+<td>当前不支持</td>
+<td>当前硬件不支持该路径。</td>
+</tr>
+<tr>
+<td>直接使用推理加速框架启动</td>
+<td>支持并提供步骤</td>
+<td>本节提供 MLX-VLM 的启动步骤。</td>
+</tr>
+</tbody>
+</table>
 <p>安装 MLX-VLM 推理框架（v0.3.11以上版本）：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;mlx-vlm&gt;=0.3.11&quot;</span>
 </span></code></pre></div>
@@ -4824,9 +4929,30 @@ You're not viewing the latest version.
 <h3 id="33">3.3 性能调优<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
 <p>请参考<a href="PaddleOCR-VL.html#33">PaddleOCR-VL 使用教程 - 3.3 性能调优</a>。</p>
 <h2 id="4">4. 服务化部署<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p>目前仅支持<strong>手动部署</strong>方式。</p>
+<p><strong>当前硬件支持的部署方式</strong></p>
+<table>
+<thead>
+<tr>
+<th>部署方式</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker Compose 部署</td>
+<td>当前不支持</td>
+<td>当前硬件仅支持手动部署路径。</td>
+</tr>
+<tr>
+<td>手动部署</td>
+<td>支持（步骤见主教程）</td>
+<td>请先完成第 1 节“环境准备”，再继续阅读第 4.1 节，然后参考主教程中的共享手动部署说明。</td>
+</tr>
+</tbody>
+</table>
 <h3 id="41">4.1 手动部署<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html">PaddleOCR-VL 使用教程</a> 4.2 方法二：手动部署。</p>
+<p>请先完成第 1 节“环境准备”，再参考 <a href="PaddleOCR-VL.html#42">PaddleOCR-VL 使用教程 - 4.2 方法二：手动部署</a>。</p>
 <h3 id="42">4.2 客户端调用方式<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
 <p>请参考<a href="PaddleOCR-VL.html#43">PaddleOCR-VL 使用教程 - 4.3 客户端调用方式</a>。</p>
 <h3 id="43">4.3 产线配置调整说明<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>

@@ -1420,10 +1420,10 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#流程导览" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        流程导览
+        从这里开始
       
     </span>
   </a>
@@ -1431,10 +1431,32 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#paddleocr-vl_1" class="md-nav__link">
+  <a href="#paddleocr-vl-对推理设备的支持情况" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PaddleOCR-VL 对推理设备的支持情况
+        PaddleOCR-VL 推理方式与硬件支持矩阵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环境要求
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本教程支持的使用目标
       
     </span>
   </a>
@@ -1507,7 +1529,7 @@ You're not viewing the latest version.
   <a href="#22-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Python脚本方式集成
+        2.2 Python 脚本方式集成
       
     </span>
   </a>
@@ -4737,10 +4759,10 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#流程导览" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        流程导览
+        从这里开始
       
     </span>
   </a>
@@ -4748,10 +4770,32 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#paddleocr-vl_1" class="md-nav__link">
+  <a href="#paddleocr-vl-对推理设备的支持情况" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PaddleOCR-VL 对推理设备的支持情况
+        PaddleOCR-VL 推理方式与硬件支持矩阵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环境要求
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本教程支持的使用目标
       
     </span>
   </a>
@@ -4824,7 +4868,7 @@ You're not viewing the latest version.
   <a href="#22-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Python脚本方式集成
+        2.2 Python 脚本方式集成
       
     </span>
   </a>
@@ -5178,300 +5222,300 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </div>
 <p>PaddleOCR-VL 是一款先进、高效的文档解析模型，专为文档中的元素识别设计。以其初代版本（PaddleOCR-VL v1）为例，其核心组件为 PaddleOCR-VL-0.9B，这是一种紧凑而强大的视觉语言模型（VLM），它由 NaViT 风格的动态分辨率视觉编码器与 ERNIE-4.5-0.3B 语言模型组成，能够实现精准的元素识别。该系列模型支持 109 种语言，并在识别复杂元素（如文本、表格、公式和图表）方面表现出色，同时保持极低的资源消耗。通过在广泛使用的公开基准与内部基准上的全面评测，PaddleOCR-VL 在页级文档解析与元素级识别均达到 SOTA 表现。它显著优于现有的基于Pipeline方案和文档解析多模态方案以及先进的通用多模态大模型，并具备更快的推理速度。这些优势使其非常适合在真实场景中落地部署。</p>
 <p><strong>2026年1月29日，我们发布了PaddleOCR-VL-1.5。PaddleOCR-VL-1.5不仅以94.5%精度大幅刷新了评测集OmniDocBench v1.5，更创新性地支持了异形框定位，使得PaddleOCR-VL-1.5 在扫描、倾斜、弯折、屏幕拍摄及复杂光照等真实场景中均表现优异。此外，模型还新增了印章识别与文本检测识别能力，关键指标持续领跑。</strong></p>
-<h2 id="流程导览">流程导览<a class="headerlink" href="#流程导览" title="Permanent link">&para;</a></h2>
-<p>您可以先根据自己的目标选择阅读路径，再结合硬件类型确认应阅读本教程，还是对应硬件教程中的相同章节。</p>
-<p>在开始前，建议先确认您的设备类型：</p>
-<ul>
-<li><strong>x64 CPU</strong>：可直接阅读本教程。</li>
-<li><strong>英伟达 GPU</strong>：<ul>
-<li>如果是 <strong>RTX 50 系等 Blackwell 架构 GPU</strong>，建议先继续阅读本节流程导览，确定使用目标；随后再参考 <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程</a> 中对应的章节。</li>
-<li>其他英伟达 GPU 可直接阅读本教程。</li>
-</ul>
-</li>
-<li><strong>Apple Silicon、昆仑芯 XPU、海光 DCU、沐曦 GPU、天数 GPU、华为昇腾 NPU</strong>：建议先继续阅读本节流程导览，确定使用目标；随后再参考对应硬件教程中的相同章节。</li>
-</ul>
-<p>在按照上述路径直接阅读后续章节之前，如果您需要确认 PaddleOCR-VL 在当前硬件环境下支持哪些推理方式（例如使用 PaddlePaddle 框架作为推理引擎），请继续阅读下一节“PaddleOCR-VL 对推理设备的支持情况”。</p>
-<p>确认上述信息后，再按使用目标选择路径：</p>
-<ol>
-<li>
-<p><strong>本地直接推理（快速体验 / 脚本集成）</strong>：</p>
-<p>适用于在本机通过 PaddleOCR CLI 或 Python API 直接调用 PaddleOCR-VL。
-这一类通常对应本地推理引擎方式，如 PaddlePaddle 或 Transformers。</p>
-<p>请阅读 <a href="#1">1. 环境准备</a> 和 <a href="#2">2. 快速开始</a>，或其他硬件文档中的对应章节。</p>
-</li>
-<li>
-<p><strong>客户端结合 VLM 推理服务（性能优先）</strong>：</p>
-<p>适用于将 VLM 环节交给专用推理服务处理，以提升性能。您既可以自建基于 <code>vLLM</code>、<code>SGLang</code>、<code>FastDeploy</code>、<code>MLX-VLM</code>、<code>llama.cpp</code> 等后端的 VLM 推理服务，也可以直接使用兼容的托管服务。
-这一类通常对应“版面检测推理方式 + VLM 推理服务”的组合。</p>
-<p>建议先按上一条完成本地直接推理的基本跑通，再继续阅读 <a href="#3-vlm">3. 使用 VLM 推理服务提升推理性能</a> 或其他硬件文档中的对应章节。</p>
-<p>需要特别注意的是，<strong>第 3 节启动的是 VLM 推理服务，而不是 PaddleOCR-VL 的完整 API 服务</strong>；版面检测等其他环节仍在客户端执行。</p>
-</li>
-<li>
-<p><strong>部署完整 API 服务</strong>：</p>
-<p>适用于将 PaddleOCR-VL 的完整能力封装为网络服务，客户端仅通过 HTTP 接口即可完成调用。与上一条不同，这里部署的是可直接对外提供完整 PaddleOCR-VL 能力的 API 服务，而不是仅负责 VLM 推理的后端服务。在对并发处理能力没有特别要求的情况下，可以选择以下两种方案之一：</p>
-<ul>
-<li>使用 Docker Compose 部署（一键启动，推荐使用）：采用“PaddlePaddle + VLM 推理服务”的推理方式，底层 VLM 服务使用推理加速框架。请阅读 <a href="#41-docker-compose">4.1 方法一：使用 Docker Compose 部署</a> 和 <a href="#43">4.3 客户端调用方式</a>，或其他硬件文档中的对应章节。</li>
-<li>手动部署：默认采用 PaddlePaddle 推理方式，也可切换到 Transformers，或者通过配置 VLM 推理服务实现“版面检测推理方式 + VLM 推理服务”组合。请阅读 <a href="#1">1. 环境准备</a>、<a href="#42">4.2 方法二：手动部署</a> 和 <a href="#43">4.3 客户端调用方式</a>，或其他硬件文档中的对应章节。</li>
-</ul>
-<p>如需支持并发请求处理，请参考<a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/hps/README.md">高性能服务化部署方案</a>。</p>
-</li>
-<li>
-<p><strong>模型微调</strong>：</p>
-<p>如果您发现 PaddleOCR-VL 在特定业务场景中的精度表现未达预期，请阅读 <a href="#5">5. 模型微调</a> 或其他硬件文档中的对应章节。</p>
-</li>
-</ol>
-<p>各硬件对应的使用教程：</p>
+<p>PaddleOCR-VL 整体由版面分析与 VLM 识别两个核心阶段组成。下图展示了一个简化的流程：</p>
+<p><img src="https://github.com/cuicheng01/PaddleX_doc_images/blob/5f2c42665e6a97d5726fe553241acd79361159a0/images/paddleocr_vl_1_5/process_step_ZH.png"/></p>
+<p>在该流程中，第一阶段为版面分析：模型以整图作为输入，检测并定位图像中的各类版面元素（例如表格、公式等），同时确定其阅读顺序，并根据检测结果裁剪出对应的元素子图；第二阶段为 VLM 识别：将每个子图独立输入 VLM，生成对应的识别结果（例如 Markdown 文本），随后再按照版面分析阶段给出的顺序对各元素结果进行合并，得到整幅图像的完整解析结果。因此，<strong>若需使用 PaddleOCR-VL 的完整能力，必须采用版面分析与 VLM 识别协同的完整流程，而不能仅单独使用 VLM。</strong> 后文会多次涉及相关概念，请注意区分完整的 PaddleOCR-VL 流程与其中的 VLM 组件。以 PaddleOCR-VL v1 为例，版面分析模型为 PP-DocLayoutV2，VLM 为 PaddleOCR-VL-0.9B。需要特别说明的是，“PaddleOCR-VL-0.9B” 并不是 PaddleOCR-VL 的一个模型变种，而是 PaddleOCR-VL v1 完整流程中的 VLM 组件；这与常见 LLM / VLM 的命名习惯不同，例如 Qwen2-72B 通常表示 Qwen2 系列下的一个具体模型变体。</p>
+<p><strong>如果在使用过程中出现无法复现论文或 PaddleOCR 官网精度、模型输出大量幻觉文本等问题，首先应确认当前使用的是完整的 PaddleOCR-VL 流程，而不是仅使用其中的 VLM 组件。</strong> 例如，直接通过 Transformers 本地执行 PaddleOCR-VL-0.9B 模型，或直接请求 vLLM / SGLang / FastDeploy 服务，都不等同于运行完整的 PaddleOCR-VL 流程。</p>
+<h2 id="_1">从这里开始<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>请先根据硬件选择对应教程。</p>
 <table>
 <thead>
 <tr>
-<th>硬件类型</th>
-<th>使用教程</th>
+<th>硬件　　　　　　　　　　　　　</th>
+<th>阅读哪篇教程　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>x64 CPU</td>
-<td>本教程（当前仅支持手动安装依赖）</td>
+<td>x64 CPU　　　　　　　　　　　　</td>
+<td>继续阅读本教程。请使用第 1.2 节的手动安装路径；仅适用于 NVIDIA GPU 的 Docker 步骤不适用。　　</td>
 </tr>
 <tr>
-<td>英伟达 GPU</td>
-<td>- NVIDIA Blackwell 架构 GPU（如RTX 50 系）参考 <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程</a> <br/> - 其他英伟达 GPU 参考本教程</td>
+<td>除 Blackwell 之外的 NVIDIA GPU</td>
+<td>继续阅读本教程。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</td>
 </tr>
 <tr>
-<td>昆仑芯 XPU</td>
-<td><a href="PaddleOCR-VL-Kunlunxin-XPU.html">PaddleOCR-VL 昆仑芯 XPU 使用教程</a></td>
+<td>NVIDIA Blackwell GPU　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程</a>。</td>
 </tr>
 <tr>
-<td>海光 DCU</td>
-<td><a href="PaddleOCR-VL-Hygon-DCU.html">PaddleOCR-VL 海光 DCU 使用教程</a></td>
+<td>Apple Silicon　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-Apple-Silicon.html">PaddleOCR-VL Apple Silicon 使用教程</a>。　　　　　　　　</td>
 </tr>
 <tr>
-<td>沐曦 GPU</td>
-<td><a href="PaddleOCR-VL-MetaX-GPU.html">PaddleOCR-VL 沐曦 GPU 使用教程</a></td>
+<td>昆仑芯 XPU　　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-Kunlunxin-XPU.html">PaddleOCR-VL 昆仑芯 XPU 使用教程</a>。　　　　　　　　　</td>
 </tr>
 <tr>
-<td>天数 GPU</td>
-<td><a href="PaddleOCR-VL-Iluvatar-GPU.html">PaddleOCR-VL 天数 GPU 使用教程</a></td>
+<td>海光 DCU　　　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-Hygon-DCU.html">PaddleOCR-VL 海光 DCU 使用教程</a>。　　　　　　　　　　　　</td>
 </tr>
 <tr>
-<td>华为昇腾 NPU</td>
-<td><a href="PaddleOCR-VL-Huawei-Ascend-NPU.html">PaddleOCR-VL 华为昇腾 NPU 使用教程</a></td>
+<td>沐曦 GPU　　　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-MetaX-GPU.html">PaddleOCR-VL 沐曦 GPU 使用教程</a>。　　　　　　　　　　　　</td>
 </tr>
 <tr>
-<td>Apple Silicon</td>
-<td><a href="PaddleOCR-VL-Apple-Silicon.html">PaddleOCR-VL Apple Silicon 使用教程</a></td>
+<td>天数 GPU　　　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-Iluvatar-GPU.html">PaddleOCR-VL 天数 GPU 使用教程</a>。　　　　　　　　　　　</td>
 </tr>
 <tr>
-<td>AMD GPU</td>
-<td><a href="PaddleOCR-VL-AMD-GPU.html">PaddleOCR-VL AMD GPU 使用教程</a></td>
+<td>华为昇腾 NPU　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html">PaddleOCR-VL 华为昇腾 NPU 使用教程</a>。　　　　　　</td>
 </tr>
 <tr>
-<td>Intel Arc GPU</td>
-<td><a href="PaddleOCR-VL-Intel-Arc-GPU.html">PaddleOCR-VL Intel Arc GPU 使用教程</a></td>
+<td>AMD GPU　　　　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-AMD-GPU.html">PaddleOCR-VL AMD GPU 使用教程</a>。　　　　　　　　　　　　　　</td>
+</tr>
+<tr>
+<td>Intel Arc GPU　　　　　　　　　</td>
+<td>阅读 <a href="PaddleOCR-VL-Intel-Arc-GPU.html">PaddleOCR-VL Intel Arc GPU 使用教程</a>。　　　　　　　　</td>
 </tr>
 </tbody>
 </table>
-<h2 id="paddleocr-vl_1">PaddleOCR-VL 对推理设备的支持情况<a class="headerlink" href="#paddleocr-vl_1" title="Permanent link">&para;</a></h2>
-<p>目前 PaddleOCR-VL 提供多种推理方式，支持的推理设备不完全相同，请确认您的推理设备是否满足下表要求再进行 PaddleOCR-VL 的推理部署：</p>
-<table border="1">
+<p>如果你只是想先确认 PaddleOCR-VL 支持在哪些硬件上部署，或是特定硬件支持哪些推理方式，请先阅读下方的 <a href="#paddleocr-vl-对推理设备的支持情况">PaddleOCR-VL 推理方式与硬件支持矩阵</a>。</p>
+<h2 id="paddleocr-vl-对推理设备的支持情况">PaddleOCR-VL 推理方式与硬件支持矩阵<a class="headerlink" href="#paddleocr-vl-对推理设备的支持情况" title="Permanent link">&para;</a></h2>
+<table>
 <thead>
-  <tr style="text-align: center;">
-    <th>推理方式</th>
-    <th>英伟达 GPU</th>
-    <th>昆仑芯 XPU</th>
-    <th>海光 DCU</th>
-    <th>沐曦 GPU</th>
-    <th>天数 GPU</th>
-    <th>华为昇腾 NPU</th>
-    <th>x64 CPU</th>
-    <th>Apple Silicon</th>
-    <th>AMD GPU</th>
-    <th>Intel Arc GPU</th>
-  </tr>
+<tr>
+<th>推理方式</th>
+<th>NVIDIA GPU</th>
+<th>昆仑芯 XPU</th>
+<th>海光 DCU</th>
+<th>沐曦 GPU</th>
+<th>天数 GPU</th>
+<th>华为昇腾 NPU</th>
+<th>x64 CPU</th>
+<th>Apple Silicon</th>
+<th>AMD GPU</th>
+<th>Intel Arc GPU</th>
+</tr>
 </thead>
 <tbody>
-  <tr style="text-align: center;">
-    <td>PaddlePaddle</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>Transformers</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>PaddlePaddle + vLLM</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>✅</td>
-    <td>-</td>
-    <td>-</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>PaddlePaddle + SGLang</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>-</td>
-    <td>-</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>PaddlePaddle + FastDeploy</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>✅</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>-</td>
-    <td>-</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>PaddlePaddle + MLX-VLM</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>✅</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>PaddlePaddle + llama.cpp</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>Transformers + vLLM</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>-</td>
-    <td>-</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>Transformers + SGLang</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>-</td>
-    <td>-</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>Transformers + FastDeploy</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>-</td>
-    <td>-</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>Transformers + MLX-VLM</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>✅</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr style="text-align: center;">
-    <td>Transformers + llama.cpp</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>✅</td>
-    <td>🚧</td>
-    <td>🚧</td>
-    <td>🚧</td>
-  </tr>
+<tr>
+<td>PaddlePaddle</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>🚧</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>Transformers</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>PaddlePaddle + vLLM</td>
+<td>✅</td>
+<td>🚧</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PaddlePaddle + SGLang</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>❌</td>
+<td>❌</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>PaddlePaddle + FastDeploy</td>
+<td>✅</td>
+<td>✅</td>
+<td>🚧</td>
+<td>✅</td>
+<td>✅</td>
+<td>🚧</td>
+<td>❌</td>
+<td>❌</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>PaddlePaddle + MLX-VLM</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>PaddlePaddle + llama.cpp</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>Transformers + vLLM</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>❌</td>
+<td>❌</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>Transformers + SGLang</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>❌</td>
+<td>❌</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>Transformers + FastDeploy</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>❌</td>
+<td>❌</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
+<tr>
+<td>Transformers + MLX-VLM</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Transformers + llama.cpp</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>✅</td>
+<td>🚧</td>
+<td>🚧</td>
+<td>🚧</td>
+</tr>
 </tbody>
 </table>
-
-<details><summary>推理方式说明</summary>
-“PaddlePaddle” 表示版面检测模型与 VLM 均使用飞桨框架推理，PaddleOCR CLI 与 Python API 默认使用这种推理方式；“Transformers” 表示版面检测模型与 VLM 均通过 Transformers 引擎推理；其余推理方式遵循 “版面检测模型推理方式 + VLM 推理方式” 的格式，如“PaddlePaddle + vLLM”是指版面检测模型使用 PaddlePaddle 推理，VLM 使用 vLLM 推理。
-</details>
-
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p><strong>状态说明</strong></p>
 <ul>
-<li>使用英伟达 GPU 推理时需要注意 Compute Capability（简称 CC） 和 CUDA 版本（简称 CUDA）是否满足要求：<blockquote>
-<ul>
-<li>PaddlePaddle：CC ≥ 7.0, CUDA ≥ 11.8</li>
-<li>Transformers：CC ≥ 7.0, CUDA ≥ 11.8</li>
-<li>vLLM：CC ≥ 8.0, CUDA ≥ 12.6</li>
-<li>SGLang：8.0 ≤ CC &lt; 12.0, CUDA ≥ 12.6</li>
-<li>FastDeploy：8.0 ≤ CC &lt; 12.0, CUDA ≥ 12.6</li>
-<li>CC ≥ 8 的常见显卡包括 RTX 30/40/50 系列及 A10/A100 等，更多型号可查看 <a href="https://developer.nvidia.cn/cuda-gpus">CUDA GPU 计算能力</a></li>
+<li><code>✅</code>：支持。</li>
+<li><code>🚧</code>：适配中或待进一步验证。</li>
+<li><code>❌</code>：当前不支持或不适用。</li>
 </ul>
-</blockquote>
-</li>
-<li>虽然 vLLM 可在 T4/V100 等 CC 7.x 的 NVIDIA GPU 上启动，但容易出现超时或 OOM，不推荐使用。</li>
+<p><strong>推理方式说明</strong></p>
+<p><code>PaddlePaddle</code> 表示版面分析模型与 VLM 均使用本地飞桨框架推理；在实际执行时，各模块会根据模型形态解析为 <code>paddle_static</code> 或 <code>paddle_dynamic</code>。<code>Transformers</code> 表示版面分析模型与 VLM 均通过 <code>transformers</code> 引擎推理；其余推理方式遵循 <code>版面分析模型推理方式 + VLM 推理方式</code> 的格式，例如 <code>PaddlePaddle + vLLM</code> 表示版面分析模型使用本地飞桨框架，VLM 使用 vLLM 推理。</p>
+<p><strong>判定补充说明</strong></p>
+<ul>
 <li>vLLM、SGLang 和 FastDeploy 无法在 Windows 上原生运行，请使用我们提供的 Docker 镜像。</li>
-<li>由于不同库之间存在依赖冲突，使用 Transformers + vLLM 等混合推理方式时需将版面检测模型和 VLM 服务部署在不同环境中。</li>
+<li>由于不同库之间存在依赖冲突，使用 Transformers + vLLM 等混合推理方式时，通常需要将版面分析模型和 VLM 服务部署在不同环境中。</li>
 </ul>
-</div>
+<h2 id="_2">环境要求<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>使用 NVIDIA GPU 推理时，需要注意 Compute Capability（简称 CC）和 CUDA 版本（简称 CUDA）是否满足要求：</p>
+<ul>
+<li>PaddlePaddle：CC ≥ 7.0，CUDA ≥ 11.8</li>
+<li>Transformers：CC ≥ 7.0，CUDA ≥ 11.8</li>
+<li>vLLM：CC ≥ 8.0，CUDA ≥ 12.6</li>
+<li>SGLang：8.0 ≤ CC &lt; 12.0，CUDA ≥ 12.6</li>
+<li>FastDeploy：8.0 ≤ CC &lt; 12.0，CUDA ≥ 12.6</li>
+<li>CC ≥ 8 的常见显卡包括 RTX 30/40/50 系列及 A10/A100 等，更多型号可查看 <a href="https://developer.nvidia.cn/cuda-gpus">CUDA GPU 计算能力</a>。</li>
+</ul>
+<p>此外，虽然 vLLM 可在 T4/V100 等 CC 7.x 的 NVIDIA GPU 上启动，但容易出现超时或 OOM，不推荐使用。</p>
+<h2 id="_3">本教程支持的使用目标<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>本教程是 x64 CPU 用户和除 Blackwell 之外的 NVIDIA GPU 用户的默认路径。</p>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>在本教程中的支持情况</th>
+<th>从哪里开始阅读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本地直接推理</td>
+<td>支持。x64 CPU 用户应使用第 1.2 节的手动安装路径。</td>
+<td>阅读第 1 节“环境准备”和第 2 节“快速开始”。</td>
+</tr>
+<tr>
+<td>客户端 + VLM 推理服务</td>
+<td>支持。不同硬件平台支持的推理方式不完全相同，如需确认某种具体推理方式，请先查看推理方式与硬件支持矩阵。</td>
+<td>先完成本地直接推理，再阅读第 3 节“使用 VLM 推理服务提升推理性能”。</td>
+</tr>
+<tr>
+<td>完整 API 服务</td>
+<td>支持。x64 CPU 用户应使用手动部署路径；除 Blackwell 之外的 NVIDIA GPU 用户可使用 Docker Compose 或手动部署。</td>
+<td>阅读第 4 节“服务化部署”：如需 Docker Compose，阅读第 4.1 节；如需手动部署，先完成第 1 节“环境准备”，然后阅读第 4.2 节。如需支持更高并发，请参考<a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/hps/README.md">高性能服务化部署方案</a>。</td>
+</tr>
+<tr>
+<td>模型微调</td>
+<td>支持。</td>
+<td>阅读第 5 节“模型微调”。</td>
+</tr>
+</tbody>
+</table>
 <h2 id="1">1. 环境准备<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>此步骤主要介绍如何搭建 PaddleOCR-VL 的运行环境。本教程主要适用于 <strong>x64 CPU</strong> 和 <strong>除 Blackwell 之外的 NVIDIA GPU</strong> 用户，其他硬件请优先参考上文列出的专用教程。</p>
 <p>在本教程中，有以下两种环境准备方式：</p>
@@ -5511,7 +5555,9 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>
-标签后缀为 <code>latest-xxx</code> 的镜像对应最新版本。如果希望使用特定版本的镜像，可以将标签中的 <code>latest</code> 替换为 PaddleOCR 版本号：<code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>。
+标签后缀为 <code>latest-xxx</code> 的镜像对应最新版本。
+如果本地已经存在对应的 <code>latest</code> 镜像，但希望使用最新功能或修复，建议在继续使用前重新执行一次 <code>docker pull</code> 更新镜像。
+如果希望使用特定版本的镜像，可以将标签中的 <code>latest</code> 替换为 PaddleOCR 版本号：<code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>。
 例如：
 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:paddleocr3.3-nvidia-gpu-offline</code></p>
 </div>
@@ -5527,7 +5573,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <ul>
 <li>使用 PaddlePaddle 推理时：请安装 3.2.1 及以上版本的 PaddlePaddle。常见安装方式如下（<strong>注意不允许同时安装 CPU 和 GPU 版本的 PaddlePaddle</strong>）：</li>
 </ul>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 英伟达 GPU（以 CUDA 12.6 为例）</span>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># NVIDIA GPU（以 CUDA 12.6 为例）</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>paddlepaddle-gpu<span class="o">==</span><span class="m">3</span>.2.1<span class="w"> </span>-i<span class="w"> </span>https://www.paddlepaddle.org.cn/packages/stable/cu126/
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># x64 CPU</span>
@@ -5542,7 +5588,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </span></code></pre></div>
 <h2 id="2">2. 快速开始<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>此步骤主要介绍如何使用 PaddleOCR-VL，包括如何通过 CLI 命令行方式和 Python API 方式进行使用。</p>
-<p>PaddleOCR-VL 支持 CLI 命令行方式和 Python API 两种使用方式，其中 CLI 命令行方式更简单，适合快速验证功能，而 Python API 方式更灵活，适合集成到现有项目中。下文示例默认使用飞桨框架推理；如需切换到 <code>transformers</code> 引擎，可在 CLI 中追加 <code>--engine transformers</code>，或在 Python API 初始化时传入 <code>engine="transformers"</code>。</p>
+<p>PaddleOCR-VL 支持 CLI 命令行方式和 Python API 两种使用方式，其中 CLI 命令行方式更简单，适合快速验证功能，而 Python API 方式更灵活，适合集成到现有项目中。下文示例默认使用本地飞桨框架；在实际执行时，各模块会根据模型形态解析为 <code>paddle_static</code> 或 <code>paddle_dynamic</code>。如需切换到 <code>transformers</code> 引擎，可在 CLI 中追加 <code>--engine transformers</code>，或在 Python API 初始化时传入 <code>engine="transformers"</code>。</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>
@@ -5554,7 +5600,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span>paddleocr_vl_demo.png<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/paddleocr_vl_demo.png
 </span></code></pre></div>
 <p>下面给出一组可直接复制的示例命令。建议首次体验时附加 <code>--save_path ./output</code>，便于在当前目录下查看保存结果：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 英伟达 GPU</span>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># NVIDIA GPU</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>./paddleocr_vl_demo.png<span class="w"> </span>--save_path<span class="w"> </span>./output
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># 昆仑芯 XPU</span>
@@ -5578,7 +5624,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="c1"># 通过 --use_doc_unwarping 指定是否使用文本图像矫正模块</span>
 </span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>./paddleocr_vl_demo.png<span class="w"> </span>--use_doc_unwarping<span class="w"> </span>True<span class="w"> </span>--save_path<span class="w"> </span>./output
 </span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
-</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="c1"># 通过 --use_layout_detection 指定是否使用版面区域检测排序模块</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="c1"># 通过 --use_layout_detection 指定是否使用版面分析模块</span>
 </span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>./paddleocr_vl_demo.png<span class="w"> </span>--use_layout_detection<span class="w"> </span>False<span class="w"> </span>--save_path<span class="w"> </span>./output
 </span></code></pre></div>
 <p>执行成功后，终端会打印结构化结果；如果设置了 <code>--save_path ./output</code>，结果文件也会保存到当前目录下的 <code>output</code> 中，便于继续查看和调试。</p>
@@ -5622,14 +5668,14 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>layout_detection_model_name</code></td>
-<td><b>含义：</b>版面区域检测排序模型名称。<br/>
+<td><b>含义：</b>版面分析模型名称。<br/>
 <b>说明：</b>如果不设置，将会使用默认模型。</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_dir</code></td>
-<td><b>含义：</b>版面区域检测排序模型的目录路径。<br/>
+<td><b>含义：</b>版面分析模型的目录路径。<br/>
 <b>说明：</b>如果不设置，将会下载官方模型。</td>
 <td><code>str</code></td>
 <td></td>
@@ -5645,7 +5691,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td><b>含义：</b>版面检测是否使用后处理NMS。<br/>
+<td><b>含义：</b>版面分析是否使用后处理NMS。<br/>
 <b>说明：</b>如果不设置，将使用初始化的默认值。</td>
 <td><code>bool</code></td>
 <td></td>
@@ -5661,7 +5707,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>layout_merge_bboxes_mode</code></td>
-<td><b>含义：</b>版面检测中模型输出的检测框的合并处理模式。<br/>
+<td><b>含义：</b>版面分析中模型输出的检测框的合并处理模式。<br/>
 <b>说明：</b>
 <ul>
 <li><b>large</b>，设置为large时，表示在模型输出的检测框中，对于互相重叠包含的检测框，只保留外部最大的框，删除重叠的内部框；</li>
@@ -5762,7 +5808,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>use_layout_detection</code></td>
-<td><b>含义：</b>是否加载并使用版面区域检测排序模块。<br/>
+<td><b>含义：</b>是否加载并使用版面分析模块。<br/>
 <b>说明：</b>如果不设置，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
 <td><code>bool</code></td>
 <td></td>
@@ -5797,7 +5843,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>merge_layout_blocks</code></td>
-<td><b>含义：</b>控制是否对跨栏或上下交错分栏的版面检测框进行合并。<br/>
+<td><b>含义：</b>控制是否对跨栏或上下交错分栏的版面分析框进行合并。<br/>
 <b>说明：</b>如果不设置，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
 <td><code>bool</code></td>
 <td></td>
@@ -5811,7 +5857,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>layout_shape_mode</code></td>
-<td><b>含义：</b>用于指定版面检测结果的几何形状表示模式。该参数决定了检测区域（如文本块、图片、表格等）边界的计算方式及展示形态。<br/>
+<td><b>含义：</b>用于指定版面分析结果的几何形状表示模式。该参数决定了检测区域（如文本块、图片、表格等）边界的计算方式及展示形态。<br/>
 <b>说明：</b>取值说明：
     <ul>
     <li><b>rect (矩形)</b>: 输出水平正向的边界框（包含 x1, y1, x2, y2）。适用于标准的水平排版版面。</li>
@@ -5826,7 +5872,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <tr>
 <td><code>use_queues</code></td>
 <td><b>含义：</b>用于控制是否启用内部队列。<br/>
-<b>说明：</b>当设置为 <code>True</code> 时，数据加载（如将 PDF 页面渲染为图像）、版面检测模型处理以及 VLM 推理将分别在独立线程中异步执行，通过队列传递数据，从而提升效率。对于页数较多的 PDF 文档，或是包含大量图像或 PDF 文件的目录，这种方式尤其高效。如果不设置，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
+<b>说明：</b>当设置为 <code>True</code> 时，数据加载（如将 PDF 页面渲染为图像）、版面分析模型处理以及 VLM 推理将分别在独立线程中异步执行，通过队列传递数据，从而提升效率。对于页数较多的 PDF 文档，或是包含大量图像或 PDF 文件的目录，这种方式尤其高效。如果不设置，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
@@ -5956,9 +6002,9 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 {'res': {'input_path': 'paddleocr_vl_demo.png', 'page_index': None, 'model_settings': {'use_doc_preprocessor': False, 'use_layout_detection': True, 'use_chart_recognition': False, 'format_block_content': False}, 'layout_det_res': {'input_path': None, 'page_index': None, 'boxes': [{'cls_id': 6, 'label': 'doc_title', 'score': 0.9636914134025574, 'coordinate': [np.float32(131.31366), np.float32(36.450516), np.float32(1384.522), np.float32(127.984665)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9281806349754333, 'coordinate': [np.float32(585.39465), np.float32(158.438), np.float32(930.2184), np.float32(182.57469)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9840355515480042, 'coordinate': [np.float32(9.023666), np.float32(200.86115), np.float32(361.41583), np.float32(343.8828)]}, {'cls_id': 14, 'label': 'image', 'score': 0.9871416091918945, 'coordinate': [np.float32(775.50574), np.float32(200.66502), np.float32(1503.3807), np.float32(684.9304)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9801855087280273, 'coordinate': [np.float32(9.532196), np.float32(344.90594), np.float32(361.4413), np.float32(440.8244)]}, {'cls_id': 17, 'label': 'paragraph_title', 'score': 0.9708921313285828, 'coordinate': [np.float32(28.040405), np.float32(455.87976), np.float32(341.7215), np.float32(520.7117)]}, {'cls_id': 24, 'label': 'vision_footnote', 'score': 0.9002962708473206, 'coordinate': [np.float32(809.0692), np.float32(703.70044), np.float32(1488.3016), np.float32(750.5238)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9825374484062195, 'coordinate': [np.float32(8.896561), np.float32(536.54895), np.float32(361.05237), np.float32(655.8058)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9822263717651367, 'coordinate': [np.float32(8.971573), np.float32(657.4949), np.float32(362.01715), np.float32(774.625)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9767460823059082, 'coordinate': [np.float32(9.407074), np.float32(776.5216), np.float32(361.31067), np.float32(846.82874)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9868153929710388, 'coordinate': [np.float32(8.669495), np.float32(848.2543), np.float32(361.64703), np.float32(1062.8568)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9826608300209045, 'coordinate': [np.float32(8.8025055), np.float32(1063.8615), np.float32(361.46588), np.float32(1182.8524)]}, {'cls_id': 22, 'label': 'text', 'score': 0.982555627822876, 'coordinate': [np.float32(8.820602), np.float32(1184.4663), np.float32(361.66394), np.float32(1302.4507)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9584776759147644, 'coordinate': [np.float32(9.170288), np.float32(1304.2161), np.float32(361.48898), np.float32(1351.7483)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9782056212425232, 'coordinate': [np.float32(389.1618), np.float32(200.38202), np.float32(742.7591), np.float32(295.65146)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9844875931739807, 'coordinate': [np.float32(388.73303), np.float32(297.18463), np.float32(744.00024), np.float32(441.3034)]}, {'cls_id': 17, 'label': 'paragraph_title', 'score': 0.9680547714233398, 'coordinate': [np.float32(409.39468), np.float32(455.89386), np.float32(721.7174), np.float32(520.9387)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9741666913032532, 'coordinate': [np.float32(389.71606), np.float32(536.8138), np.float32(742.7112), np.float32(608.00165)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9840384721755981, 'coordinate': [np.float32(389.30988), np.float32(609.39636), np.float32(743.09247), np.float32(750.3231)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9845995306968689, 'coordinate': [np.float32(389.13272), np.float32(751.7772), np.float32(743.058), np.float32(894.8815)]}, {'cls_id': 22, 'label': 'text', 'score': 0.984852135181427, 'coordinate': [np.float32(388.83267), np.float32(896.0371), np.float32(743.58215), np.float32(1038.7345)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9804865717887878, 'coordinate': [np.float32(389.08478), np.float32(1039.9119), np.float32(742.7585), np.float32(1134.4897)]}, {'cls_id': 22, 'label': 'text', 'score': 0.986461341381073, 'coordinate': [np.float32(388.52643), np.float32(1135.8137), np.float32(743.451), np.float32(1352.0085)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9869391918182373, 'coordinate': [np.float32(769.8341), np.float32(775.66235), np.float32(1124.9813), np.float32(1063.207)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9822869896888733, 'coordinate': [np.float32(770.30383), np.float32(1063.938), np.float32(1124.8295), np.float32(1184.2192)]}, {'cls_id': 17, 'label': 'paragraph_title', 'score': 0.9689218997955322, 'coordinate': [np.float32(791.3042), np.float32(1199.3169), np.float32(1104.4521), np.float32(1264.6985)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9713128209114075, 'coordinate': [np.float32(770.4253), np.float32(1279.6072), np.float32(1124.6917), np.float32(1351.8672)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9236552119255066, 'coordinate': [np.float32(1153.9058), np.float32(775.5814), np.float32(1334.0654), np.float32(798.1581)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9857938885688782, 'coordinate': [np.float32(1151.5197), np.float32(799.28015), np.float32(1506.3619), np.float32(991.1156)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9820687174797058, 'coordinate': [np.float32(1151.5686), np.float32(991.91095), np.float32(1506.6023), np.float32(1110.8875)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9866049885749817, 'coordinate': [np.float32(1151.6919), np.float32(1112.1301), np.float32(1507.1611), np.float32(1351.9504)]}]}}}
 </code></pre></details>
 
-<p>运行结果及保存接口的详细说明可参考 <a href="#22-python">2.2 Python脚本方式集成</a> 中的结果解释。</p>
-<p><b>注：</b>由于 PaddleOCR-VL 的默认模型较大，推理速度可能较慢，建议实际推理使用 <a href="#3-vlm">3. 使用 VLM 推理服务提升推理性能</a> 方式进行快速推理。</p>
-<h3 id="22-python">2.2 Python脚本方式集成<a class="headerlink" href="#22-python" title="Permanent link">&para;</a></h3>
+<p>运行结果及保存接口的详细说明可参考 <a href="#22-python">2.2 Python 脚本方式集成</a> 中的结果解释。</p>
+<p><strong>注：</strong>由于 PaddleOCR-VL 的默认模型较大，推理速度可能较慢，建议实际推理使用 <a href="#3-vlm">3. 使用 VLM 推理服务提升推理性能</a> 方式进行快速推理。</p>
+<h3 id="22-python">2.2 Python 脚本方式集成<a class="headerlink" href="#22-python" title="Permanent link">&para;</a></h3>
 <p>命令行方式是为了快速体验查看效果，一般来说，在项目中，往往需要通过代码集成。您可以通过几行代码即可完成 PaddleOCR-VL 的快速推理：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
@@ -5967,7 +6013,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">output_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./output&quot;</span><span class="p">)</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">output_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># 英伟达 GPU</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># NVIDIA GPU</span>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PaddleOCRVL</span><span class="p">()</span>
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># 昆仑芯 XPU</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="c1"># pipeline = PaddleOCRVL(device=&quot;xpu&quot;)</span>
@@ -5982,7 +6028,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
 </span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="c1"># pipeline = PaddleOCRVL(use_doc_orientation_classify=True) # 通过 use_doc_orientation_classify 指定是否使用文档方向分类模型</span>
 </span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="c1"># pipeline = PaddleOCRVL(use_doc_unwarping=True) # 通过 use_doc_unwarping 指定是否使用文本图像矫正模块</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="c1"># pipeline = PaddleOCRVL(use_layout_detection=False) # 通过 use_layout_detection 指定是否使用版面区域检测排序模块</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="c1"># pipeline = PaddleOCRVL(use_layout_detection=False) # 通过 use_layout_detection 指定是否使用版面分析模块</span>
 </span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>
 </span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="n">output</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;./paddleocr_vl_demo.png&quot;</span><span class="p">)</span>
 </span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
@@ -6069,14 +6115,14 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>layout_detection_model_name</code></td>
-<td><b>含义：</b>版面区域检测排序模型名称。<br/>
+<td><b>含义：</b>版面分析模型名称。<br/>
 <b>说明：</b>如果设置为<code>None</code>，将会使用默认模型。</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_dir</code></td>
-<td><b>含义：</b>版面区域检测排序模型的目录路径。<br/>
+<td><b>含义：</b>版面分析模型的目录路径。<br/>
 <b>说明：</b>如果设置为<code>None</code>，将会下载官方模型。</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
@@ -6096,7 +6142,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td><b>含义：</b>版面检测是否使用后处理NMS。<br/>
+<td><b>含义：</b>版面分析是否使用后处理NMS。<br/>
 <b>说明：</b>如果设置为<code>None</code>，将使用初始化的默认值。</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
@@ -6216,7 +6262,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>use_layout_detection</code></td>
-<td><b>含义：</b>是否加载并使用版面区域检测排序模块。<br/>
+<td><b>含义：</b>是否加载并使用版面分析模块。<br/>
 <b>说明：</b>如果设置为<code>None</code>，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
@@ -6251,7 +6297,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>merge_layout_blocks</code></td>
-<td><b>含义：</b>控制是否对跨栏或上下交错分栏的版面检测框进行合并。<br/>
+<td><b>含义：</b>控制是否对跨栏或上下交错分栏的版面分析框进行合并。<br/>
 <b>说明：</b>如果设置为<code>None</code>，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
 <td><code>bool|None</code></td>
 <td></td>
@@ -6266,7 +6312,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <tr>
 <td><code>use_queues</code></td>
 <td><b>含义：</b>用于控制是否启用内部队列。<br/>
-<b>说明：</b>当设置为 <code>True</code> 时，数据加载（如将 PDF 页面渲染为图像）、版面检测模型处理以及 VLM 推理将分别在独立线程中异步执行，通过队列传递数据，从而提升效率。对于页数较多的 PDF 文档，或是包含大量图像或 PDF 文件的目录，这种方式尤其高效。如果设置为<code>None</code>，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
+<b>说明：</b>当设置为 <code>True</code> 时，数据加载（如将 PDF 页面渲染为图像）、版面分析模型处理以及 VLM 推理将分别在独立线程中异步执行，通过队列传递数据，从而提升效率。对于页数较多的 PDF 文档，或是包含大量图像或 PDF 文件的目录，这种方式尤其高效。如果设置为<code>None</code>，将使用初始化的默认值，默认初始化为<code>True</code>。</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -6462,7 +6508,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>layout_shape_mode</code></td>
-<td><b>含义：</b>用于指定版面检测结果的几何形状表示模式。该参数决定了检测区域（如文本块、图片、表格等）边界的计算方式及展示形态。<br/>
+<td><b>含义：</b>用于指定版面分析结果的几何形状表示模式。该参数决定了检测区域（如文本块、图片、表格等）边界的计算方式及展示形态。<br/>
 <b>说明：</b>取值说明：
     <ul>
     <li><b>rect (矩形)</b>: 输出水平正向的边界框（包含 x1, y1, x2, y2）。适用于标准的水平排版版面。</li>
@@ -6534,7 +6580,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 <tr>
 <td><code>merge_layout_blocks</code></td>
-<td><b>含义：</b>控制是否对跨栏或上下交错分栏的版面检测框进行合并。</td>
+<td><b>含义：</b>控制是否对跨栏或上下交错分栏的版面分析框进行合并。</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -6711,7 +6757,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
       <li><code>model_settings</code>: <code>(Dict[str, bool])</code> 配置产线所需的模型参数
         <ol>
           <li><code>use_doc_preprocessor</code>: <code>(bool)</code> 控制是否启用文档预处理子产线</li>
-          <li><code>use_layout_detection</code>: <code>(bool)</code> 控制是否启用版面检测模块</li>
+          <li><code>use_layout_detection</code>: <code>(bool)</code> 控制是否启用版面分析模块</li>
           <li><code>use_chart_recognition</code>: <code>(bool)</code> 控制是否开启图表识别功能</li>
           <li><code>format_block_content</code>: <code>(bool)</code> 控制是否在<code>JSON</code>中保存格式化后的markdown内容</li>
         </ol>
@@ -6747,7 +6793,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
       <li><code>model_settings</code>: <code>(Dict[str, bool])</code> 配置产线所需的模型参数
         <ol>
           <li><code>use_doc_preprocessor</code>: <code>(bool)</code> 控制是否启用文档预处理子产线</li>
-          <li><code>use_layout_detection</code>: <code>(bool)</code> 控制是否启用版面检测模块</li>
+          <li><code>use_layout_detection</code>: <code>(bool)</code> 控制是否启用版面分析模块</li>
           <li><code>use_chart_recognition</code>: <code>(bool)</code> 控制是否开启图表识别功能</li>
           <li><code>format_block_content</code>: <code>(bool)</code> 控制是否在<code>JSON</code>中保存格式化后的markdown内容</li>
         </ol>
@@ -6812,7 +6858,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 
 <p><a id="3-vlm"></a></p>
 <h2 id="3-vlm">3. 使用 VLM 推理服务提升推理性能<a class="headerlink" href="#3-vlm" title="Permanent link">&para;</a></h2>
-<p>只使用 PaddlePaddle 或 Transformers 通常无法得到最优的推理性能。此步骤主要介绍如何通过 VLM 推理服务提升 PaddleOCR-VL 的推理性能。您既可以自行部署基于 vLLM、SGLang、FastDeploy、MLX-VLM、llama.cpp 等后端的 VLM 推理服务，也可以直接使用兼容的托管服务。这一节对应“版面检测推理方式 + VLM 推理服务”类组合，其核心思路是：<strong>客户端继续负责版面检测等完整流程中的其他环节，仅将 VLM 推理交给专用服务处理。</strong></p>
+<p>只使用 PaddlePaddle 或 Transformers 通常无法得到最优的推理性能。此步骤主要介绍如何通过 VLM 推理服务提升 PaddleOCR-VL 的推理性能。您既可以自行部署基于 vLLM、SGLang、FastDeploy、MLX-VLM、llama.cpp 等后端的 VLM 推理服务，也可以直接使用兼容的托管服务。这一节对应“版面分析推理方式 + VLM 推理服务”类组合，其核心思路是：<strong>客户端继续负责版面分析等完整流程中的其他环节，仅将 VLM 推理交给专用服务处理。</strong></p>
 <h3 id="31-vlm">3.1 启动 VLM 推理服务<a class="headerlink" href="#31-vlm" title="Permanent link">&para;</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -6849,8 +6895,8 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <p><strong>我们强烈推荐采用 Docker 镜像的方式，以最大程度减少可能出现的环境问题。</strong></p>
 <p>此外，<a href="https://siliconflow.cn/">硅基流动</a>、<a href="https://novita.ai/models-console/model-detail/paddlepaddle-paddleocr-vl">Novita AI</a> 等云平台还提供托管服务。若采用此类服务，可跳过本小节，直接阅读 <a href="#32">3.2 客户端使用方法</a>。</p>
 <h4 id="311-docker">3.1.1 方法一：使用 Docker 镜像<a class="headerlink" href="#311-docker" title="Permanent link">&para;</a></h4>
-<p>PaddleOCR 提供了 Docker 镜像，用于快速启动 vLLM 或 FastDeploy 推理服务。可使用以下命令启动服务（要求 Docker 版本 &gt;= 19.03，机器装配有 GPU 且英伟达驱动支持 CUDA 12.6 或以上版本）：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">启动 vLLM 服务</label><label for="__tabbed_1_2">启动 FastDeploy 服务</label></div>
+<p>PaddleOCR 提供了 Docker 镜像，用于快速启动 vLLM 或 FastDeploy 推理服务。可使用以下命令启动服务（要求 Docker 版本 &gt;= 19.03，机器装配有 GPU 且NVIDIA驱动支持 CUDA 12.6 或以上版本）：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">启动 vLLM 服务</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
@@ -6863,19 +6909,22 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </span></code></pre></div>
 <p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu</code>（镜像大小约为 13 GB）更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-offline</code>（镜像大小约为 15 GB）。</p>
 </div>
-<div class="tabbed-block">
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span>-it<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span>--gpus<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-nvidia-gpu<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.5-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>fastdeploy
+</div>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>=== &quot;启动 FastDeploy 服务&quot;
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    ```shell
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    docker run \
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        -it \
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        --rm \
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        --gpus all \
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        --network host \
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-nvidia-gpu \
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        paddleocr genai_server --model_name PaddleOCR-VL-1.5-0.9B --host 0.0.0.0 --port 8118 --backend fastdeploy
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    ```
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 `ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-nvidia-gpu`（镜像大小约为 43 GB）更换为离线版本镜像 `ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-nvidia-gpu-offline`（镜像大小约为 45 GB）。
 </span></code></pre></div>
-<p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-nvidia-gpu</code>（镜像大小约为 43 GB）更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-nvidia-gpu-offline</code>（镜像大小约为 45 GB）。</p>
-</div>
-</div>
-</div>
 <p>启动 vLLM 或 FastDeploy 推理服务时，我们提供了一套默认参数设置。如果您有调整显存占用等更多参数的需求，可以自行配置更多参数。请参考 <a href="#331">3.3.1 服务端参数调整</a> 创建配置文件，然后将该文件挂载到容器中，并在启动服务的命令中使用 <code>backend_config</code> 指定配置文件，以 vLLM 为例：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span>-it<span class="w"> </span><span class="se">\</span>
@@ -6890,7 +6939,9 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>
-标签后缀为 <code>latest-xxx</code> 的镜像对应 PaddleOCR 的最新版本。如果希望使用特定版本的 PaddleOCR 镜像，可以将标签中的 <code>latest</code> 替换为对应版本号：<code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>。
+标签后缀为 <code>latest-xxx</code> 的镜像对应最新版本。
+如果本地已经存在对应的 <code>latest</code> 镜像，但希望使用最新功能或修复，建议在继续使用前重新执行一次 <code>docker pull</code> 更新镜像。
+如果希望使用特定版本的 PaddleOCR 镜像，可以将标签中的 <code>latest</code> 替换为对应版本号：<code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>。
 例如：
 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:paddleocr3.3-nvidia-gpu-offline</code></p>
 </div>
@@ -6914,11 +6965,11 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>paddleocr<span class="w"> </span>install_genai_server_deps<span class="w"> </span>&lt;推理加速框架名称&gt;
 </span></code></pre></div>
 <p>当前支持的框架名称为 <code>vllm</code>、<code>sglang</code> 和 <code>fastdeploy</code>，分别对应 vLLM、SGLang 和 FastDeploy。</p>
-<p>通过 <code>paddleocr install_genai_server_deps</code> 安装的 vLLM 与 SGLang 均为 <strong>CUDA 12.6</strong> 版本，请确保本地英伟达驱动与此版本一致或更高。</p>
+<p>通过 <code>paddleocr install_genai_server_deps</code> 安装的 vLLM 与 SGLang 均为 <strong>CUDA 12.6</strong> 版本，请确保本地 NVIDIA 驱动与此版本一致或更高。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>
-目前 vLLM 和 SGLang 与 Transformers 引擎所需的 transformers 库版本存在冲突，因此同一环境中无法同时安装 Transformers 引擎与 vLLM 或 SGLang。如果使用 Transformers + vLLM 或 Transformers + SGLang 的推理方式，请将版面检测模型和 VLM 服务部署在不同环境中。</p>
+目前 vLLM 和 SGLang 与 Transformers 引擎所需的 transformers 库版本存在冲突，因此同一环境中无法同时安装 Transformers 引擎与 vLLM 或 SGLang。如果使用 Transformers + vLLM 或 Transformers + SGLang 的推理方式，请将版面分析模型和 VLM 服务部署在不同环境中。</p>
 </div>
 <p>安装完成后，可通过 <code>paddleocr genai_server</code> 命令启动服务：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.5-0.9B<span class="w"> </span>--backend<span class="w"> </span>vllm<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span>
@@ -6981,7 +7032,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </li>
 </ul>
 <h3 id="32">3.2 客户端使用方法<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
-<p>启动 VLM 推理服务后，客户端即可通过 PaddleOCR 调用该服务。本节既适用于调用 3.1 中自建的 VLM 推理服务，也适用于调用第三方提供的兼容托管服务。<strong>请注意，由于客户端仍需要调用版面检测模型并完成其他流程环节，仍建议在 GPU 等加速设备上运行客户端，以获得更稳定和高效的性能。客户端环境配置请参考第 1 节，3.1 节介绍的环境配置仅适用于启动服务，不适用于客户端。若您希望客户端只通过 HTTP 接口调用 PaddleOCR-VL 的完整能力，请直接参考第 4 节“服务化部署”。</strong></p>
+<p>启动 VLM 推理服务后，客户端即可通过 PaddleOCR 调用该服务。本节既适用于调用 3.1 中自建的 VLM 推理服务，也适用于调用第三方提供的兼容托管服务。<strong>请注意，由于客户端仍需要调用版面分析模型并完成其他流程环节，仍建议在 GPU 等加速设备上运行客户端，以获得更稳定和高效的性能。客户端环境配置请参考第 1 节，3.1 节介绍的环境配置仅适用于启动服务，不适用于客户端。若您希望客户端只通过 HTTP 接口调用 PaddleOCR-VL 的完整能力，请直接参考第 4 节“服务化部署”。</strong></p>
 <h4 id="321-cli">3.2.1 CLI 调用<a class="headerlink" href="#321-cli" title="Permanent link">&para;</a></h4>
 <p>可通过 <code>--vl_rec_backend</code> 指定后端类型（<code>vllm-server</code>、<code>sglang-server</code>、<code>fastdeploy-server</code>、<code>mlx-vlm-server</code> 或 <code>llama-cpp-server</code>），通过 <code>--vl_rec_server_url</code> 指定服务地址，例如：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>--input<span class="w"> </span>paddleocr_vl_demo.png<span class="w"> </span>--vl_rec_backend<span class="w"> </span>vllm-server<span class="w"> </span>--vl_rec_server_url<span class="w"> </span>http://localhost:8118/v1
@@ -7096,21 +7147,28 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </li>
 </ul>
 <p>上述两种方式一次仅能处理一个请求，如需支持并发请求，请参考<a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/hps/README.md">高性能服务化部署方案</a>。</p>
-<blockquote>
-<p>请注意，本节所介绍 PaddleOCR-VL 服务与上一节中的 VLM 推理服务有所区别：后者仅负责完整流程中的一个环节（即 VLM 推理），并作为前者的底层服务被调用。</p>
-</blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>
+本节所介绍的 PaddleOCR-VL 服务与上一节中的 VLM 推理服务有所区别：后者仅负责完整流程中的一个环节（即 VLM 推理），并作为前者的底层服务被调用。</p>
+</div>
 <h3 id="41-docker-compose">4.1 方法一：使用 Docker Compose 部署（推荐使用）<a class="headerlink" href="#41-docker-compose" title="Permanent link">&para;</a></h3>
 <p>您可以分别从 <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/gpu/compose.yaml">此处</a> 和 <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/gpu/.env">此处</a> 获取 Compose 文件与环境变量配置文件并下载到本地，然后在刚刚下载的文件所在目录下执行以下命令启动服务器，默认监听 <strong>8080</strong> 端口：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># 必须在 compose.yaml 和 .env 文件所在的目录中执行</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
 </span></code></pre></div>
+<blockquote>
+<p>提示：
+<code>compose.yaml</code> 中使用的镜像标签通常由 <code>.env</code> 中的 <code>API_IMAGE_TAG_SUFFIX</code> 和 <code>VLM_IMAGE_TAG_SUFFIX</code> 控制，默认使用 <code>latest-nvidia-gpu-offline</code> 等标签。如需确保拉取到最新的 <code>latest</code> 镜像，可先在当前目录执行 <code>docker compose pull</code>，再执行 <code>docker compose up</code>。
+如果希望使用特定版本的 PaddleOCR 镜像，可将这两个环境变量中的 <code>latest</code> 替换为对应版本号 <code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>，例如 <code>paddleocr3.3-nvidia-gpu-offline</code>。</p>
+</blockquote>
 <p>启动后将看到类似如下输出：</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>paddleocr-vl-api             | INFO:     Started server process [1]
 </span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>paddleocr-vl-api             | INFO:     Waiting for application startup.
 </span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>paddleocr-vl-api             | INFO:     Application startup complete.
 </span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>paddleocr-vl-api             | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
 </span></code></pre></div>
-<p>此方式基于 vLLM 等框架对 VLM 推理进行加速，更适合生产环境部署，但要求机器配备 GPU，并且英伟达驱动程序支持 CUDA 12.6 或以上版本。</p>
+<p>此方式基于 vLLM 等框架对 VLM 推理进行加速，更适合生产环境部署，但要求机器配备 GPU，并且NVIDIA驱动程序支持 CUDA 12.6 或以上版本。</p>
 <p>此外，使用此方式启动服务器后，除拉取镜像外，无需连接互联网。如需在离线环境中部署，可先在联网机器上拉取 Compose 文件中涉及的镜像，导出并传输至离线机器中导入，即可在离线环境下启动服务。</p>
 <p>Docker Compose 通过读取 <code>.env</code> 和 <code>compose.yaml</code> 文件中配置，先后启动 2 个容器，分别运行底层 VLM 推理服务，以及 PaddleOCR-VL 服务（产线服务）。</p>
 <p><code>.env</code> 文件中包含的各环境变量含义如下：</p>
@@ -7204,6 +7262,11 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </details>
 
 <h3 id="42">4.2 方法二：手动部署<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>
+执行本节前，请先按第 1 节完成 PaddleOCR 运行环境准备。</p>
+</div>
 <p>执行以下命令，通过 PaddleX CLI 安装服务化部署插件：</p>
 <blockquote>
 <p><code>paddlex</code> 命令会在安装 <code>paddleocr</code> 时一并安装，因此如果您已按前文完成 PaddleOCR 安装，通常无需额外安装 PaddleX。</p>
@@ -7257,7 +7320,6 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </tr>
 </tbody>
 </table>
-
 <p>如需调整产线相关配置（如模型路径、批处理大小、部署设备等），可参考 4.4 小节。</p>
 <h3 id="43">4.3 客户端调用方式<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
 <p>以下是服务化部署的 API 参考与多语言服务调用示例：</p>
@@ -8279,7 +8341,7 @@ foreach ($result as $i => $item) {
 </div>
 <p>调整服务化部署的 PaddleOCR-VL 配置只需以下三步：</p>
 <ol>
-<li>获取配置文件 </li>
+<li>获取配置文件</li>
 <li>修改配置文件</li>
 <li>应用配置文件</li>
 </ol>
@@ -8362,7 +8424,7 @@ foreach ($result as $i => $item) {
 <h2 id="5">5. 模型微调<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>若您发现 PaddleOCR-VL 在特定业务场景中的精度表现未达预期，我们推荐使用 <a href="https://github.com/PaddlePaddle/ERNIE/tree/release/v1.4">ERNIEKit 套件</a> 对视觉语言模型（例如 PaddleOCR-VL-0.9B）进行有监督微调（SFT）。具体操作步骤可参考 <a href="https://github.com/PaddlePaddle/ERNIE/blob/release/v1.4/docs/paddleocr_vl_sft_zh.md">ERNIEKit 官方文档</a>。</p>
 <blockquote>
-<p>目前暂不支持对版面检测排序模型进行微调。</p>
+<p>目前暂不支持对版面分析排序模型进行微调。</p>
 </blockquote>
 
 <!-- Source file information -->

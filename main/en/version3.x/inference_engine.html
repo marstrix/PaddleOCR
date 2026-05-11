@@ -4962,11 +4962,14 @@ You're not viewing the latest version.
 <li><code>transformers</code>: Hugging Face Transformers inference, making it convenient to integrate with the Hugging Face ecosystem.</li>
 </ul>
 <h2 id="3-installation-by-inference-engine">3. Installation by Inference Engine<a class="headerlink" href="#3-installation-by-inference-engine" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Since different inference engines may have conflicting dependencies, it is recommended to install only one inference engine per environment.</p>
+</blockquote>
 <h3 id="31-paddlepaddle-framework">3.1 PaddlePaddle framework<a class="headerlink" href="#31-paddlepaddle-framework" title="Permanent link">&para;</a></h3>
-<p>When using the PaddlePaddle framework for inference, you need to install PaddlePaddle first. For installation instructions, see <a href="paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
+<p>When using the PaddlePaddle framework for inference, install PaddlePaddle first. For installation instructions, see <a href="paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>. For requirements on the PaddlePaddle version, see <a href="paddleocr_and_paddlex.html#1-differences-and-connections-between-paddleocr-and-paddlex">here</a>.</p>
 <h3 id="32-transformers">3.2 Transformers<a class="headerlink" href="#32-transformers" title="Permanent link">&para;</a></h3>
-<p>When using Transformers as the inference engine, you need to install Hugging Face Transformers. Example command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;transformers&gt;=5.4.0&quot;</span>
+<p>When using Transformers as the inference engine, you need to install Hugging Face Transformers (<code>&gt;=5.8.0</code>). Example command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;transformers&gt;=5.8.0&quot;</span>
 </span></code></pre></div>
 <p>In many cases, you also need to install the underlying inference framework. For details, see the <a href="https://huggingface.co/docs/transformers/installation">Transformers official documentation</a>.</p>
 <h2 id="4-configuration-and-supported-values-of-engine-and-engine_config">4. Configuration and Supported Values of <code>engine</code> and <code>engine_config</code><a class="headerlink" href="#4-configuration-and-supported-values-of-engine-and-engine_config" title="Permanent link">&para;</a></h2>

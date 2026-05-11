@@ -4962,11 +4962,14 @@ You're not viewing the latest version.
 <li><code>transformers</code>：Hugging Face Transformers 推理，便于与 Hugging Face 生态集成。</li>
 </ul>
 <h2 id="3">3. 各推理引擎安装方式<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>不同推理引擎之间可能存在依赖冲突，建议每个环境仅安装一种推理引擎。</p>
+</blockquote>
 <h3 id="31">3.1 飞桨框架<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
-<p>当您使用飞桨框架进行推理时，需要先安装飞桨框架。安装方法请参考<a href="paddlepaddle_installation.html">飞桨框架安装</a>。</p>
+<p>当您使用飞桨框架进行推理时，需要先安装飞桨框架。安装方法请参考 <a href="paddlepaddle_installation.html">飞桨框架安装</a>。PaddleOCR 对飞桨框架的版本要求可以参考 <a href="paddleocr_and_paddlex.html#1-paddleocr-paddlex">此处</a>。</p>
 <h3 id="32-transformers">3.2 Transformers<a class="headerlink" href="#32-transformers" title="Permanent link">&para;</a></h3>
-<p>当您使用 Transformers 作为推理引擎时，需要安装 Hugging Face Transformers。示例命令如下：</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;transformers&gt;=5.4.0&quot;</span>
+<p>当您使用 Transformers 作为推理引擎时，需要安装 Hugging Face Transformers（<code>&gt;=5.8.0</code>）。示例命令如下：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;transformers&gt;=5.8.0&quot;</span>
 </span></code></pre></div>
 <p>通常，您还需要安装底层推理框架，详情可参考 <a href="https://huggingface.co/docs/transformers/installation">Transformers 官方文档</a>。</p>
 <h2 id="4-engine-engine_config">4. <code>engine</code> 和 <code>engine_config</code> 的设置与取值<a class="headerlink" href="#4-engine-engine_config" title="Permanent link">&para;</a></h2>

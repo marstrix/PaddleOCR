@@ -12,35 +12,35 @@
         <meta name="author" content="PaddleOCR PMC">
       
       
-        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/on_device_deployment.html">
+        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleOCR/main/data_anno_synth/x_anylabeling.html">
       
       
-        <link rel="prev" href="obtaining_onnx_models.html">
+        <link rel="prev" href="../version3.x/pipeline_usage/PP-DocTranslation.html">
       
       
-        <link rel="next" href="serving.html">
+        <link rel="next" href="../version3.x/other_devices_support/multi_devices_use_guide.html">
       
       
         
-          <link rel="alternate" href="on_device_deployment.html" hreflang="zh">
+          <link rel="alternate" href="x_anylabeling.html" hreflang="zh">
         
-          <link rel="alternate" href="../../en/version3.x/deployment/on_device_deployment.html" hreflang="en">
+          <link rel="alternate" href="../en/data_anno_synth/x_anylabeling.html" hreflang="en">
         
       
       
-      <link rel="icon" href="../logo.jpg">
+      <link rel="icon" href="../version3.x/logo.jpg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>端侧部署 - PaddleOCR 文档</title>
+        <title>X-AnyLabeling 文档解析 - PaddleOCR 文档</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -157,7 +157,7 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -182,7 +182,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ocr-demo" class="md-skip">
+        <a href="#x-anylabeling" class="md-skip">
           跳转至
         </a>
       
@@ -197,12 +197,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
 You're not viewing the latest version.
-<a href="../../..">
+<a href="../..">
     <strong>Click here to go to latest.</strong>
 </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -214,9 +214,9 @@ You're not viewing the latest version.
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="PaddleOCR 文档" class="md-header__button md-logo" aria-label="PaddleOCR 文档" data-md-component="logo">
+    <a href="../index.html" title="PaddleOCR 文档" class="md-header__button md-logo" aria-label="PaddleOCR 文档" data-md-component="logo">
       
-  <img src="../logo.jpg" alt="logo">
+  <img src="../version3.x/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -233,7 +233,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              端侧部署
+              X-AnyLabeling 文档解析
             
           </span>
         </div>
@@ -280,13 +280,13 @@ You're not viewing the latest version.
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="on_device_deployment.html" hreflang="zh" class="md-select__link">
+            <a href="x_anylabeling.html" hreflang="zh" class="md-select__link">
               简体中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/version3.x/deployment/on_device_deployment.html" hreflang="en" class="md-select__link">
+            <a href="../en/data_anno_synth/x_anylabeling.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -371,7 +371,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -390,7 +390,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../installation.html" class="md-tabs__link">
+      <a href="../version3.x/installation.html" class="md-tabs__link">
         
   
   
@@ -409,7 +409,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../quick_start.html" class="md-tabs__link">
+      <a href="../quick_start.html" class="md-tabs__link">
         
   
   
@@ -430,7 +430,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../pipeline_usage/OCR.html" class="md-tabs__link">
+        <a href="../version3.x/pipeline_usage/OCR.html" class="md-tabs__link">
           
   
   
@@ -452,7 +452,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../pipeline_usage/PP-StructureV3.html" class="md-tabs__link">
+        <a href="../version3.x/pipeline_usage/PP-StructureV3.html" class="md-tabs__link">
           
   
   
@@ -474,7 +474,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../pipeline_usage/PP-ChatOCRv4.html" class="md-tabs__link">
+        <a href="../version3.x/pipeline_usage/PP-ChatOCRv4.html" class="md-tabs__link">
           
   
   
@@ -496,7 +496,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../pipeline_usage/PaddleOCR-VL.html" class="md-tabs__link">
+        <a href="../version3.x/pipeline_usage/PaddleOCR-VL.html" class="md-tabs__link">
           
   
   
@@ -514,13 +514,11 @@ You're not viewing the latest version.
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="high_performance_inference.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../version3.x/deployment/high_performance_inference.html" class="md-tabs__link">
           
   
   
@@ -542,7 +540,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../module_usage/module_overview.html" class="md-tabs__link">
+        <a href="../version3.x/module_usage/module_overview.html" class="md-tabs__link">
           
   
   
@@ -564,7 +562,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../pipeline_usage/pipeline_overview.html" class="md-tabs__link">
+        <a href="../version3.x/pipeline_usage/pipeline_overview.html" class="md-tabs__link">
           
   
   
@@ -582,11 +580,13 @@ You're not viewing the latest version.
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../data_anno_synth/x_anylabeling.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="x_anylabeling.html" class="md-tabs__link">
           
   
   
@@ -608,7 +608,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../other_devices_support/multi_devices_use_guide.html" class="md-tabs__link">
+        <a href="../version3.x/other_devices_support/multi_devices_use_guide.html" class="md-tabs__link">
           
   
   
@@ -630,7 +630,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../paddleocr_and_paddlex.html" class="md-tabs__link">
+        <a href="../version3.x/paddleocr_and_paddlex.html" class="md-tabs__link">
           
   
   
@@ -652,7 +652,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../paddlex/overview.html" class="md-tabs__link">
+        <a href="../version3.x/paddlex/overview.html" class="md-tabs__link">
           
   
   
@@ -674,7 +674,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../../data_anno_synth/overview.html" class="md-tabs__link">
+        <a href="overview.html" class="md-tabs__link">
           
   
   
@@ -694,7 +694,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../update/update.html" class="md-tabs__link">
+      <a href="../update/update.html" class="md-tabs__link">
         
   
   
@@ -715,7 +715,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../../version2.x/legacy/index.html" class="md-tabs__link">
+        <a href="../version2.x/legacy/index.html" class="md-tabs__link">
           
   
   
@@ -735,7 +735,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../FAQ.html" class="md-tabs__link">
+      <a href="../FAQ.html" class="md-tabs__link">
         
   
   
@@ -756,7 +756,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../../community/community_contribution.html" class="md-tabs__link">
+        <a href="../community/community_contribution.html" class="md-tabs__link">
           
   
   
@@ -798,9 +798,9 @@ You're not viewing the latest version.
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="PaddleOCR 文档" class="md-nav__button md-logo" aria-label="PaddleOCR 文档" data-md-component="logo">
+    <a href="../index.html" title="PaddleOCR 文档" class="md-nav__button md-logo" aria-label="PaddleOCR 文档" data-md-component="logo">
       
-  <img src="../logo.jpg" alt="logo">
+  <img src="../version3.x/logo.jpg" alt="logo">
 
     </a>
     PaddleOCR 文档
@@ -827,7 +827,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -854,7 +854,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../installation.html" class="md-nav__link">
+      <a href="../version3.x/installation.html" class="md-nav__link">
         
   
   
@@ -881,7 +881,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start.html" class="md-nav__link">
+      <a href="../quick_start.html" class="md-nav__link">
         
   
   
@@ -968,7 +968,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/OCR.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/OCR.html" class="md-nav__link">
         
   
   
@@ -996,7 +996,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
+      <a href="../version3.x/algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
         
   
   
@@ -1024,7 +1024,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
+      <a href="../version3.x/algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
         
   
   
@@ -1117,7 +1117,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PP-StructureV3.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PP-StructureV3.html" class="md-nav__link">
         
   
   
@@ -1145,7 +1145,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-StructureV3/PP-StructureV3.html" class="md-nav__link">
+      <a href="../version3.x/algorithm/PP-StructureV3/PP-StructureV3.html" class="md-nav__link">
         
   
   
@@ -1238,7 +1238,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PP-ChatOCRv4.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PP-ChatOCRv4.html" class="md-nav__link">
         
   
   
@@ -1266,7 +1266,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-ChatOCRv4/PP-ChatOCRv4.html" class="md-nav__link">
+      <a href="../version3.x/algorithm/PP-ChatOCRv4/PP-ChatOCRv4.html" class="md-nav__link">
         
   
   
@@ -1379,7 +1379,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL.html" class="md-nav__link">
         
   
   
@@ -1407,7 +1407,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.5.html" class="md-nav__link">
+      <a href="../version3.x/algorithm/PaddleOCR-VL/PaddleOCR-VL-1.5.html" class="md-nav__link">
         
   
   
@@ -1435,7 +1435,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL.html" class="md-nav__link">
+      <a href="../version3.x/algorithm/PaddleOCR-VL/PaddleOCR-VL.html" class="md-nav__link">
         
   
   
@@ -1463,7 +1463,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.html" class="md-nav__link">
         
   
   
@@ -1491,7 +1491,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html" class="md-nav__link">
         
   
   
@@ -1519,7 +1519,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-Hygon-DCU.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.html" class="md-nav__link">
         
   
   
@@ -1547,7 +1547,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-MetaX-GPU.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-MetaX-GPU.html" class="md-nav__link">
         
   
   
@@ -1575,7 +1575,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-Iluvatar-GPU.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-Iluvatar-GPU.html" class="md-nav__link">
         
   
   
@@ -1603,7 +1603,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-nav__link">
         
   
   
@@ -1631,7 +1631,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-Apple-Silicon.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-Apple-Silicon.html" class="md-nav__link">
         
   
   
@@ -1659,7 +1659,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-AMD-GPU.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-AMD-GPU.html" class="md-nav__link">
         
   
   
@@ -1687,7 +1687,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PaddleOCR-VL-Intel-Arc-GPU.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PaddleOCR-VL-Intel-Arc-GPU.html" class="md-nav__link">
         
   
   
@@ -1719,10 +1719,8 @@ You're not viewing the latest version.
       
   
   
-    
   
   
-  
     
     
       
@@ -1754,20 +1752,19 @@ You're not viewing the latest version.
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1785,7 +1782,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1803,7 +1800,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="high_performance_inference.html" class="md-nav__link">
+      <a href="../version3.x/deployment/high_performance_inference.html" class="md-nav__link">
         
   
   
@@ -1831,7 +1828,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="obtaining_onnx_models.html" class="md-nav__link">
+      <a href="../version3.x/deployment/obtaining_onnx_models.html" class="md-nav__link">
         
   
   
@@ -1856,37 +1853,10 @@ You're not viewing the latest version.
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    端侧部署
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="on_device_deployment.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../version3.x/deployment/on_device_deployment.html" class="md-nav__link">
         
   
   
@@ -1902,226 +1872,6 @@ You're not viewing the latest version.
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        快速开始
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="快速开始">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        环境准备
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        物料准备
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        部署步骤
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        代码介绍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        工程详解
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        进阶使用
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="进阶使用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新预测库
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nb" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        转换 .nb 模型
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="转换 .nb 模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#macubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        终端命令方法（支持Mac/Ubuntu）
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python-windowsmacubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        python 脚本方法（支持Windows/Mac/Ubuntu）
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新模型、标签文件和预测图片
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="更新模型、标签文件和预测图片">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新模型
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新标签文件
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新预测图片
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新输入/输出预处理
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2134,7 +1884,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="serving.html" class="md-nav__link">
+      <a href="../version3.x/deployment/serving.html" class="md-nav__link">
         
   
   
@@ -2162,7 +1912,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="browser.html" class="md-nav__link">
+      <a href="../version3.x/deployment/browser.html" class="md-nav__link">
         
   
   
@@ -2190,7 +1940,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="mcp_server.html" class="md-nav__link">
+      <a href="../version3.x/deployment/mcp_server.html" class="md-nav__link">
         
   
   
@@ -2218,7 +1968,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="skills.html" class="md-nav__link">
+      <a href="../version3.x/deployment/skills.html" class="md-nav__link">
         
   
   
@@ -2246,7 +1996,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="packaging.html" class="md-nav__link">
+      <a href="../version3.x/deployment/packaging.html" class="md-nav__link">
         
   
   
@@ -2274,7 +2024,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/instructions/parallel_inference.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/instructions/parallel_inference.html" class="md-nav__link">
         
   
   
@@ -2360,7 +2110,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="cpp/OCR.html" class="md-nav__link">
+      <a href="../version3.x/deployment/cpp/OCR.html" class="md-nav__link">
         
   
   
@@ -2388,7 +2138,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="cpp/OCR_windows.html" class="md-nav__link">
+      <a href="../version3.x/deployment/cpp/OCR_windows.html" class="md-nav__link">
         
   
   
@@ -2424,7 +2174,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/instructions/benchmark.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/instructions/benchmark.html" class="md-nav__link">
         
   
   
@@ -2452,7 +2202,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_engine.html" class="md-nav__link">
+      <a href="../version3.x/inference_engine.html" class="md-nav__link">
         
   
   
@@ -2571,7 +2321,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/module_overview.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/module_overview.html" class="md-nav__link">
         
   
   
@@ -2599,7 +2349,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/doc_img_orientation_classification.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/doc_img_orientation_classification.html" class="md-nav__link">
         
   
   
@@ -2627,7 +2377,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/doc_vlm.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/doc_vlm.html" class="md-nav__link">
         
   
   
@@ -2655,7 +2405,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/formula_recognition.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/formula_recognition.html" class="md-nav__link">
         
   
   
@@ -2683,7 +2433,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/layout_detection.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/layout_detection.html" class="md-nav__link">
         
   
   
@@ -2711,7 +2461,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/layout_analysis.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/layout_analysis.html" class="md-nav__link">
         
   
   
@@ -2739,7 +2489,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/seal_text_detection.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/seal_text_detection.html" class="md-nav__link">
         
   
   
@@ -2767,7 +2517,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/table_cells_detection.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/table_cells_detection.html" class="md-nav__link">
         
   
   
@@ -2795,7 +2545,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/table_classification.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/table_classification.html" class="md-nav__link">
         
   
   
@@ -2823,7 +2573,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/table_structure_recognition.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/table_structure_recognition.html" class="md-nav__link">
         
   
   
@@ -2851,7 +2601,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/text_detection.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/text_detection.html" class="md-nav__link">
         
   
   
@@ -2879,7 +2629,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/text_image_unwarping.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/text_image_unwarping.html" class="md-nav__link">
         
   
   
@@ -2907,7 +2657,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/textline_orientation_classification.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/textline_orientation_classification.html" class="md-nav__link">
         
   
   
@@ -2935,7 +2685,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/text_recognition.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/text_recognition.html" class="md-nav__link">
         
   
   
@@ -2963,7 +2713,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/chart_parsing.html" class="md-nav__link">
+      <a href="../version3.x/module_usage/chart_parsing.html" class="md-nav__link">
         
   
   
@@ -3066,7 +2816,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/pipeline_overview.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/pipeline_overview.html" class="md-nav__link">
         
   
   
@@ -3094,7 +2844,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/formula_recognition.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/formula_recognition.html" class="md-nav__link">
         
   
   
@@ -3122,7 +2872,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/doc_preprocessor.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/doc_preprocessor.html" class="md-nav__link">
         
   
   
@@ -3150,7 +2900,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/doc_understanding.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/doc_understanding.html" class="md-nav__link">
         
   
   
@@ -3178,7 +2928,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/seal_recognition.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/seal_recognition.html" class="md-nav__link">
         
   
   
@@ -3206,7 +2956,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/table_recognition_v2.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/table_recognition_v2.html" class="md-nav__link">
         
   
   
@@ -3234,7 +2984,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/PP-DocTranslation.html" class="md-nav__link">
+      <a href="../version3.x/pipeline_usage/PP-DocTranslation.html" class="md-nav__link">
         
   
   
@@ -3266,8 +3016,10 @@ You're not viewing the latest version.
       
   
   
+    
   
   
+  
     
     
       
@@ -3277,19 +3029,20 @@ You're not viewing the latest version.
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
-        
-          
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   
@@ -3307,7 +3060,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3322,10 +3075,37 @@ You're not viewing the latest version.
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../data_anno_synth/x_anylabeling.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    X-AnyLabeling 文档解析
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="x_anylabeling.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3341,6 +3121,147 @@ You're not viewing the latest version.
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        简介
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-x-anylabeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装 X-AnyLabeling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-paddleocr-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 配置 PaddleOCR 官方 API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 导入待解析文档
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 选择解析模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-document-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 执行 Document Parsing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 对照原文档复核解析结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 切换 JSON 视图查看结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 导出结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据目录结构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3420,7 +3341,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/multi_devices_use_guide.html" class="md-nav__link">
+      <a href="../version3.x/other_devices_support/multi_devices_use_guide.html" class="md-nav__link">
         
   
   
@@ -3448,7 +3369,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_NPU.html" class="md-nav__link">
+      <a href="../version3.x/other_devices_support/paddlepaddle_install_NPU.html" class="md-nav__link">
         
   
   
@@ -3476,7 +3397,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_XPU.html" class="md-nav__link">
+      <a href="../version3.x/other_devices_support/paddlepaddle_install_XPU.html" class="md-nav__link">
         
   
   
@@ -3571,7 +3492,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../paddleocr_and_paddlex.html" class="md-nav__link">
+      <a href="../version3.x/paddleocr_and_paddlex.html" class="md-nav__link">
         
   
   
@@ -3599,7 +3520,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../update/upgrade_notes.html" class="md-nav__link">
+      <a href="../update/upgrade_notes.html" class="md-nav__link">
         
   
   
@@ -3627,7 +3548,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../logging.html" class="md-nav__link">
+      <a href="../version3.x/logging.html" class="md-nav__link">
         
   
   
@@ -3720,7 +3641,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../paddlex/overview.html" class="md-nav__link">
+      <a href="../version3.x/paddlex/overview.html" class="md-nav__link">
         
   
   
@@ -3748,7 +3669,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../paddlex/quick_start.html" class="md-nav__link">
+      <a href="../version3.x/paddlex/quick_start.html" class="md-nav__link">
         
   
   
@@ -3855,7 +3776,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../data_anno_synth/overview.html" class="md-nav__link">
+      <a href="overview.html" class="md-nav__link">
         
   
   
@@ -3883,7 +3804,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../data_anno_synth/data_annotation.html" class="md-nav__link">
+      <a href="data_annotation.html" class="md-nav__link">
         
   
   
@@ -3911,7 +3832,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../data_anno_synth/data_synthesis.html" class="md-nav__link">
+      <a href="data_synthesis.html" class="md-nav__link">
         
   
   
@@ -3939,7 +3860,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/datasets.html" class="md-nav__link">
+      <a href="../datasets/datasets.html" class="md-nav__link">
         
   
   
@@ -3967,7 +3888,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/handwritten_datasets.html" class="md-nav__link">
+      <a href="../datasets/handwritten_datasets.html" class="md-nav__link">
         
   
   
@@ -3995,7 +3916,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/vertical_and_multilingual_datasets.html" class="md-nav__link">
+      <a href="../datasets/vertical_and_multilingual_datasets.html" class="md-nav__link">
         
   
   
@@ -4023,7 +3944,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/layout_datasets.html" class="md-nav__link">
+      <a href="../datasets/layout_datasets.html" class="md-nav__link">
         
   
   
@@ -4051,7 +3972,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/table_datasets.html" class="md-nav__link">
+      <a href="../datasets/table_datasets.html" class="md-nav__link">
         
   
   
@@ -4079,7 +4000,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/kie_datasets.html" class="md-nav__link">
+      <a href="../datasets/kie_datasets.html" class="md-nav__link">
         
   
   
@@ -4114,7 +4035,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../update/update.html" class="md-nav__link">
+      <a href="../update/update.html" class="md-nav__link">
         
   
   
@@ -4184,7 +4105,7 @@ You're not viewing the latest version.
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../version2.x/legacy/index.html" class="md-nav__link ">
+            <a href="../version2.x/legacy/index.html" class="md-nav__link ">
               
   
   
@@ -4228,7 +4149,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/model_list_2.x.html" class="md-nav__link">
+      <a href="../version2.x/legacy/model_list_2.x.html" class="md-nav__link">
         
   
   
@@ -4256,7 +4177,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/python_infer.html" class="md-nav__link">
+      <a href="../version2.x/legacy/python_infer.html" class="md-nav__link">
         
   
   
@@ -4284,7 +4205,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/cpp_infer.html" class="md-nav__link">
+      <a href="../version2.x/legacy/cpp_infer.html" class="md-nav__link">
         
   
   
@@ -4312,7 +4233,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/windows_vs2019_build.html" class="md-nav__link">
+      <a href="../version2.x/legacy/windows_vs2019_build.html" class="md-nav__link">
         
   
   
@@ -4340,7 +4261,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/paddle_server.html" class="md-nav__link">
+      <a href="../version2.x/legacy/paddle_server.html" class="md-nav__link">
         
   
   
@@ -4368,7 +4289,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/android_demo.html" class="md-nav__link">
+      <a href="../version2.x/legacy/android_demo.html" class="md-nav__link">
         
   
   
@@ -4396,7 +4317,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/lite.html" class="md-nav__link">
+      <a href="../version2.x/legacy/lite.html" class="md-nav__link">
         
   
   
@@ -4424,7 +4345,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/paddle2onnx.html" class="md-nav__link">
+      <a href="../version2.x/legacy/paddle2onnx.html" class="md-nav__link">
         
   
   
@@ -4452,7 +4373,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/paddle_cloud.html" class="md-nav__link">
+      <a href="../version2.x/legacy/paddle_cloud.html" class="md-nav__link">
         
   
   
@@ -4480,7 +4401,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/benchmark.html" class="md-nav__link">
+      <a href="../version2.x/legacy/benchmark.html" class="md-nav__link">
         
   
   
@@ -4515,7 +4436,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../FAQ.html" class="md-nav__link">
+      <a href="../FAQ.html" class="md-nav__link">
         
   
   
@@ -4600,7 +4521,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../community/community_contribution.html" class="md-nav__link">
+      <a href="../community/community_contribution.html" class="md-nav__link">
         
   
   
@@ -4628,7 +4549,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../community/code_and_doc.html" class="md-nav__link">
+      <a href="../community/code_and_doc.html" class="md-nav__link">
         
   
   
@@ -4686,199 +4607,120 @@ You're not viewing the latest version.
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        快速开始
+        简介
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="快速开始">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-x-anylabeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装 X-AnyLabeling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-paddleocr-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 配置 PaddleOCR 官方 API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 导入待解析文档
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 选择解析模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-document-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 执行 Document Parsing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 对照原文档复核解析结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 切换 JSON 视图查看结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 导出结果
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        环境准备
+        数据目录结构
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        物料准备
+        参考链接
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        部署步骤
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        代码介绍
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        工程详解
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        进阶使用
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="进阶使用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新预测库
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nb" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        转换 .nb 模型
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="转换 .nb 模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#macubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        终端命令方法（支持Mac/Ubuntu）
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python-windowsmacubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        python 脚本方法（支持Windows/Mac/Ubuntu）
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新模型、标签文件和预测图片
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="更新模型、标签文件和预测图片">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新模型
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新标签文件
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新预测图片
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        更新输入/输出预处理
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4924,7 +4766,7 @@ You're not viewing the latest version.
 <!-- Actions -->
 
   
-    <a href="https://github.com/PaddlePaddle/PaddleOCR/edit/main/docs/version3.x/deployment/on_device_deployment.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/edit/main/docs/data_anno_synth/x_anylabeling.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -4933,7 +4775,7 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/PaddlePaddle/PaddleOCR/raw/main/docs/version3.x/deployment/on_device_deployment.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/raw/main/docs/data_anno_synth/x_anylabeling.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
@@ -4949,470 +4791,156 @@ You're not viewing the latest version.
 
 
 <!-- Page content -->
-<h1 id="ocr-demo">OCR 端侧部署 demo 使用指南<a class="headerlink" href="#ocr-demo" title="Permanent link">&para;</a></h1>
+<h1 id="x-anylabeling">X-AnyLabeling 文档解析<a class="headerlink" href="#x-anylabeling" title="Permanent link">&para;</a></h1>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>PaddleOCR-VL</strong> 系列模型的文档解析能力已集成至 <a href="https://github.com/CVHub520/X-AnyLabeling">X-AnyLabeling</a> 标注平台。</p>
+<p>X-AnyLabeling 是由 CVHub 推出的工业级一体化智能标注平台，打通训练、推理、标注全链路。借助其 <code>PaddleOCR</code> 面板，开发者可以基于 PaddleOCR-VL 系列模型对图片和 PDF 进行版面解析、文字识别、公式识别、表格识别和印章识别，并在识别完成后对结果进行复核、编辑、复制和导出。</p>
+<p>PaddleOCR-VL 在 X-AnyLabeling 中提供两种接入方式：</p>
 <ul>
-<li><a href="#_1">快速开始</a><ul>
-<li><a href="#_2">环境准备</a></li>
-<li><a href="#_4">部署步骤</a></li>
+<li><strong>官方 API（推荐）</strong>：直接调用 PaddleOCR 官方 API，适合快速验证模型效果、低成本体验和轻量开发场景，无需额外部署推理服务。</li>
+<li><strong>本地部署</strong>：通过 <a href="https://github.com/CVHub520/X-AnyLabeling-Server">X-AnyLabeling-Server</a> 自行部署推理服务，适合私有化部署、敏感数据处理和持续性标注任务。</li>
 </ul>
-</li>
-<li><a href="#_5">代码介绍</a></li>
-<li><a href="#_6">工程详解</a></li>
-<li><a href="#_7">进阶使用</a><ul>
-<li><a href="#_8">更新预测库</a></li>
-<li><a href="#nb">转换 nb 模型</a></li>
-<li><a href="#_9">更新模型、标签文件和预测图片</a><ul>
-<li><a href="#_10">更新模型</a></li>
-<li><a href="#_11">更新标签文件</a></li>
-<li><a href="#_12">更新预测图片</a></li>
-</ul>
-</li>
-<li><a href="#_13">更新输入/输出预处理</a></li>
-</ul>
-</li>
-</ul>
-<p>本指南主要介绍 PaddleX 端侧部署——OCR文字识别 demo 在 Android shell 上的运行方法。</p>
-<p>本指南适配了以下 OCR 模型：</p>
+<h2 id="1-x-anylabeling">1. 安装 X-AnyLabeling<a class="headerlink" href="#1-x-anylabeling" title="Permanent link">&para;</a></h2>
+<p>推荐从官方 Release 下载对应平台的预编译包：</p>
 <ul>
-<li>PP-OCRv3_mobile（cpu）</li>
-<li>PP-OCRv4_mobile（cpu）</li>
-<li>PP-OCRv5_mobile（cpu）</li>
+<li>Release 地址：<a href="https://github.com/CVHub520/X-AnyLabeling/releases">https://github.com/CVHub520/X-AnyLabeling/releases</a></li>
 </ul>
-<h2 id="_1">快速开始<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">环境准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>也可以通过 pip 安装：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>x-anylabeling
+</span></code></pre></div>
+<p>启动后可以通过左侧工具栏中的 <code>PaddleOCR</code> 图标，或使用快捷键 <code>Ctrl+4</code> 打开 PaddleOCR 面板。</p>
+<p><img alt="在左侧工具栏选择 PaddleOCR" src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/x_anylabeling/open_panel.png" /></p>
+<p>打开后即可看到 PaddleOCR 面板的初始界面：</p>
+<p><img alt="PaddleOCR 面板初始界面" src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/x_anylabeling/panel.png" /></p>
+<h2 id="2-paddleocr-api">2. 配置 PaddleOCR 官方 API<a class="headerlink" href="#2-paddleocr-api" title="Permanent link">&para;</a></h2>
+<p>X-AnyLabeling 客户端默认支持 PaddleOCR 官方 API。首次打开 PaddleOCR 面板且尚未配置 API 信息时，界面会自动弹出 <code>PPOCR API Settings</code> 配置窗口；后续如需修改配置，也可以点击右侧结果面板顶部的齿轮按钮重新打开。</p>
+<p><img alt="PPOCR API Settings 配置窗口" src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/x_anylabeling/api_settings.png" /></p>
+<p>获取 <code>API_KEY</code> 的方式：</p>
 <ol>
-<li>
-<p>在本地环境安装好 CMAKE 编译工具，并在 <a href="https://developer.android.google.cn/ndk/downloads">Android NDK 官网</a>下载当前系统的某个版本的 NDK 软件包。例如，在 Mac 上开发，需要在 Android NDK 官网下载 Mac 平台的 NDK 软件包</p>
-<p><strong>环境要求</strong></p>
-<ul>
-<li><code>CMake &gt;= 3.10</code>（最低版本未经验证，推荐 3.20 及以上）</li>
-<li><code>Android NDK &gt;= r17c</code>（最低版本未经验证，推荐 r20b 及以上）</li>
-</ul>
-<p><strong>本指南所使用的测试环境：</strong></p>
-<ul>
-<li><code>cmake == 3.20.0</code></li>
-<li><code>android-ndk == r20b</code></li>
-</ul>
-</li>
-<li>
-<p>准备一部 Android 手机，并开启 USB 调试模式。开启方法: <code>手机设置 -&gt; 查找开发者选项 -&gt; 打开开发者选项和 USB 调试模式</code></p>
-</li>
-<li>
-<p>电脑上安装 ADB 工具，用于调试。ADB 安装方式如下：</p>
-<p>3.1. Mac 电脑安装 ADB:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>cask<span class="w"> </span>install<span class="w"> </span>android-platform-tools
-</span></code></pre></div>
-<p>3.2. Linux 安装 ADB</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>wget<span class="w"> </span>adb
-</span></code></pre></div>
-<p>3.3. Windows 安装 ADB</p>
-<p>win 上安装需要去谷歌的安卓平台下载 ADB 软件包进行安装：<a href="https://developer.android.com/studio">链接</a></p>
-<p>打开终端，手机连接电脑，在终端中输入</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>adb<span class="w"> </span>devices
-</span></code></pre></div>
-<p>如果有 device 输出，则表示安装成功。</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>List<span class="w"> </span>of<span class="w"> </span>devices<span class="w"> </span>attached
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>744be294<span class="w">    </span>device
-</span></code></pre></div>
-</li>
+<li>访问 PaddleOCR 官方网站：<a href="https://www.paddleocr.com">https://www.paddleocr.com</a></li>
+<li>点击右上角 <strong>API</strong>，选择 <strong>PaddleOCR-VL-1.5</strong>。</li>
+<li>打开示例代码，复制其中的 <code>TOKEN</code>（访问令牌）。</li>
+<li>回到 X-AnyLabeling 的 <code>PPOCR API Settings</code>，将其粘贴到 <code>API_KEY</code> 字段并确认即可。</li>
 </ol>
-<h3 id="_3">物料准备<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>克隆 <code>Paddle-Lite-Demo</code> 仓库的 <code>feature/paddle-x</code> 分支到 <code>PaddleX-Lite-Deploy</code> 目录。</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>feature/paddle-x<span class="w"> </span>https://github.com/PaddlePaddle/Paddle-Lite-Demo.git<span class="w"> </span>PaddleX-Lite-Deploy
+<p><code>API_KEY</code> 用于接口鉴权，支持申请每天免费解析数万文档页数。配置会保存在本地：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>${workspace}/xanylabeling_data/paddleocr/api_settings.json
 </span></code></pre></div>
-</li>
-<li>
-<p>填写 <a href="https://paddle.wjx.cn/vm/eaaBo0H.aspx#">问卷</a> 下载压缩包，将压缩包放到指定解压目录，切换到指定解压目录后执行解压命令。</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 1. 切换到指定解压目录</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>PaddleX-Lite-Deploy/ocr/android/shell/ppocr_demo
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># 2. 执行解压命令</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>unzip<span class="w"> </span>ocr.zip
+<p>默认情况下，<code>${workspace}</code> 为用户主目录 <code>~</code>；如果启动 X-AnyLabeling 时传入了 <code>--work-dir</code>，则以该目录为准。</p>
+<p>右侧 <code>Parsing Model</code> 下拉框当前支持以下官方 API 选项：</p>
+<ul>
+<li><code>PaddleOCR-VL-1.5 (API)</code></li>
+<li><code>PaddleOCR-VL (API)</code></li>
+</ul>
+<h2 id="3">3. 导入待解析文档<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>打开 PaddleOCR 面板后，点击左侧面板顶部的 <code>+ New Parsing</code> 导入文件。导入后文件会自动复制到本地 PaddleOCR 工作目录，并自动加入解析队列。</p>
+<p>当前 PaddleOCR 面板支持的文件类型：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">后缀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">PDF 文档</td>
+<td style="text-align: left;"><code>.pdf</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">图片</td>
+<td style="text-align: left;"><code>.bmp</code>, <code>.cif</code>, <code>.gif</code>, <code>.jpeg</code>, <code>.jpg</code>, <code>.png</code>, <code>.tif</code>, <code>.tiff</code>, <code>.webp</code></td>
+</tr>
+</tbody>
+</table>
+<p>适用的真实场景包括教材页面、论文截图、票据图片、合同扫描件、表格文档、政企材料等。</p>
+<h2 id="4">4. 选择解析模型<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>在右侧 <code>Parsing Model</code> 下拉框中可在 PaddleOCR-VL 系列的不同版本之间切换：</p>
+<ul>
+<li><code>PaddleOCR-VL-1.5 (API)</code>（推荐）：在 OmniDocBench v1.5 上达到 94.5% 精度，支持异形框定位，对扫描、倾斜、弯折、屏幕拍摄及复杂光照等场景具备更强鲁棒性，并新增印章识别与文本检测识别能力。</li>
+<li><code>PaddleOCR-VL (API)</code>：初代版本。</li>
+</ul>
+<p><img alt="Parsing Model 切换 PaddleOCR-VL 与 PaddleOCR-VL-1.5" src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/x_anylabeling/model_switch.png" /></p>
+<h2 id="5-document-parsing">5. 执行 Document Parsing<a class="headerlink" href="#5-document-parsing" title="Permanent link">&para;</a></h2>
+<p>选择模型后，X-AnyLabeling 会自动开始解析。模型会对文档中的文本、公式、表格、图表、印章等内容进行识别和结构化处理。</p>
+<p>左侧文件项左下角的彩色点表示解析状态：</p>
+<ul>
+<li>蓝色：待解析或正在解析</li>
+<li>绿色：解析完成</li>
+<li>红色：解析失败</li>
+</ul>
+<h2 id="6">6. 对照原文档复核解析结果<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<p>解析完成后，X-AnyLabeling 会呈现左右对照视图：左侧为原始文档，右侧为模型的解析结果。开发者可以逐段检查文字内容、公式表达、表格结构、图表信息和印章结果是否准确，并通过以下操作进行复核：</p>
+<p><img alt="Document Parsing 左右对照视图" src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/x_anylabeling/document_parsing.png" /></p>
+<ul>
+<li>单击左侧预览区或右侧结果区中的任意块，可以在两侧快速匹配并高亮对应内容。</li>
+<li>双击右侧识别结果中的某个块，或点击该块的 <code>纠正</code> 按钮，进入编辑状态。</li>
+<li>鼠标悬停在源文件预览区的块上时，可以直接点击浮出的 <code>复制</code> 按钮复制该块内容。</li>
+<li>对识别结果做人工修正后，JSON 中会记录已编辑块；如需重新获取模型结果，可使用右侧重解析按钮。</li>
+</ul>
+<p>针对不同类型的内容，X-AnyLabeling 提供专用编辑器：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">编辑器</th>
+<th style="text-align: left;">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">富文本编辑器</td>
+<td style="text-align: left;">普通文本、标题、页脚、印章等非表格/公式内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">LaTeX 公式编辑器</td>
+<td style="text-align: left;"><code>display_formula</code>, <code>formula</code>, <code>formula_number</code>, <code>algorithm</code>，支持源码编辑与实时预览</td>
+</tr>
+<tr>
+<td style="text-align: left;">表格编辑器</td>
+<td style="text-align: left;"><code>table</code> 或被识别为表格结构的内容，支持单元格编辑、增删行列等</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-json">7. 切换 JSON 视图查看结果<a class="headerlink" href="#7-json" title="Permanent link">&para;</a></h2>
+<p>除了 <code>Document Parsing</code> 视图外，X-AnyLabeling 还支持 <code>JSON</code> 视图：</p>
+<ul>
+<li><code>Document Parsing</code> 视图：以卡片形式展示版面块、文本、公式、表格、图片，适合人工阅读和结果复核。</li>
+<li><code>JSON</code> 视图：查看完整的结构化结果，适合开发者进行数据处理、训练样本构建、评测结果整理和业务系统集成。</li>
+</ul>
+<p><img alt="JSON 视图" src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/x_anylabeling/json_view.png" /></p>
+<h2 id="8">8. 导出结果<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<p>完成复核和修正后，可以将标注结果导出，用于后续任务，典型用途包括：</p>
+<ul>
+<li>构建 OCR 训练数据集</li>
+<li>进行模型评测和误差分析</li>
+<li>沉淀企业内部文档解析数据</li>
+<li>接入业务系统进行自动化处理</li>
+</ul>
+<p>在 <code>Document Parsing</code> 视图下，右侧工具栏的下载按钮会下载包含 Markdown 与相关资源的 ZIP；在 <code>JSON</code> 视图下则下载完整 JSON。</p>
+<h2 id="_2">数据目录结构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>X-AnyLabeling PaddleOCR 面板会将导入文件和解析结果保存在本地工作目录中：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>${workspace}/xanylabeling_data/paddleocr/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── api_settings.json
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── ui_state.json
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>├── files/
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>│   ├── example.pdf
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│   ├── image.png
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│   ├── __PDF_example/
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│   │   ├── page_001.png
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│   │   └── page_002.png
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>│   └── __BLOCK_IMAGES_image.png/
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>│       └── page_001_block_0001.png
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>└── jsons/
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    ├── example.pdf.json
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    └── image.png.json
 </span></code></pre></div>
-</li>
-</ol>
-<h3 id="_4">部署步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>将工作目录切换到 <code>PaddleX-Lite-Deploy/libs</code> 目录，运行 <code>download.sh</code> 脚本，下载需要的 Paddle Lite 预测库。此步骤只需执行一次，即可支持每个 demo 使用。</p>
-</li>
-<li>
-<p>将工作目录切换到 <code>PaddleX-Lite-Deploy/ocr/assets</code> 目录，运行 <code>download.sh</code> 脚本，下载 <a href="https://www.paddlepaddle.org.cn/lite/v2.10/user_guides/model_optimize_tool.html">paddle_lite_opt 工具</a> 优化后的 nb 模型文件及预测图片、字典文件等物料。</p>
-</li>
-<li>
-<p>将工作目录切换到 <code>PaddleX-Lite-Deploy/ocr/android/shell/cxx/ppocr_demo</code> 目录，运行 <code>build.sh</code> 脚本，完成可执行文件的编译。</p>
-</li>
-<li>
-<p>将工作目录切换到 <code>PaddleX-Lite-Deploy/ocr/android/shell/cxx/ppocr_demo</code>，运行 <code>run.sh</code> 脚本，完成在端侧的预测。</p>
-</li>
-</ol>
-<p><strong>注意事项：</strong></p>
+<p>删除左侧文件项时，会同时删除源文件、本地 JSON、PDF 预览页和 block 裁剪图。</p>
+<h2 id="_3">参考链接<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>在运行 <code>build.sh</code> 脚本前，需要更改 <code>NDK_ROOT</code> 指定的路径为实际安装的 NDK 路径。</li>
-<li>在 Windows 系统上可以使用 Git Bash 执行部署步骤。</li>
-<li>若在 Windows 系统上编译，需要将 <code>CMakeLists.txt</code> 中的 <code>CMAKE_SYSTEM_NAME</code> 设置为 <code>windows</code>。</li>
-<li>若在 Mac 系统上编译，需要将 <code>CMakeLists.txt</code> 中的 <code>CMAKE_SYSTEM_NAME</code> 设置为 <code>darwin</code>。</li>
-<li>在运行 <code>run.sh</code> 脚本时需保持 ADB 连接。</li>
-<li><code>download.sh</code> 和 <code>run.sh</code> 支持传入参数来指定模型，若不指定则默认使用 <code>PP-OCRv5_mobile</code> 模型。目前适配了以下模型：<ul>
-<li><code>PP-OCRv3_mobile</code></li>
-<li><code>PP-OCRv4_mobile</code></li>
-<li><code>PP-OCRv5_mobile</code></li>
-</ul>
-</li>
-</ul>
-<p>以下为实际操作时的示例：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 1. 下载需要的 Paddle Lite 预测库</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>PaddleX-Lite-Deploy/libs
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sh<span class="w"> </span>download.sh
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1"># 2. 下载 paddle_lite_opt 工具优化后的 nb 模型文件及预测图片、字典文件等物料</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">cd</span><span class="w"> </span>../ocr/assets
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>sh<span class="w"> </span>download.sh<span class="w"> </span>PP-OCRv5_mobile
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># 3. 完成可执行文件的编译</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="nb">cd</span><span class="w"> </span>../android/shell/ppocr_demo
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>sh<span class="w"> </span>build.sh
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1"># 4. 预测</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>sh<span class="w"> </span>run.sh<span class="w"> </span>PP-OCRv5_mobile
-</span></code></pre></div>
-<p>运行结果如下所示：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>The detection visualized image saved in ./test_img_result.jpg
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>0       纯臻营养护发素  0.998541
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>1       产品信息/参数   0.999094
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2       (45元/每公斤，100公斤起订）     0.948841
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>3       每瓶22元，1000瓶起订)   0.961245
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>4       【品牌】：代加工方式/OEMODM     0.970401
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>5       【品名】：纯臻营养护发素        0.977496
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>6       ODMOEM  0.955396
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>7       【产品编号】：YM-X-3011 0.977864
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>8       【净含量】：220ml       0.970538
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>9       【适用人群】：适合所有肤质      0.995907
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>10      【主要成分】：鲸蜡硬脂醇、燕麦β-葡聚    0.975813
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>11      糖、椰油酰胺丙基甜菜碱、泛醌    0.964397
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>12      （成品包材）    0.97298
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>13      【主要功能】：可紧致头发磷层，从而达到  0.989097
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>14      即时持久改善头发光泽的效果，给干燥的头  0.990088
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>15      发足够的滋养    0.998037
-</span></code></pre></div>
-<p><img alt="预测结果" src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/refs/heads/main/images/pipeline_deploy/edge_PP-OCRv5_mobile.jpg" /></p>
-<h2 id="_5">代码介绍<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>.
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>├── ...
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>├── ocr 
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>│    ├── ...
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>│    ├── android
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>│    │    ├── ...
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>│    │    └── shell
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>│    │        └── ppocr_demo
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>│    │            ├── src # 存放预测代码
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>│    │            |   ├── cls_process.cc # 方向分类器的推理全流程，包含预处理、预测和后处理三部分
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>│    │            |   ├── rec_process.cc # 识别模型 CRNN 的推理全流程，包含预处理、预测和后处理三部分
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>│    │            |   ├── det_process.cc # 检测模型 CRNN 的推理全流程，包含预处理、预测和后处理三部分
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>│    │            |   ├── det_post_process.cc # 检测模型 DB 的后处理文件
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>│    │            |   ├── pipeline.cc # OCR 文字识别 demo 推理全流程代码
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>│    │            |   └── MakeFile # 预测代码的 MakeFile 文件
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>│    │            |   
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>│    │            ├── CMakeLists.txt # CMake 文件，约束可执行文件的编译方法
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>│    │            ├── README.md
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>│    │            ├── build.sh # 用于可执行文件的编译
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>│    │            └── run.sh # 用于预测
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>│    └── assets # 存放模型、测试图片、标签文件、config 文件
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>│        ├── images # 存放测试图片
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>│        ├── labels # 存放字典文件，更多详情可参考下文备注
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>│        ├── models # 存放 nb 模型
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>│        ├── config.txt
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>│        └── download.sh # 下载脚本，用于下载 paddle_lite_opt 工具优化后的模型
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>└── libs # 存放不同端的预测库和 OpenCV 库。
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>    ├── ...
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>    └── download.sh # 下载脚本，用于下载 Paddle Lite 预测库和 OpenCV 库
-</span></code></pre></div>
-<p><strong>备注：</strong></p>
-<ul>
-<li><code>PaddleX-Lite-Deploy/ocr/assets/labels/</code> 目录下存放了 PP-OCRv3、PP-OCRv4 模型的字典文件 <code>ppocr_keys_v1.txt</code> 以及 PP-OCRv5 模型的字典文件 <code>ppocr_keys_ocrv5.txt</code>。在实际推理过程中，会根据模型名称自动选择相应的字典文件，因此无需手动干预。</li>
-<li>如果使用的 nb 模型是英文数字或其他语言的模型，需要更换为对应语言的字典。PaddleOCR 仓库提供了<a href="../../../ppocr/utils">部分字典文件</a>。</li>
-</ul>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># run.sh 脚本中可执行文件的参数含义：</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;cd </span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="s2">           &amp;&amp; chmod +x ./ppocr_demo \</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="s2">           &amp;&amp; export LD_LIBRARY_PATH=</span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="s2">           &amp;&amp; ./ppocr_demo \</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_det.nb\&quot; \</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_rec.nb\&quot; \</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="s2">                ./models/</span><span class="si">${</span><span class="nv">CLS_MODEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="s2">                ./images/test.jpg \</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="s2">                ./test_img_result.jpg \</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="s2">                ./labels/</span><span class="si">${</span><span class="nv">LABEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="s2">                ./config.txt&quot;</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>第一个参数：ppocr_demo<span class="w"> </span>可执行文件
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>第二个参数：./models/<span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span>_det.nb<span class="w">  </span>检测模型的.nb文件
-</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>第三个参数：./models/<span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span>_rec.nb<span class="w">  </span>识别模型的.nb文件
-</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>第四个参数：./models/<span class="si">${</span><span class="nv">CLS_MODEL_FILE</span><span class="si">}</span><span class="w"> </span>文本行方向分类模型的.nb文件，默认根据模型名自动选择
-</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>第五个参数：./images/test.jpg<span class="w">  </span>测试图片
-</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>第六个参数：./test_img_result.jpg<span class="w">  </span>结果保存文件
-</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>第七个参数：./labels/<span class="si">${</span><span class="nv">LABEL_FILE</span><span class="si">}</span><span class="w">  </span>label<span class="w"> </span>文件，默认根据模型名自动选择
-</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>第八个参数：./config.txt<span class="w">  </span>配置文件，模型的超参数配置文件，包含了检测器、分类器的超参数
-</span></code></pre></div>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># config.txt 具体参数 List：</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>max_side_len<span class="w">  </span><span class="m">960</span><span class="w">         </span><span class="c1"># 输入图像长宽大于 960 时，等比例缩放图像，使得图像最长边为 960</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>det_db_thresh<span class="w">  </span><span class="m">0</span>.3<span class="w">        </span><span class="c1"># 用于过滤 DB 预测的二值化图像，设置为 0.3 对结果影响不明显</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>det_db_box_thresh<span class="w">  </span><span class="m">0</span>.5<span class="w">    </span><span class="c1"># DB 后处理过滤 box 的阈值，如果检测存在漏框情况，可酌情减小</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>det_db_unclip_ratio<span class="w">  </span><span class="m">1</span>.6<span class="w">  </span><span class="c1"># 表示文本框的紧致程度，越小则文本框更靠近文本</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>use_direction_classify<span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="c1"># 是否使用方向分类器，0 表示不使用，1 表示使用</span>
-</span></code></pre></div>
-<h2 id="_6">工程详解<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>OCR 文字识别 demo 由三个模型一起完成 OCR 文字识别功能，对输入图片先通过 <code>${MODEL_NAME}_det.nb</code> 模型做检测处理，然后通过 <code>ch_ppocr_mobile_v2.0_cls_slim_opt.nb</code> 模型做文字方向分类处理，最后通过 <code>${MODEL_NAME}_rec.nb</code> 模型完成文字识别处理。</p>
-<ol>
-<li>
-<p><code>pipeline.cc</code> : OCR 文字识别 demo 预测全流程代码
-  该文件完成了三个模型串行推理的全流程控制处理，包含整个处理过程的调度处理。</p>
-<ul>
-<li><code>Pipeline::Pipeline(...)</code> 方法完成调用三个模型类构造函数，完成模型加载和线程数、绑核处理及 predictor 创建处理</li>
-<li><code>Pipeline::Process(...)</code> 方法用于完成这三个模型串行推理的全流程控制处理</li>
-</ul>
-</li>
-<li>
-<p><code>cls_process.cc</code> 方向分类器的预测文件
-  该文件完成了方向分类器的预处理、预测和后处理过程</p>
-<ul>
-<li><code>ClsPredictor::ClsPredictor()</code>  方法用于完成模型加载和线程数、绑核处理及 predictor 创建处理</li>
-<li><code>ClsPredictor::Preprocess()</code> 方法用于模型的预处理</li>
-<li><code>ClsPredictor::Postprocess()</code> 方法用于模型的后处理</li>
-</ul>
-</li>
-<li>
-<p><code>rec_process.cc</code> 识别模型 CRNN 的预测文件
-  该文件完成了识别模型 CRNN 的预处理、预测和后处理过程</p>
-<ul>
-<li><code>RecPredictor::RecPredictor()</code>  方法用于完成模型加载和线程数、绑核处理及 predictor 创建处理</li>
-<li><code>RecPredictor::Preprocess()</code> 方法用于模型的预处理</li>
-<li><code>RecPredictor::Postprocess()</code> 方法用于模型的后处理</li>
-</ul>
-</li>
-<li>
-<p><code>det_process.cc</code> 检测模型 DB 的预测文件
-  该文件完成了检测模型 DB 的预处理、预测和后处理过程</p>
-<ul>
-<li><code>DetPredictor::DetPredictor()</code>  方法用于完成模型加载和线程数、绑核处理及 predictor 创建处理</li>
-<li><code>DetPredictor::Preprocess()</code> 方法用于模型的预处理</li>
-<li><code>DetPredictor::Postprocess()</code> 方法用于模型的后处理</li>
-</ul>
-</li>
-<li>
-<p><code>db_post_process</code> 检测模型 DB 的后处理函数，包含 clipper 库的调用
-  该文件完成了检测模型 DB 的第三方库调用和其他后处理方法实现</p>
-<ul>
-<li><code>std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt; BoxesFromBitmap(...)</code> 方法从 Bitmap 图中获取检测框</li>
-<li><code>std::vector&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt; FilterTagDetRes(...)</code> 方法根据识别结果获取目标框位置</li>
-</ul>
-</li>
-</ol>
-<h2 id="_7">进阶使用<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>如果快速开始部分无法满足你的需求，可以参考本节对 demo 进行自定义修改。</p>
-<p>本节主要包含四部分： </p>
-<ul>
-<li>更新预测库；</li>
-<li>转换 <code>.nb</code> 模型；</li>
-<li>更新模型、标签文件和预测图片；</li>
-<li>更新输入/输出预处理。</li>
-</ul>
-<h3 id="_8">更新预测库<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>本指南所使用的预测库为最新版本（214rc），不推荐自行更新预测库。</p>
-<p>若有使用其他版本的需求，可参考如下步骤更新预测库：</p>
-<ul>
-<li>Paddle Lite 项目：https://github.com/PaddlePaddle/Paddle-Lite</li>
-<li>参考 <a href="https://www.paddlepaddle.org.cn/lite/develop/source_compile/compile_env.html">Paddle Lite 源码编译文档</a>，编译 Android 预测库</li>
-<li>编译最终产物位于 <code>build.lite.xxx.xxx.xxx</code> 下的 <code>inference_lite_lib.xxx.xxx</code><ul>
-<li>替换 c++ 库<ul>
-<li>头文件
-  将生成的 <code>build.lite.android.xxx.gcc/inference_lite_lib.android.xxx/cxx/include</code> 文件夹替换 demo 中的 <code>PaddleX-Lite-Deploy/libs/android/cxx/include</code></li>
-<li>armeabi-v7a
-  将生成的 <code>build.lite.android.armv7.gcc/inference_lite_lib.android.armv7/cxx/libs/libpaddle_lite_api_shared.so</code> 库替换 demo 中的 <code>PaddleX-Lite-Deploy/libs/android/cxx/libs/armeabi-v7a/libpaddle_lite_api_shared.so</code></li>
-<li>arm64-v8a
-  将生成的 <code>build.lite.android.armv8.gcc/inference_lite_lib.android.armv8/cxx/libs/libpaddle_lite_api_shared.so</code> 库替换 demo 中的 <code>PaddleX-Lite-Deploy/libs/android/cxx/libs/arm64-v8a/libpaddle_lite_api_shared.so</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="nb">转换 .nb 模型<a class="headerlink" href="#nb" title="Permanent link">&para;</a></h3>
-<p>若想使用自己训练的模型，可先参考以下流程得到 <code>.nb</code> 模型。</p>
-<h4 id="macubuntu">终端命令方法（支持Mac/Ubuntu）<a class="headerlink" href="#macubuntu" title="Permanent link">&para;</a></h4>
-<ol>
-<li>
-<p>进入Paddle-Lite Github仓库的<a href="https://github.com/PaddlePaddle/Paddle-Lite/releases">release界面</a>，选择所需版本下载对应的转化工具opt（推荐使用最新版本）。</p>
-</li>
-<li>
-<p>下载 opt 工具后，执行以下命令（此处以 2.14rc 版本的 linux_x86 opt 工具转换 PP-OCRv5_mobile_det 模型为例）：</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./opt_linux_x86<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span>--model_file<span class="o">=</span>PP-OCRv5_mobile_det/inference.pdmodel<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span>--param_file<span class="o">=</span>PP-OCRv5_mobile_det/inference.pdiparams<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span>--optimize_out<span class="o">=</span>PP-OCRv5_mobile_det<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span>--valid_targets<span class="o">=</span>arm
-</span></code></pre></div>
-</li>
-</ol>
-<p>有关使用终端命令方法转换 <code>.nb</code> 模型的详细介绍，可参考 Paddle-Lite 仓库的<a href="https://www.paddlepaddle.org.cn/lite/v2.12/user_guides/opt/opt_bin.html">使用可执行文件 opt</a>。</p>
-<h4 id="python-windowsmacubuntu">python 脚本方法（支持Windows/Mac/Ubuntu）<a class="headerlink" href="#python-windowsmacubuntu" title="Permanent link">&para;</a></h4>
-<ol>
-<li>
-<p>安装最新版本的 paddlelite wheel 包。</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--pre<span class="w"> </span>paddlelite
-</span></code></pre></div>
-</li>
-<li>
-<p>使用 python 脚本进行模型转换。以下为转换 PP-OCRv5_mobile_det 模型的示例代码：</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddlelite.lite</span><span class="w"> </span><span class="kn">import</span> <span class="n">Opt</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1"># 1. 创建opt实例</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">opt</span> <span class="o">=</span> <span class="n">Opt</span><span class="p">()</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># 2. 指定输入模型地址 </span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">opt</span><span class="o">.</span><span class="n">set_model_file</span><span class="p">(</span><span class="s2">&quot;./PP-OCRv5_mobile_det/inference.pdmodel&quot;</span><span class="p">)</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">opt</span><span class="o">.</span><span class="n">set_param_file</span><span class="p">(</span><span class="s2">&quot;./PP-OCRv5_mobile_det/inference.pdiparams&quot;</span><span class="p">)</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># 3. 指定转化类型</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">opt</span><span class="o">.</span><span class="n">set_valid_places</span><span class="p">(</span><span class="s2">&quot;arm&quot;</span><span class="p">)</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># 4. 指定输出模型地址</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">opt</span><span class="o">.</span><span class="n">set_optimize_out</span><span class="p">(</span><span class="s2">&quot;./PP-OCRv5_mobile_det&quot;</span><span class="p">)</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="c1"># 5. 执行模型优化</span>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="n">opt</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</span></code></pre></div>
-</li>
-</ol>
-<p>有关使用 python 脚本方法转换 <code>.nb</code> 模型的详细介绍，可参考 Paddle-Lite 仓库的<a href="https://www.paddlepaddle.org.cn/lite/v2.12/api_reference/python_api/opt.html">使用 Python 脚本 opt</a>。</p>
-<p><strong>注意</strong></p>
-<ul>
-<li>有关模型优化工具 opt 的详细介绍，可参考 Paddle-Lite 仓库的<a href="https://www.paddlepaddle.org.cn/lite/v2.12/user_guides/model_optimize_tool.html">模型优化工具 opt</a></li>
-<li>目前仅支持将 <code>.pdmodel</code> 格式的静态图模型转换为 <code>.nb</code> 格式。在 PaddlePaddle 3.0 以上的版本，默认导出为 <code>.json</code> 的模型，如果希望导出为 <code>.pdmodel</code> 格式的模型，导出时加上 <code>-o Global.export_with_pir=False</code> 即可。</li>
-</ul>
-<h3 id="_9">更新模型、标签文件和预测图片<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<h4 id="_10">更新模型<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p>本指南只对 <code>PP-OCRv3_mobile</code>、<code>PP-OCRv4_mobile</code>、<code>PP-OCRv5_mobile</code> 模型进行了验证，其他模型不保证适用性。</p>
-<p>如果你对 <code>PP-OCRv5_mobile</code> 模型进行了微调，并生成了一个名为 <code>PP-OCRv5_mobile_ft</code> 的新模型，可以按照以下步骤将原有模型替换为你的微调模型：</p>
-<ol>
-<li>
-<p>将 <code>PP-OCRv5_mobile_ft</code> 的 nb 模型存放到目录 <code>PaddleX-Lite-Deploy/ocr/assets/models/</code> 下，最终得到的文件结构如下：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>.
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>├── ocr 
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>│    ├── ...
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>│    └── assets 
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>│        ├── models
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>│        │   ├── ...
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>│        │   ├── PP-OCRv5_mobile_ft_det.nb 
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>│        │   └── PP-OCRv5_mobile_ft_rec.nb 
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>│        └── ...
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>└── ...
-</span></code></pre></div>
-</li>
-<li>
-<p>将模型名加入到 <code>run.sh</code> 脚本中的 <code>MODEL_LIST</code>。</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">MODEL_LIST</span><span class="o">=</span><span class="s2">&quot;PP-OCRv3_mobile PP-OCRv4_mobile PP-OCRv5_mobile PP-OCRv5_mobile_ft&quot;</span><span class="w"> </span><span class="c1"># 模型之间以单个空格为间隔</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>运行 <code>run.sh</code> 脚本时使用模型目录名。</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sh<span class="w"> </span>run.sh<span class="w"> </span>PP-OCRv5_mobile_ft
-</span></code></pre></div>
-</li>
-</ol>
-<p><strong>注意：</strong></p>
-<ul>
-<li>
-<p>如果更新模型中的输入 Tensor、Shape、和 Dtype 发生更新:</p>
-<ul>
-<li>更新文字方向分类器模型，则需要更新 <code>ppocr_demo/src/cls_process.cc</code> 中 <code>ClsPredictor::Preprocss</code> 函数</li>
-<li>更新检测模型，则需要更新 <code>ppocr_demo/src/det_process.cc</code> 中 <code>DetPredictor::Preprocss</code> 函数</li>
-<li>更新识别器模型，则需要更新 <code>ppocr_demo/src/rec_process.cc</code> 中 <code>RecPredictor::Preprocss</code> 函数</li>
-</ul>
-</li>
-<li>
-<p>如果更新模型中的输出 Tensor 和 Dtype 发生更新:</p>
-<ul>
-<li>更新文字方向分类器模型，则需要更新 <code>ppocr_demo/src/cls_process.cc</code> 中 <code>ClsPredictor::Postprocss</code> 函数</li>
-<li>更新检测模型，则需要更新 <code>ppocr_demo/src/det_process.cc</code> 中 <code>DetPredictor::Postprocss</code> 函数</li>
-<li>更新识别器模型，则需要更新 <code>ppocr_demo/src/rec_process.cc</code> 中 <code>RecPredictor::Postprocss</code> 函数</li>
-</ul>
-</li>
-</ul>
-<h4 id="_11">更新标签文件<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<p>如果需要更新标签文件，则需要将新的标签文件存放在目录 <code>PaddleX-Lite-Deploy/ocr/assets/labels/</code> 下，并参考模型更新方法更新 <code>PaddleX-Lite-Deploy/ocr/android/shell/ppocr_demo/run.sh</code> 中执行命令；</p>
-<p>以更新 <code>new_labels.txt</code> 为例：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># 代码文件 `PaddleX-Lite-Deploy/ocr/android/shell/ppocr_demo/run.sh`</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="c1"># old</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;cd </span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="s2">          &amp;&amp; chmod +x ./ppocr_demo \</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="s2">          &amp;&amp; export LD_LIBRARY_PATH=</span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="s2">          &amp;&amp; ./ppocr_demo \</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_det.nb\&quot; \</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_rec.nb\&quot; \</span>
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="s2">                ./models/</span><span class="si">${</span><span class="nv">CLS_MODEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="s2">                ./images/test.jpg \</span>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="s2">                ./test_img_result.jpg \</span>
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="s2">                ./labels/</span><span class="si">${</span><span class="nv">LABEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="s2">                ./config.txt&quot;</span>
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="c1"># update</span>
-</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;cd </span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="s2">          &amp;&amp; chmod +x ./ppocr_demo \</span>
-</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="s2">          &amp;&amp; export LD_LIBRARY_PATH=</span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="s2">          &amp;&amp; ./ppocr_demo \</span>
-</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_det.nb\&quot; \</span>
-</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_rec.nb\&quot; \</span>
-</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="s2">                ./models/</span><span class="si">${</span><span class="nv">CLS_MODEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="s2">                ./images/test.jpg \</span>
-</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="s2">                ./test_img_result.jpg \</span>
-</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="s2">                ./labels/new_labels.txt \</span>
-</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="s2">                ./config.txt&quot;</span>
-</span></code></pre></div>
-<h4 id="_12">更新预测图片<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
-<p>如果需要更新预测图片，将更新的图片存放在 <code>PaddleX-Lite-Deploy/ocr/assets/images/</code> 下，更新文件 <code>PaddleX-Lite-Deploy/ocr/android/shell/ppocr_demo/rush.sh</code> 中执行命令；</p>
-<p>以更新 <code>new_pics.jpg</code> 为例：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># 代码文件 `PaddleX-Lite-Deploy/ocr/assets/images/run.sh`</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1">## old</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;cd </span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="s2">          &amp;&amp; chmod +x ./ppocr_demo \</span>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="s2">          &amp;&amp; export LD_LIBRARY_PATH=</span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="s2">          &amp;&amp; ./ppocr_demo \</span>
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_det.nb\&quot; \</span>
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_rec.nb\&quot; \</span>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="s2">                ./models/</span><span class="si">${</span><span class="nv">CLS_MODEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="s2">                ./images/test.jpg \</span>
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="s2">                ./test_img_result.jpg \</span>
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="s2">                ./labels/</span><span class="si">${</span><span class="nv">LABEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="s2">                ./config.txt&quot;</span>
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="c1"># update</span>
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">&quot;cd </span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="s2">          &amp;&amp; chmod +x ./ppocr_demo \</span>
-</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="s2">          &amp;&amp; export LD_LIBRARY_PATH=</span><span class="si">${</span><span class="nv">ppocr_demo_path</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="s2">          &amp;&amp; ./ppocr_demo \</span>
-</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="s2">                \&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_det.nb\&quot; \</span>
-</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="s2">                \&quot;\&quot;./models/</span><span class="si">${</span><span class="nv">MODEL_NAME</span><span class="si">}</span><span class="s2">_rec.nb\&quot;\&quot; \</span>
-</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="s2">                ./models/</span><span class="si">${</span><span class="nv">CLS_MODEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="s2">                ./images/new_pics.jpg \</span>
-</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="s2">                ./test_img_result.jpg \</span>
-</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="s2">                ./labels/</span><span class="si">${</span><span class="nv">LABEL_FILE</span><span class="si">}</span><span class="s2"> \</span>
-</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="s2">                ./config.txt&quot;</span>
-</span></code></pre></div>
-<h3 id="_13">更新输入/输出预处理<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>更新输入预处理</p>
-<ul>
-<li>更新文字方向分类器模型，则需要更新 <code>ppocr_demo/src/cls_process.cc</code> 中 <code>ClsPredictor::Preprocss</code> 函数</li>
-<li>更新检测模型，则需要更新 <code>ppocr_demo/src/det_process.cc</code> 中 <code>DetPredictor::Preprocss</code> 函数</li>
-<li>更新识别器模型，则需要更新 <code>ppocr_demo/src/rec_process.cc</code> 中 <code>RecPredictor::Preprocss</code> 函数</li>
-</ul>
-</li>
-<li>
-<p>更新输出预处理</p>
-<ul>
-<li>更新文字方向分类器模型，则需要更新 <code>ppocr_demo/src/cls_process.cc</code> 中 <code>ClsPredictor::Postprocss</code> 函数</li>
-<li>更新检测模型，则需要更新 <code>ppocr_demo/src/det_process.cc</code> 中 <code>DetPredictor::Postprocss</code> 函数</li>
-<li>更新识别器模型，则需要更新 <code>ppocr_demo/src/rec_process.cc</code> 中 <code>RecPredictor::Postprocss</code> 函数</li>
-</ul>
-</li>
+<li>X-AnyLabeling 项目主页：<a href="https://github.com/CVHub520/X-AnyLabeling">https://github.com/CVHub520/X-AnyLabeling</a></li>
+<li>X-AnyLabeling PaddleOCR 面板文档：<a href="https://github.com/CVHub520/X-AnyLabeling/blob/main/docs/zh_cn/paddle_ocr.md">https://github.com/CVHub520/X-AnyLabeling/blob/main/docs/zh_cn/paddle_ocr.md</a></li>
+<li>X-AnyLabeling-Server（本地推理服务）：<a href="https://github.com/CVHub520/X-AnyLabeling-Server">https://github.com/CVHub520/X-AnyLabeling-Server</a></li>
+<li>PaddleOCR 官方网站：<a href="https://www.paddleocr.com">https://www.paddleocr.com</a></li>
+<li>PaddleOCR-VL 使用教程：<a href="../version3.x/pipeline_usage/PaddleOCR-VL.html">PaddleOCR-VL 使用教程</a></li>
 </ul>
 
 <!-- Source file information -->
@@ -5424,8 +4952,65 @@ You're not viewing the latest version.
 
 
   
+    
+  
+  
+    
   
 
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime" title="2026年5月13日 17:54:18 CST">2026-05-13 17:54:18</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime" title="2026年5月13日 17:54:18 CST">2026-05-13 17:54:18</span>
+  </span>
+
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="贡献者">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/scyyh11" class="md-author" title="@scyyh11">
+          
+          <img src="https://avatars.githubusercontent.com/u/98971614?v=4&size=72" alt="scyyh11">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
 
 
 <!-- Was this page helpful? -->
@@ -5505,7 +5090,7 @@ You're not viewing the latest version.
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="obtaining_onnx_models.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 获取ONNX模型">
+          <a href="../version3.x/pipeline_usage/PP-DocTranslation.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: PP-DocTranslation产线">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -5515,20 +5100,20 @@ You're not viewing the latest version.
                 上一页
               </span>
               <div class="md-ellipsis">
-                获取ONNX模型
+                PP-DocTranslation产线
               </div>
             </div>
           </a>
         
         
           
-          <a href="serving.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 服务化部署">
+          <a href="../version3.x/other_devices_support/multi_devices_use_guide.html" class="md-footer__link md-footer__link--next" aria-label="下一页: PaddleOCR 多硬件使用指南">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                服务化部署
+                PaddleOCR 多硬件使用指南
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5596,12 +5181,12 @@ You're not viewing the latest version.
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/katex.min.js"></script>
+        <script src="../javascripts/katex.min.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

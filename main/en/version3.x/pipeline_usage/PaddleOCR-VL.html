@@ -7704,14 +7704,14 @@ Before following this section, complete the PaddleOCR runtime environment setup 
 <tr>
 <td><code>file</code></td>
 <td><code>string</code></td>
-<td>The URL of an image file or PDF file accessible to the server, or the Base64-encoded result of the content of the aforementioned file types.
+<td>The URL of image files (including TIFF; multi-page TIFF is processed page by page) or PDF file accessible to the server, or the Base64-encoded result of the content of the aforementioned file types.
 </td>
 <td>Yes</td>
 </tr>
 <tr>
 <td><code>fileType</code></td>
 <td><code>integer</code>|<code>null</code></td>
-<td>File type.<code>0</code> represents a PDF file,<code>1</code> represents an image file. If this property is not present in the request body, the file type will be inferred from the URL.</td>
+<td>File type. <code>0</code> represents a PDF file, <code>1</code> represents an image file (including TIFF). If this property is not present in the request body, the file type will be inferred from the URL.</td>
 <td>No</td>
 </tr>
 <tr>
@@ -8691,13 +8691,13 @@ If you do not need to adjust pipeline configurations, you can ignore this sectio
 <li><code>url_expires_in</code>: URL validity period (in seconds). <code>-1</code> indicates it never expires.</li>
 </ul>
 <p>For more information on obtaining AK/SK and other details, refer to the <a href="https://cloud.baidu.com/doc/BOS/index.html">Baidu Intelligent Cloud Official Documentation</a>.</p>
-<p><strong>Limit the Number of PDF Pages Parsed</strong></p>
-<p>By default, the service processes the entire PDF file. In production environments, if a PDF contains too many pages, it may affect system stability, leading to processing timeouts or excessive resource usage. To ensure stable service operation, it is recommended to set a reasonable page limit based on actual needs. You can add the following configuration to the production configuration file (<code>Serving</code> is the top-level field):</p>
+<p><strong>Limit the Number of PDF and Multi-Page TIFF Pages Parsed</strong></p>
+<p>By default, the service processes the entire PDF file. Multi-page TIFF files (<code>fileType=1</code>) are expanded page by page before processing. In production environments, if a PDF or multi-page TIFF contains too many pages, it may affect system stability, leading to processing timeouts or excessive resource usage. To ensure stable service operation, it is recommended to set a reasonable page limit based on actual needs. You can add the following configuration to the production configuration file (<code>Serving</code> is the top-level field):</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nt">Serving</span><span class="p">:</span>
 </span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">  </span><span class="nt">extra</span><span class="p">:</span>
 </span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="nt">max_num_input_imgs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;page limit, e.g., 100&gt;</span>
 </span></code></pre></div>
-<p>When <code>max_num_input_imgs</code> is set to <code>null</code>, there will be no limit on the number of PDF pages.</p>
+<p><code>max_num_input_imgs</code> caps the maximum number of pages processed for both PDF and multi-page TIFF. When it is set to <code>null</code>, there is no page limit for either.</p>
 <h4 id="443-apply-the-configuration-file">4.4.3 Apply the Configuration File<a class="headerlink" href="#443-apply-the-configuration-file" title="Permanent link">&para;</a></h4>
 <p><strong>If you deployed using Docker Compose</strong>:</p>
 <p><strong>If you are deploying using Docker Compose:</strong></p>

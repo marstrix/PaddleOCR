@@ -841,13 +841,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/doc2md.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_engine.html</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_engine.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_engine.html"/>
-    </url>
-    <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/installation.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
@@ -925,81 +918,137 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/algorithm/PaddleOCR-VL/PaddleOCR-VL.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/browser.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/cross_platform/browser.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/browser.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/browser.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/cross_platform/browser.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/cross_platform/browser.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/high_performance_inference.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/cross_platform/on_device_deployment.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/high_performance_inference.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/high_performance_inference.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/cross_platform/on_device_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/cross_platform/on_device_deployment.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/mcp_server.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/high_performance_inference.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/mcp_server.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/mcp_server.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/high_performance_inference.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/local_inference/high_performance_inference.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/obtaining_onnx_models.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/inference_engine.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/obtaining_onnx_models.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/obtaining_onnx_models.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/inference_engine.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/local_inference/inference_engine.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/on_device_deployment.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/parallel_inference.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/on_device_deployment.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/on_device_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/parallel_inference.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/local_inference/parallel_inference.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/packaging.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/cpp/OCR.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/packaging.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/packaging.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/cpp/OCR.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/local_inference/cpp/OCR.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/serving.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/cpp/OCR_windows.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/serving.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/serving.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/cpp/OCR_windows.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/local_inference/cpp/OCR_windows.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/skills.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/cpp/cpp_local_deployment.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/skills.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/skills.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/local_inference/cpp/cpp_local_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/local_inference/cpp/cpp_local_deployment.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/cpp/OCR.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/others/benchmark.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/cpp/OCR.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/cpp/OCR.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/others/benchmark.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/others/benchmark.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/cpp/OCR_windows.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/others/obtaining_onnx_models.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/cpp/OCR_windows.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/cpp/OCR_windows.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/others/obtaining_onnx_models.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/others/obtaining_onnx_models.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/cpp/cpp_local_deployment.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/others/packaging.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/deployment/cpp/cpp_local_deployment.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/deployment/cpp/cpp_local_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/others/packaging.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/others/packaging.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/serving.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/serving.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/serving/serving.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/cli.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/cli.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/serving/paddleocr_official_api/cli.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/go.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/go.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/serving/paddleocr_official_api/go.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/overview.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/overview.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/serving/paddleocr_official_api/overview.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/python.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/python.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/serving/paddleocr_official_api/python.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/typescript.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/inference_deployment/serving/paddleocr_official_api/typescript.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/inference_deployment/serving/paddleocr_official_api/typescript.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/integrations/mcp_server.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/integrations/mcp_server.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/integrations/mcp_server.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/integrations/skills.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/integrations/skills.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/integrations/skills.html"/>
     </url>
     <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/module_usage/chart_parsing.html</loc>
@@ -1280,20 +1329,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/table_recognition_v2.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/table_recognition_v2.html"/>
-    </url>
-    <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/instructions/benchmark.html</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/instructions/benchmark.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/instructions/benchmark.html"/>
-    </url>
-    <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/instructions/parallel_inference.html</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/instructions/parallel_inference.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/instructions/parallel_inference.html"/>
     </url>
     <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/index.html</loc>
@@ -2142,13 +2177,6 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/doc2md.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_engine.html</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_engine.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_engine.html"/>
-    </url>
-    <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/installation.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
@@ -2226,81 +2254,137 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/algorithm/PaddleOCR-VL/PaddleOCR-VL.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/browser.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/cross_platform/browser.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/browser.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/browser.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/cross_platform/browser.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/cross_platform/browser.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/high_performance_inference.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/cross_platform/on_device_deployment.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/high_performance_inference.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/high_performance_inference.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/cross_platform/on_device_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/cross_platform/on_device_deployment.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/mcp_server.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/high_performance_inference.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/mcp_server.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/mcp_server.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/high_performance_inference.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/local_inference/high_performance_inference.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/obtaining_onnx_models.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/inference_engine.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/obtaining_onnx_models.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/obtaining_onnx_models.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/inference_engine.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/local_inference/inference_engine.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/on_device_deployment.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/parallel_inference.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/on_device_deployment.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/on_device_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/parallel_inference.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/local_inference/parallel_inference.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/packaging.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/cpp/OCR.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/packaging.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/packaging.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/cpp/OCR.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/local_inference/cpp/OCR.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/serving.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/cpp/OCR_windows.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/serving.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/serving.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/cpp/OCR_windows.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/local_inference/cpp/OCR_windows.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/skills.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/cpp/cpp_local_deployment.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/skills.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/skills.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/local_inference/cpp/cpp_local_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/local_inference/cpp/cpp_local_deployment.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/cpp/OCR.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/others/benchmark.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/cpp/OCR.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/cpp/OCR.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/others/benchmark.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/others/benchmark.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/cpp/OCR_windows.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/others/obtaining_onnx_models.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/cpp/OCR_windows.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/cpp/OCR_windows.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/others/obtaining_onnx_models.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/others/obtaining_onnx_models.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/cpp/cpp_local_deployment.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/others/packaging.html</loc>
         <lastmod>2026-05-28</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/deployment/cpp/cpp_local_deployment.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/deployment/cpp/cpp_local_deployment.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/others/packaging.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/others/packaging.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/serving.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/serving.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/serving/serving.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/cli.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/cli.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/serving/paddleocr_official_api/cli.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/go.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/go.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/serving/paddleocr_official_api/go.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/overview.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/overview.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/serving/paddleocr_official_api/overview.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/python.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/python.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/serving/paddleocr_official_api/python.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/typescript.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/serving/paddleocr_official_api/typescript.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/inference_deployment/serving/paddleocr_official_api/typescript.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/integrations/mcp_server.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/integrations/mcp_server.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/integrations/mcp_server.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/integrations/skills.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/integrations/skills.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/integrations/skills.html"/>
     </url>
     <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/module_usage/chart_parsing.html</loc>
@@ -2581,19 +2665,5 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/table_recognition_v2.html"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/table_recognition_v2.html"/>
-    </url>
-    <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/instructions/benchmark.html</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/instructions/benchmark.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/instructions/benchmark.html"/>
-    </url>
-    <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/instructions/parallel_inference.html</loc>
-        <lastmod>2026-05-28</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/instructions/parallel_inference.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/instructions/parallel_inference.html"/>
     </url>
 </urlset>

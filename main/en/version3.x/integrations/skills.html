@@ -5602,11 +5602,6 @@ You're not viewing the latest version.
 <li><code>paddleocr-text-recognition</code>: extracts text from images, scans, and PDF files.</li>
 <li><code>paddleocr-doc-parsing</code>: parses complex document layouts and converts them to Markdown or structured output.</li>
 </ul>
-<p>Each skill currently supports the following underlying models:</p>
-<ul>
-<li><code>paddleocr-text-recognition</code>: <code>PP-OCRv5</code></li>
-<li><code>paddleocr-doc-parsing</code>: <code>PP-StructureV3</code>, <code>PaddleOCR-VL</code>, <code>PaddleOCR-VL-1.5</code>, <code>PaddleOCR-VL-1.6</code></li>
-</ul>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Install Python 3.9 or later on the machine that runs the skill.</li>
@@ -5645,28 +5640,11 @@ You're not viewing the latest version.
 <li>OpenClaw: <a href="https://docs.openclaw.ai/tools/skills">https://docs.openclaw.ai/tools/skills</a></li>
 </ul>
 <h2 id="configure-environment-variables">Configure Environment Variables<a class="headerlink" href="#configure-environment-variables" title="Permanent link">&para;</a></h2>
-<p>After installation, configure the required environment variables so the skills can work correctly:</p>
-<table>
-<thead>
-<tr>
-<th>Skill</th>
-<th>Required</th>
-<th>Optional</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>paddleocr-text-recognition</code></td>
-<td><code>PADDLEOCR_ACCESS_TOKEN</code> (access token)</td>
-<td><code>PADDLEOCR_BASE_URL</code> (API base URL, defaults to official service)</td>
-</tr>
-<tr>
-<td><code>paddleocr-doc-parsing</code></td>
-<td><code>PADDLEOCR_ACCESS_TOKEN</code> (access token)</td>
-<td><code>PADDLEOCR_BASE_URL</code> (API base URL, defaults to official service)</td>
-</tr>
-</tbody>
-</table>
+<p>After installation, configure the following environment variables:</p>
+<ul>
+<li>Required: <code>PADDLEOCR_ACCESS_TOKEN</code> (access token)</li>
+<li>Optional: <code>PADDLEOCR_BASE_URL</code> (API base URL, defaults to official service)</li>
+</ul>
 <p>Get access token: visit <a href="https://aistudio.baidu.com/account/accessToken">AI Studio Access Token</a></p>
 <p>Examples for some AI apps:</p>
 <ul>

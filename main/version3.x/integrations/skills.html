@@ -5602,11 +5602,6 @@ You're not viewing the latest version.
 <li><code>paddleocr-text-recognition</code>：用于识别图片、扫描件与 PDF 中的文字。</li>
 <li><code>paddleocr-doc-parsing</code>：用于解析复杂文档版面，并转换为 Markdown 或结构化结果。</li>
 </ul>
-<p>当前各 Skill 支持的底层模型如下：</p>
-<ul>
-<li><code>paddleocr-text-recognition</code>：<code>PP-OCRv5</code></li>
-<li><code>paddleocr-doc-parsing</code>：<code>PP-StructureV3</code>、<code>PaddleOCR-VL</code>、<code>PaddleOCR-VL-1.5</code>、<code>PaddleOCR-VL-1.6</code></li>
-</ul>
 <h2 id="_1">安装前准备<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ol>
 <li>请确保执行 Skill 的设备已安装 Python 3.9 或以上版本。</li>
@@ -5645,28 +5640,11 @@ You're not viewing the latest version.
 <li>OpenClaw：<a href="https://docs.openclaw.ai/tools/skills">https://docs.openclaw.ai/tools/skills</a></li>
 </ul>
 <h2 id="配置环境变量">配置环境变量<a class="headerlink" href="#配置环境变量" title="Permanent link">&para;</a></h2>
-<p>安装完成后，需要配置环境变量以便 Skill 正常工作：</p>
-<table>
-<thead>
-<tr>
-<th>Skill</th>
-<th>必填</th>
-<th>可选</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>paddleocr-text-recognition</code></td>
-<td><code>PADDLEOCR_ACCESS_TOKEN</code>（access token）</td>
-<td><code>PADDLEOCR_BASE_URL</code>（API base URL，默认官方服务）</td>
-</tr>
-<tr>
-<td><code>paddleocr-doc-parsing</code></td>
-<td><code>PADDLEOCR_ACCESS_TOKEN</code>（access token）</td>
-<td><code>PADDLEOCR_BASE_URL</code>（API base URL，默认官方服务）</td>
-</tr>
-</tbody>
-</table>
+<p>安装完成后，配置如下环境变量：</p>
+<ul>
+<li>必填：<code>PADDLEOCR_ACCESS_TOKEN</code>（access token）</li>
+<li>可选：<code>PADDLEOCR_BASE_URL</code>（API base URL，默认官方服务）</li>
+</ul>
 <p>获取 access token：访问 <a href="https://aistudio.baidu.com/account/accessToken">AI Studio Access Token 页面</a></p>
 <p>部分 AI 应用的配置方式如下：</p>
 <ul>

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,35 +12,35 @@
         <meta name="author" content="PaddleOCR PMC">
       
       
-        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.html">
+        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/inference_deployment/cross_platform/android_deployment.html">
       
       
-        <link rel="prev" href="../algorithm/PaddleOCR-VL/PaddleOCR-VL.html">
+        <link rel="prev" href="on_device_deployment.html">
       
       
-        <link rel="next" href="PaddleOCR-VL-Kunlunxin-XPU.html">
+        <link rel="next" href="browser.html">
       
       
         
-          <link rel="alternate" href="PaddleOCR-VL-NVIDIA-Blackwell.html" hreflang="zh">
+          <link rel="alternate" href="../../../../version3.x/inference_deployment/cross_platform/android_deployment.html" hreflang="zh">
         
-          <link rel="alternate" href="../../en/version3.x/pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.html" hreflang="en">
+          <link rel="alternate" href="android_deployment.html" hreflang="en">
         
       
       
-      <link rel="icon" href="../logo.jpg">
+      <link rel="icon" href="../../../../version3.x/logo.jpg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程 - PaddleOCR 文档</title>
+        <title>Android Deployment - PaddleOCR Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -157,7 +157,7 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -182,8 +182,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#paddleocr-vl-nvidia-blackwell-gpu" class="md-skip">
-          跳转至
+        <a href="#pp-ocrv6-android-demo" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -197,12 +197,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
 You're not viewing the latest version.
-<a href="../../..">
+<a href="../../../../..">
     <strong>Click here to go to latest.</strong>
 </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../../../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -213,10 +213,10 @@ You're not viewing the latest version.
   
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="PaddleOCR 文档" class="md-header__button md-logo" aria-label="PaddleOCR 文档" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="PaddleOCR Documentation" class="md-header__button md-logo" aria-label="PaddleOCR Documentation" data-md-component="logo">
       
-  <img src="../logo.jpg" alt="logo">
+  <img src="../../../../version3.x/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -227,13 +227,13 @@ You're not viewing the latest version.
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            PaddleOCR 文档
+            PaddleOCR Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程
+              Android Deployment
             
           </span>
         </div>
@@ -273,20 +273,20 @@ You're not viewing the latest version.
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="PaddleOCR-VL-NVIDIA-Blackwell.html" hreflang="zh" class="md-select__link">
+            <a href="../../../../version3.x/inference_deployment/cross_platform/android_deployment.html" hreflang="zh" class="md-select__link">
               简体中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/version3.x/pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.html" hreflang="en" class="md-select__link">
+            <a href="android_deployment.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -307,21 +307,21 @@ You're not viewing the latest version.
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -334,7 +334,7 @@ You're not viewing the latest version.
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -346,7 +346,7 @@ You're not viewing the latest version.
     
     
       <div class="md-header__source">
-        <a href="https://github.com/PaddlePaddle/PaddleOCR" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/PaddlePaddle/PaddleOCR" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -361,7 +361,7 @@ You're not viewing the latest version.
   
     
       
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -371,7 +371,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../../../index.html" class="md-tabs__link">
         
   
   
@@ -390,13 +390,13 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../installation.html" class="md-tabs__link">
+      <a href="../../installation.html" class="md-tabs__link">
         
   
   
     
   
-  安装
+  Installation
 
       </a>
     </li>
@@ -409,13 +409,13 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../quick_start.html" class="md-tabs__link">
+      <a href="../../../quick_start.html" class="md-tabs__link">
         
   
   
     
   
-  快速开始
+  Quick Start
 
       </a>
     </li>
@@ -430,7 +430,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="OCR.html" class="md-tabs__link">
+        <a href="../../pipeline_usage/OCR.html" class="md-tabs__link">
           
   
   
@@ -452,7 +452,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="PP-StructureV3.html" class="md-tabs__link">
+        <a href="../../pipeline_usage/PP-StructureV3.html" class="md-tabs__link">
           
   
   
@@ -474,7 +474,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="PP-ChatOCRv4.html" class="md-tabs__link">
+        <a href="../../pipeline_usage/PP-ChatOCRv4.html" class="md-tabs__link">
           
   
   
@@ -492,13 +492,11 @@ You're not viewing the latest version.
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="PaddleOCR-VL.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../pipeline_usage/PaddleOCR-VL.html" class="md-tabs__link">
           
   
   
@@ -516,6 +514,8 @@ You're not viewing the latest version.
   
   
   
+    
+  
   
     
     
@@ -523,17 +523,19 @@ You're not viewing the latest version.
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../inference_deployment/local_inference/high_performance_inference.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../local_inference/high_performance_inference.html" class="md-tabs__link">
           
   
   
     
   
-  推理与部署
+  Inference and Deployment
 
         </a>
       </li>
@@ -552,13 +554,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../integrations/mcp_server.html" class="md-tabs__link">
+        <a href="../../integrations/mcp_server.html" class="md-tabs__link">
           
   
   
     
   
-  生态集成
+  Ecosystem Integrations
 
         </a>
       </li>
@@ -574,13 +576,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../module_usage/module_overview.html" class="md-tabs__link">
+        <a href="../../module_usage/module_overview.html" class="md-tabs__link">
           
   
   
     
   
-  模块列表
+  Module List
 
         </a>
       </li>
@@ -596,13 +598,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="pipeline_overview.html" class="md-tabs__link">
+        <a href="../../pipeline_usage/pipeline_overview.html" class="md-tabs__link">
           
   
   
     
   
-  产线列表
+  Pipeline List
 
         </a>
       </li>
@@ -625,13 +627,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../../data_anno_synth/x_anylabeling.html" class="md-tabs__link">
+        <a href="../../../data_anno_synth/x_anylabeling.html" class="md-tabs__link">
           
   
   
     
   
-  数据标注与合成&数据集
+  Data Annotation and Synthesis & Datasets
 
         </a>
       </li>
@@ -650,13 +652,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../other_devices_support/multi_devices_use_guide.html" class="md-tabs__link">
+        <a href="../../other_devices_support/multi_devices_use_guide.html" class="md-tabs__link">
           
   
   
     
   
-  多硬件使用
+  Multi-Devices Usage
 
         </a>
       </li>
@@ -672,13 +674,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../paddleocr_and_paddlex.html" class="md-tabs__link">
+        <a href="../../paddleocr_and_paddlex.html" class="md-tabs__link">
           
   
   
     
   
-  其他说明
+  Other Notes
 
         </a>
       </li>
@@ -694,13 +696,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../paddlex/overview.html" class="md-tabs__link">
+        <a href="../../paddlex/overview.html" class="md-tabs__link">
           
   
   
     
   
-  低代码全流程开发
+  All-in-One Development
 
         </a>
       </li>
@@ -714,13 +716,13 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../update/update.html" class="md-tabs__link">
+      <a href="../../../update/update.html" class="md-tabs__link">
         
   
   
     
   
-  近期更新
+  Recently Update
 
       </a>
     </li>
@@ -735,7 +737,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../../version2.x/legacy/index.html" class="md-tabs__link">
+        <a href="../../../version2.x/legacy/index.html" class="md-tabs__link">
           
   
   
@@ -755,7 +757,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../../FAQ.html" class="md-tabs__link">
+      <a href="../../../FAQ.html" class="md-tabs__link">
         
   
   
@@ -776,13 +778,13 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../../community/community_contribution.html" class="md-tabs__link">
+        <a href="../../../community/community_contribution.html" class="md-tabs__link">
           
   
   
     
   
-  社区
+  Community
 
         </a>
       </li>
@@ -816,18 +818,18 @@ You're not viewing the latest version.
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="PaddleOCR 文档" class="md-nav__button md-logo" aria-label="PaddleOCR 文档" data-md-component="logo">
+    <a href="../../../index.html" title="PaddleOCR Documentation" class="md-nav__button md-logo" aria-label="PaddleOCR Documentation" data-md-component="logo">
       
-  <img src="../logo.jpg" alt="logo">
+  <img src="../../../../version3.x/logo.jpg" alt="logo">
 
     </a>
-    PaddleOCR 文档
+    PaddleOCR Documentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/PaddlePaddle/PaddleOCR" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/PaddlePaddle/PaddleOCR" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -847,7 +849,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -874,14 +876,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../installation.html" class="md-nav__link">
+      <a href="../../installation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    安装
+    Installation
   
 
     
@@ -901,14 +903,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start.html" class="md-nav__link">
+      <a href="../../../quick_start.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    快速开始
+    Quick Start
   
 
     
@@ -990,14 +992,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="OCR.html" class="md-nav__link">
+      <a href="../../pipeline_usage/OCR.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    使用教程
+    Usage Tutorial
   
 
     
@@ -1018,14 +1020,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
+      <a href="../../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-OCRv5简介
+    PP-OCRv5 Introduction
   
 
     
@@ -1046,14 +1048,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
+      <a href="../../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-OCRv5多语种文字识别
+    PP-OCRv5 Multilingual Text Recognition
   
 
     
@@ -1141,14 +1143,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PP-StructureV3.html" class="md-nav__link">
+      <a href="../../pipeline_usage/PP-StructureV3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    使用教程
+    Usage Tutorial
   
 
     
@@ -1169,14 +1171,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-StructureV3/PP-StructureV3.html" class="md-nav__link">
+      <a href="../../algorithm/PP-StructureV3/PP-StructureV3.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-StructureV3简介
+    PP-StructureV3 Introduction
   
 
     
@@ -1264,14 +1266,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PP-ChatOCRv4.html" class="md-nav__link">
+      <a href="../../pipeline_usage/PP-ChatOCRv4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    使用教程
+    Usage Tutorial
   
 
     
@@ -1292,14 +1294,467 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-ChatOCRv4/PP-ChatOCRv4.html" class="md-nav__link">
+      <a href="../../algorithm/PP-ChatOCRv4/PP-ChatOCRv4.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-ChatOCRv4简介
+    PP-ChatOCRv4 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PaddleOCR-VL
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.5 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithm/PaddleOCR-VL/PaddleOCR-VL.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL NVIDIA Blackwell-Architecture GPUs Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Kunlunxin XPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-Hygon-DCU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Hygon DCU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-MetaX-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL MetaX GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-Iluvatar-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Iluvatar GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Huawei Ascend NPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-Apple-Silicon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Apple Silicon Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-AMD-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL AMD GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline_usage/PaddleOCR-VL-Intel-Arc-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Intel Arc GPU Usage Tutorial
   
 
     
@@ -1330,24 +1785,6 @@ You're not viewing the latest version.
   
     
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
       
         
       
@@ -1373,17 +1810,17 @@ You're not viewing the latest version.
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL
+    Inference and Deployment
   
 
     
@@ -1394,705 +1831,12 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    PaddleOCR-VL
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.5.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL-1.5简介
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL-1.6简介
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL简介
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="PaddleOCR-VL-NVIDIA-Blackwell.html" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        本硬件支持的使用目标
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 本地运行环境准备
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 本地运行环境准备">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 方法一：使用 Docker 镜像
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-paddleocr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 方法二：手动安装推理引擎和 PaddleOCR
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 快速开始
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-vlm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 使用 VLM 推理服务
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 使用 VLM 推理服务">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-vlm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 启动 VLM 推理服务
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 启动 VLM 推理服务">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#311-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1.1 方法一：使用 Docker 镜像
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#312-paddleocr-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1.2 方法二：通过 PaddleOCR CLI 安装和使用
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 客户端使用方法
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 性能调优
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 服务化部署
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 服务化部署">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-docker-compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 方法一：使用 Docker Compose 部署
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 方法二：手动部署
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 客户端调用方式
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.4 产线配置调整说明
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 模型微调
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-Kunlunxin-XPU.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL 昆仑芯 XPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-Hygon-DCU.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL 海光 DCU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-MetaX-GPU.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL 沐曦 GPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-Iluvatar-GPU.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL 天数 GPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL 华为昇腾 NPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-Apple-Silicon.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL Apple Silicon 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-AMD-GPU.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL AMD GPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="PaddleOCR-VL-Intel-Arc-GPU.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PaddleOCR-VL Intel Arc GPU 使用教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    推理与部署
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
   
-    推理与部署
+    Inference and Deployment
   
 
           </label>
@@ -2121,10 +1865,13 @@ You're not viewing the latest version.
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2133,14 +1880,14 @@ You're not viewing the latest version.
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
         
           
-          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    本地推理
+    Local Inference
   
 
     
@@ -2156,7 +1903,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    本地推理
+    Local Inference
   
 
           </label>
@@ -2169,14 +1916,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/local_inference/high_performance_inference.html" class="md-nav__link">
+      <a href="../local_inference/high_performance_inference.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    高性能推理
+    High-Performance Inference
   
 
     
@@ -2197,14 +1944,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/local_inference/inference_engine.html" class="md-nav__link">
+      <a href="../local_inference/inference_engine.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    推理引擎与配置说明
+    Inference Engine and Configuration
   
 
     
@@ -2225,14 +1972,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/local_inference/parallel_inference.html" class="md-nav__link">
+      <a href="../local_inference/parallel_inference.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    产线并行推理
+    Parallel Inference for Pipelines
   
 
     
@@ -2286,7 +2033,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    C++ 本地部署
+    C++ Local Deployment
   
 
     
@@ -2302,7 +2049,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    C++ 本地部署
+    C++ Local Deployment
   
 
           </label>
@@ -2315,14 +2062,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/local_inference/cpp/cpp_local_deployment.html" class="md-nav__link">
+      <a href="../local_inference/cpp/cpp_local_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    概述
+    Overview
   
 
     
@@ -2343,14 +2090,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/local_inference/cpp/OCR.html" class="md-nav__link">
+      <a href="../local_inference/cpp/OCR.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    通用 OCR 产线 C++ 本地部署 - Linux
+    C++ Local Deployment for General OCR Pipeline - Linux
   
 
     
@@ -2371,14 +2118,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/local_inference/cpp/OCR_windows.html" class="md-nav__link">
+      <a href="../local_inference/cpp/OCR_windows.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    通用 OCR 产线 C++ 本地部署 - Windows
+    C++ Local Deployment for General OCR Pipeline - Windows
   
 
     
@@ -2427,10 +2174,13 @@ You're not viewing the latest version.
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2439,14 +2189,14 @@ You're not viewing the latest version.
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
         
           
-          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    服务化
+    Serving
   
 
     
@@ -2462,7 +2212,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    服务化
+    Serving
   
 
           </label>
@@ -2475,14 +2225,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/serving/serving.html" class="md-nav__link">
+      <a href="../serving/serving.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    自部署服务化
+    Self-hosted Serving
   
 
     
@@ -2540,7 +2290,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR 官方 API
+    PaddleOCR official API
   
 
     
@@ -2556,7 +2306,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    PaddleOCR 官方 API
+    PaddleOCR official API
   
 
           </label>
@@ -2569,14 +2319,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/serving/paddleocr_official_api/overview.html" class="md-nav__link">
+      <a href="../serving/paddleocr_official_api/overview.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    总览
+    Overview
   
 
     
@@ -2597,7 +2347,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/serving/paddleocr_official_api/python.html" class="md-nav__link">
+      <a href="../serving/paddleocr_official_api/python.html" class="md-nav__link">
         
   
   
@@ -2625,7 +2375,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/serving/paddleocr_official_api/typescript.html" class="md-nav__link">
+      <a href="../serving/paddleocr_official_api/typescript.html" class="md-nav__link">
         
   
   
@@ -2653,7 +2403,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/serving/paddleocr_official_api/go.html" class="md-nav__link">
+      <a href="../serving/paddleocr_official_api/go.html" class="md-nav__link">
         
   
   
@@ -2681,7 +2431,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/serving/paddleocr_official_api/cli.html" class="md-nav__link">
+      <a href="../serving/paddleocr_official_api/cli.html" class="md-nav__link">
         
   
   
@@ -2722,8 +2472,10 @@ You're not viewing the latest version.
                 
   
   
+    
   
   
+  
     
     
       
@@ -2738,27 +2490,28 @@ You're not viewing the latest version.
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    跨端部署
+    Cross-Platform Deployment
   
 
     
@@ -2769,12 +2522,12 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    跨端部署
+    Cross-Platform Deployment
   
 
           </label>
@@ -2787,14 +2540,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="on_device_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    端侧部署
+    On-Device Deployment
   
 
     
@@ -2812,17 +2565,44 @@ You're not viewing the latest version.
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../inference_deployment/cross_platform/android_deployment.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android Deployment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="android_deployment.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Android 部署
+    Android Deployment
   
 
     
@@ -2831,6 +2611,264 @@ You're not viewing the latest version.
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clone-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Clone the Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-prepare-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Prepare Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-build-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Build and Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-try-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Try the Demo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdk-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDK Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SDK Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-source-code-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Source Code Dependency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-aar-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: AAR Dependency
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Instance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perform-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perform OCR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2843,14 +2881,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/cross_platform/browser.html" class="md-nav__link">
+      <a href="browser.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    浏览器端部署
+    Browser Deployment
   
 
     
@@ -2893,10 +2931,13 @@ You're not viewing the latest version.
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2905,14 +2946,14 @@ You're not viewing the latest version.
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_4" >
         
           
-          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    其它
+    Other
   
 
     
@@ -2928,7 +2969,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    其它
+    Other
   
 
           </label>
@@ -2941,14 +2982,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/others/obtaining_onnx_models.html" class="md-nav__link">
+      <a href="../others/obtaining_onnx_models.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    获取ONNX模型
+    Obtaining ONNX Models
   
 
     
@@ -2969,14 +3010,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/others/packaging.html" class="md-nav__link">
+      <a href="../others/packaging.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    打包 PaddleOCR 项目
+    Package PaddleOCR Projects
   
 
     
@@ -2997,7 +3038,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/others/benchmark.html" class="md-nav__link">
+      <a href="../others/benchmark.html" class="md-nav__link">
         
   
   
@@ -3071,7 +3112,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    生态集成
+    Ecosystem Integrations
   
 
     
@@ -3087,7 +3128,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    生态集成
+    Ecosystem Integrations
   
 
           </label>
@@ -3100,14 +3141,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../integrations/mcp_server.html" class="md-nav__link">
+      <a href="../../integrations/mcp_server.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    MCP 服务器
+    MCP Server
   
 
     
@@ -3128,7 +3169,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../integrations/skills.html" class="md-nav__link">
+      <a href="../../integrations/skills.html" class="md-nav__link">
         
   
   
@@ -3220,7 +3261,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    模块列表
+    Module List
   
 
     
@@ -3236,7 +3277,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    模块列表
+    Module List
   
 
           </label>
@@ -3249,14 +3290,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/module_overview.html" class="md-nav__link">
+      <a href="../../module_usage/module_overview.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    模块概述
+    Module Overview
   
 
     
@@ -3277,14 +3318,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/doc_img_orientation_classification.html" class="md-nav__link">
+      <a href="../../module_usage/doc_img_orientation_classification.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文档图像方向分类模块
+    Document Image Orientation Classification Module
   
 
     
@@ -3305,14 +3346,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/doc_vlm.html" class="md-nav__link">
+      <a href="../../module_usage/doc_vlm.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文档类视觉语言模型模块
+    Document Visual Language Model Module
   
 
     
@@ -3333,14 +3374,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/formula_recognition.html" class="md-nav__link">
+      <a href="../../module_usage/formula_recognition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    公式识别模块
+    Formula Recognition Module
   
 
     
@@ -3361,14 +3402,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/layout_detection.html" class="md-nav__link">
+      <a href="../../module_usage/layout_detection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    版面区域检测模块
+    Layout Detection
   
 
     
@@ -3389,14 +3430,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/layout_analysis.html" class="md-nav__link">
+      <a href="../../module_usage/layout_analysis.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    版面分析模块
+    Layout Analysis
   
 
     
@@ -3417,14 +3458,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/seal_text_detection.html" class="md-nav__link">
+      <a href="../../module_usage/seal_text_detection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    印章文本检测模块
+    Seal Text Detection
   
 
     
@@ -3445,14 +3486,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/table_cells_detection.html" class="md-nav__link">
+      <a href="../../module_usage/table_cells_detection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    表格单元格检测模块
+    Table Cell Detection Module
   
 
     
@@ -3473,14 +3514,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/table_classification.html" class="md-nav__link">
+      <a href="../../module_usage/table_classification.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    表格分类模块
+    Table Classification Module
   
 
     
@@ -3501,14 +3542,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/table_structure_recognition.html" class="md-nav__link">
+      <a href="../../module_usage/table_structure_recognition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    表格结构识别模块
+    Table Structure Recognition Module
   
 
     
@@ -3529,14 +3570,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/text_detection.html" class="md-nav__link">
+      <a href="../../module_usage/text_detection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文本检测模块
+    Text Detection Module
   
 
     
@@ -3557,14 +3598,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/text_image_unwarping.html" class="md-nav__link">
+      <a href="../../module_usage/text_image_unwarping.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文本图像矫正模块
+    Text Image Rectification Module
   
 
     
@@ -3585,14 +3626,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/textline_orientation_classification.html" class="md-nav__link">
+      <a href="../../module_usage/textline_orientation_classification.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文本行方向分类模块
+    Text Line Orientation Classification Module
   
 
     
@@ -3613,14 +3654,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/text_recognition.html" class="md-nav__link">
+      <a href="../../module_usage/text_recognition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文本识别模块
+    Text Recognition Module
   
 
     
@@ -3641,14 +3682,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/chart_parsing.html" class="md-nav__link">
+      <a href="../../module_usage/chart_parsing.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    图表解析模块
+    Chart Parsing Module
   
 
     
@@ -3717,7 +3758,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    产线列表
+    Pipeline List
   
 
     
@@ -3733,7 +3774,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    产线列表
+    Pipeline List
   
 
           </label>
@@ -3746,14 +3787,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="pipeline_overview.html" class="md-nav__link">
+      <a href="../../pipeline_usage/pipeline_overview.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    产线概述
+    Pipeline Overview
   
 
     
@@ -3774,14 +3815,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="formula_recognition.html" class="md-nav__link">
+      <a href="../../pipeline_usage/formula_recognition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    公式识别产线
+    Formula Recognition Pipeline
   
 
     
@@ -3802,14 +3843,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="doc_preprocessor.html" class="md-nav__link">
+      <a href="../../pipeline_usage/doc_preprocessor.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文档图像预处理产线
+    Document Image Preprocessing Pipeline
   
 
     
@@ -3830,14 +3871,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="doc_understanding.html" class="md-nav__link">
+      <a href="../../pipeline_usage/doc_understanding.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    文档理解产线
+    Document Understanding Pipeline
   
 
     
@@ -3858,14 +3899,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="seal_recognition.html" class="md-nav__link">
+      <a href="../../pipeline_usage/seal_recognition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    印章文本识别产线
+    Seal Text Recognition Pipeline
   
 
     
@@ -3886,14 +3927,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="table_recognition_v2.html" class="md-nav__link">
+      <a href="../../pipeline_usage/table_recognition_v2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    通用表格识别v2产线
+    General Table Recognition v2 Pipeline
   
 
     
@@ -3914,14 +3955,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PP-DocTranslation.html" class="md-nav__link">
+      <a href="../../pipeline_usage/PP-DocTranslation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-DocTranslation产线
+    PP-DocTranslation Pipeline
   
 
     
@@ -3982,7 +4023,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    数据标注与合成&数据集
+    Data Annotation and Synthesis & Datasets
   
 
     
@@ -3998,7 +4039,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    数据标注与合成&数据集
+    Data Annotation and Synthesis & Datasets
   
 
           </label>
@@ -4042,7 +4083,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    数据标注
+    Data Annotation
   
 
     
@@ -4058,7 +4099,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    数据标注
+    Data Annotation
   
 
           </label>
@@ -4071,14 +4112,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../data_anno_synth/x_anylabeling.html" class="md-nav__link">
+      <a href="../../../data_anno_synth/x_anylabeling.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    X-AnyLabeling 文档解析
+    Document Parsing with X-AnyLabeling
   
 
     
@@ -4099,14 +4140,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../data_anno_synth/data_annotation.html" class="md-nav__link">
+      <a href="../../../data_anno_synth/data_annotation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    其它数据标注工具
+    Other Data Annotation Tools
   
 
     
@@ -4164,7 +4205,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    数据合成
+    Data Synthesis
   
 
     
@@ -4180,7 +4221,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    数据合成
+    Data Synthesis
   
 
           </label>
@@ -4193,14 +4234,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../data_anno_synth/data_synthesis.html" class="md-nav__link">
+      <a href="../../../data_anno_synth/data_synthesis.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    数据合成工具
+    Data Synthesis Tools
   
 
     
@@ -4268,7 +4309,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    数据集
+    Datasets
   
 
     
@@ -4284,7 +4325,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    数据集
+    Datasets
   
 
           </label>
@@ -4297,14 +4338,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/datasets.html" class="md-nav__link">
+      <a href="../../../datasets/datasets.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    通用中英文OCR数据集
+    General Chinese and English OCR dataset
   
 
     
@@ -4325,14 +4366,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/handwritten_datasets.html" class="md-nav__link">
+      <a href="../../../datasets/handwritten_datasets.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    手写中文OCR数据集
+    Handwritten Chinese OCR Dataset
   
 
     
@@ -4353,14 +4394,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/vertical_and_multilingual_datasets.html" class="md-nav__link">
+      <a href="../../../datasets/vertical_and_multilingual_datasets.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    垂类多语言OCR数据集
+    Vertical multi-language OCR dataset
   
 
     
@@ -4381,14 +4422,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/layout_datasets.html" class="md-nav__link">
+      <a href="../../../datasets/layout_datasets.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    版面分析数据集
+    Layout Analysis Dataset
   
 
     
@@ -4409,14 +4450,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/table_datasets.html" class="md-nav__link">
+      <a href="../../../datasets/table_datasets.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    表格识别数据集
+    Table recognition dataset
   
 
     
@@ -4437,14 +4478,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/kie_datasets.html" class="md-nav__link">
+      <a href="../../../datasets/kie_datasets.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    关键信息提取数据集
+    Key Information Extraction Dataset
   
 
     
@@ -4513,7 +4554,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    多硬件使用
+    Multi-Devices Usage
   
 
     
@@ -4529,7 +4570,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    多硬件使用
+    Multi-Devices Usage
   
 
           </label>
@@ -4542,14 +4583,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/multi_devices_use_guide.html" class="md-nav__link">
+      <a href="../../other_devices_support/multi_devices_use_guide.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR 多硬件使用指南
+    PaddleOCR Multi-Devices Usage Guide
   
 
     
@@ -4570,14 +4611,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_NPU.html" class="md-nav__link">
+      <a href="../../other_devices_support/paddlepaddle_install_NPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    昇腾 NPU 飞桨安装教程
+    Ascend NPU PaddlePaddle Installation Tutorial
   
 
     
@@ -4598,14 +4639,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_XPU.html" class="md-nav__link">
+      <a href="../../other_devices_support/paddlepaddle_install_XPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    昆仑 XPU 飞桨安装教程
+    Kunlun XPU PaddlePaddle Installation Tutorial
   
 
     
@@ -4666,7 +4707,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    其他说明
+    Other Notes
   
 
     
@@ -4682,7 +4723,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    其他说明
+    Other Notes
   
 
           </label>
@@ -4695,14 +4736,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../paddleocr_and_paddlex.html" class="md-nav__link">
+      <a href="../../paddleocr_and_paddlex.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR 与 PaddleX
+    PaddleOCR and PaddleX
   
 
     
@@ -4723,14 +4764,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../update/upgrade_notes.html" class="md-nav__link">
+      <a href="../../../update/upgrade_notes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR 3.x 升级说明
+    PaddleOCR 3.x Upgrade Notes
   
 
     
@@ -4751,14 +4792,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../logging.html" class="md-nav__link">
+      <a href="../../logging.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    配置 paddleocr 包日志系统
+    Configure logging for the paddleocr Python package
   
 
     
@@ -4817,7 +4858,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    低代码全流程开发
+    All-in-One Development
   
 
     
@@ -4833,7 +4874,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    低代码全流程开发
+    All-in-One Development
   
 
           </label>
@@ -4846,14 +4887,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../paddlex/overview.html" class="md-nav__link">
+      <a href="../../paddlex/overview.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    概述
+    Overview
   
 
     
@@ -4874,14 +4915,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../paddlex/quick_start.html" class="md-nav__link">
+      <a href="../../paddlex/quick_start.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    快速开始
+    Quick Start
   
 
     
@@ -4909,14 +4950,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../update/update.html" class="md-nav__link">
+      <a href="../../../update/update.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    近期更新
+    Recently Update
   
 
     
@@ -4981,7 +5022,7 @@ You're not viewing the latest version.
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../version2.x/legacy/index.html" class="md-nav__link ">
+            <a href="../../../version2.x/legacy/index.html" class="md-nav__link ">
               
   
   
@@ -5025,14 +5066,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/model_list_2.x.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/model_list_2.x.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    模型列表
+    Model List
   
 
     
@@ -5053,14 +5094,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/python_infer.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/python_infer.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    基于Python预测引擎推理
+    Python Inference
   
 
     
@@ -5081,14 +5122,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/cpp_infer.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/cpp_infer.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    基于C++预测引擎推理
+    CPP Inference
   
 
     
@@ -5109,14 +5150,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/windows_vs2019_build.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/windows_vs2019_build.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Visual Studio 2019 Community CMake 编译指南
+    Visual Studio 2019 Community CMake Compilation Guide
   
 
     
@@ -5137,14 +5178,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/paddle_server.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/paddle_server.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    服务化部署
+    Server Deployment
   
 
     
@@ -5165,14 +5206,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/android_demo.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/android_demo.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Android部署
+    Android Deployment
   
 
     
@@ -5193,14 +5234,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/lite.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/lite.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    端侧部署
+    On-Device Deployment
   
 
     
@@ -5221,14 +5262,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/paddle2onnx.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/paddle2onnx.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Paddle2ONNX模型转化与预测
+    Paddle2ONNX
   
 
     
@@ -5249,14 +5290,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/paddle_cloud.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/paddle_cloud.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    云上飞桨部署工具
+    Paddle Cloud
   
 
     
@@ -5277,7 +5318,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../version2.x/legacy/benchmark.html" class="md-nav__link">
+      <a href="../../../version2.x/legacy/benchmark.html" class="md-nav__link">
         
   
   
@@ -5312,7 +5353,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../FAQ.html" class="md-nav__link">
+      <a href="../../../FAQ.html" class="md-nav__link">
         
   
   
@@ -5370,7 +5411,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    社区
+    Community
   
 
     
@@ -5386,7 +5427,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    社区
+    Community
   
 
           </label>
@@ -5399,14 +5440,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../community/community_contribution.html" class="md-nav__link">
+      <a href="../../../community/community_contribution.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    社区贡献
+    Community Contribution
   
 
     
@@ -5427,14 +5468,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../community/code_and_doc.html" class="md-nav__link">
+      <a href="../../../community/code_and_doc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    附录
+    Appendix
   
 
     
@@ -5468,7 +5509,7 @@ You're not viewing the latest version.
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -5477,15 +5518,15 @@ You're not viewing the latest version.
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        本硬件支持的使用目标
+        Introduction
       
     </span>
   </a>
@@ -5493,22 +5534,55 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 本地运行环境准备
+        Features
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 本地运行环境准备">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-docker" class="md-nav__link">
+  <a href="#1-clone-the-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 方法一：使用 Docker 镜像
+        1. Clone the Project
       
     </span>
   </a>
@@ -5516,10 +5590,32 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-paddleocr" class="md-nav__link">
+  <a href="#2-prepare-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2 方法二：手动安装推理引擎和 PaddleOCR
+        2. Prepare Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-build-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Build and Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-try-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Try the Demo
       
     </span>
   </a>
@@ -5532,45 +5628,22 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#sdk-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 快速开始
+        SDK Integration
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-vlm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 使用 VLM 推理服务
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 使用 VLM 推理服务">
+    <nav class="md-nav" aria-label="SDK Integration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-vlm" class="md-nav__link">
+  <a href="#option-1-source-code-dependency" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 启动 VLM 推理服务
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 启动 VLM 推理服务">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#311-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1.1 方法一：使用 Docker 镜像
+        Option 1: Source Code Dependency
       
     </span>
   </a>
@@ -5578,37 +5651,10 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#312-paddleocr-cli" class="md-nav__link">
+  <a href="#option-2-aar-dependency" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.2 方法二：通过 PaddleOCR CLI 安装和使用
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 客户端使用方法
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 性能调优
+        Option 2: AAR Dependency
       
     </span>
   </a>
@@ -5621,22 +5667,22 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#api-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 服务化部署
+        API Reference
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 服务化部署">
+    <nav class="md-nav" aria-label="API Reference">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-docker-compose" class="md-nav__link">
+  <a href="#create-instance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 方法一：使用 Docker Compose 部署
+        Create Instance
       
     </span>
   </a>
@@ -5644,10 +5690,10 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
+  <a href="#perform-ocr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 方法二：手动部署
+        Perform OCR
       
     </span>
   </a>
@@ -5655,10 +5701,10 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
+  <a href="#release-resources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 客户端调用方式
+        Release Resources
       
     </span>
   </a>
@@ -5666,10 +5712,21 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#44" class="md-nav__link">
+  <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4 产线配置调整说明
+        Configuration Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Models
       
     </span>
   </a>
@@ -5682,10 +5739,21 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
+  <a href="#performance-testing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 模型微调
+        Performance Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
       
     </span>
   </a>
@@ -5734,7 +5802,7 @@ You're not viewing the latest version.
 <!-- Actions -->
 
   
-    <a href="https://github.com/PaddlePaddle/PaddleOCR/edit/main/docs/version3.x/pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/edit/main/docs/version3.x/inference_deployment/cross_platform/android_deployment.en.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -5743,7 +5811,7 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/PaddlePaddle/PaddleOCR/raw/main/docs/version3.x/pipeline_usage/PaddleOCR-VL-NVIDIA-Blackwell.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/raw/main/docs/version3.x/inference_deployment/cross_platform/android_deployment.en.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
@@ -5759,417 +5827,256 @@ You're not viewing the latest version.
 
 
 <!-- Page content -->
-<h1 id="paddleocr-vl-nvidia-blackwell-gpu">PaddleOCR-VL NVIDIA Blackwell 架构 GPU 使用教程<a class="headerlink" href="#paddleocr-vl-nvidia-blackwell-gpu" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>
-除非另有说明，本教程中提到的 “PaddleOCR-VL” 均指 PaddleOCR-VL 系列模型（如 PaddleOCR-VL-1.6 等）；若特指 PaddleOCR-VL v1 版本，将另行明确标注。</p>
-</div>
-<p>本教程是 PaddleOCR-VL 在 NVIDIA Blackwell 架构 GPU 上的使用指南，涵盖了从本地运行环境准备到服务化部署的完整流程。</p>
-<p>NVIDIA Blackwell 架构 GPU 包括但不限于以下几种：</p>
+<h1 id="pp-ocrv6-android-demo">PP-OCRv6 Android Demo<a class="headerlink" href="#pp-ocrv6-android-demo" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>This project is an Android deployment example for PaddleOCR v6, implementing mobile OCR inference using ONNX Runtime. The project adopts a <strong>SDK and Demo separation</strong> architecture, where the SDK module can be independently integrated into third-party applications.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
-<li>RTX 5090</li>
-<li>RTX 5080</li>
-<li>RTX 5070、RTX 5070 Ti</li>
-<li>RTX 5060、RTX 5060 Ti</li>
-<li>RTX 5050</li>
+<li>End-to-end text detection and recognition pipeline</li>
+<li>Supports PP-OCRv6 series ONNX models</li>
+<li>Detailed performance timing (detection/recognition stage breakdown)</li>
+<li>MVVM + Jetpack Compose Demo application</li>
+<li>AAR integration support</li>
 </ul>
-<p>目前 PaddleOCR-VL 已在 RTX 5070 上完成精度、速度验证；鉴于硬件环境的多样性，其他 NVIDIA Blackwell 架构 GPU 的兼容性尚未验证。我们诚挚欢迎社区用户在不同硬件上进行测试并反馈您的运行结果。</p>
-<p>教程开始前，<strong>请确认您的 NVIDIA 驱动支持 CUDA 12.9 或以上版本</strong>。</p>
-<h2 id="_1">本硬件支持的使用目标<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>请在本硬件教程中按下表继续阅读。</p>
+<h2 id="project-structure">Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ppocr-android/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── ppocr-sdk/                    # OCR SDK (Android Library)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── src/main/
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   │   ├── assets/models/        # Model files directory
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   │   │   ├── det/              # Detection model: inference.onnx
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   │   │   └── rec/              # Recognition model: inference.onnx, inference.yml
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   │   └── java/com/paddle/ocr/
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   │       ├── PaddleOCR.kt      # [Public API] SDK entry point
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   │       ├── PaddleOCRConfig.kt # [Public API] Inference configuration
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   │       └── ...
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   └── build.gradle.kts
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── app/                          # Demo App
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   ├── src/main/java/com/paddle/ocr/demo/
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   │   ├── OCRApplication.kt     # Initialize SDK
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│   │   └── ui/                   # Compose UI
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│   └── build.gradle.kts
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── run_benchmark.sh              # Performance test script
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└── README.md
+</span></code></pre></div>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>目标</th>
-<th>本硬件上的支持情况</th>
-<th>从哪里开始阅读</th>
+<th>Dependency</th>
+<th>Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>本地直接推理</td>
-<td>支持</td>
-<td>阅读第 1 节“本地运行环境准备”和第 2 节“快速开始”。</td>
+<td>Android Studio</td>
+<td>Ladybug (2024.2+)</td>
 </tr>
 <tr>
-<td>客户端 + VLM 推理服务</td>
-<td>支持</td>
-<td>先完成本地直接推理，再阅读第 3 节“使用 VLM 推理服务”。</td>
+<td>JDK</td>
+<td>17</td>
 </tr>
 <tr>
-<td>完整 API 服务</td>
-<td>支持 Docker Compose 和手动部署</td>
-<td>如需 Docker Compose，阅读第 4.1 节；如需手动部署，先完成第 1 节“本地运行环境准备”，然后阅读第 4.2 节；随后继续阅读第 4.3 节客户端调用部分和第 4.4 节产线配置调整部分。</td>
+<td>Kotlin</td>
+<td>2.1.0</td>
 </tr>
 <tr>
-<td>模型微调</td>
-<td>支持</td>
-<td>阅读第 5 节“模型微调”。</td>
+<td>minSdk</td>
+<td>26 (Android 8.0)</td>
+</tr>
+<tr>
+<td>ONNX Runtime</td>
+<td>1.21.1</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td>4.5.3</td>
 </tr>
 </tbody>
 </table>
-<p>如果你只是想先确认本硬件支持哪些推理方式，请参考主教程中的 <a href="PaddleOCR-VL.html#paddleocr-vl-对推理设备的支持情况">PaddleOCR-VL 推理方式与硬件支持矩阵</a>。</p>
-<h2 id="1">1. 本地运行环境准备<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><strong>当前硬件支持的本地运行环境准备方式</strong></p>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<h3 id="1-clone-the-project">1. Clone the Project<a class="headerlink" href="#1-clone-the-project" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PaddlePaddle/PaddleOCR.git
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>PaddleOCR/deploy/ppocr-android
+</span></code></pre></div>
+<h3 id="2-prepare-models">2. Prepare Models<a class="headerlink" href="#2-prepare-models" title="Permanent link">&para;</a></h3>
+<p>This project supports the following models:</p>
 <table>
 <thead>
 <tr>
-<th>本地运行环境准备方式</th>
-<th>状态</th>
-<th>说明</th>
+<th>Model</th>
+<th>HuggingFace</th>
+<th>BOS</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>官方 Docker 镜像</td>
-<td>支持并提供步骤</td>
-<td>请继续阅读本节的 1.1。</td>
+<td><strong>PP-OCRv6_small</strong></td>
+<td><a href="https://huggingface.co/PaddlePaddle/PP-OCRv6_small_det_onnx">Detection model</a> / <a href="https://huggingface.co/PaddlePaddle/PP-OCRv6_small_rec_onnx">Recognition model</a></td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_small_det_onnx_infer.tar">Detection model</a> / <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_small_rec_onnx_infer.tar">Recognition model</a></td>
 </tr>
 <tr>
-<td>手动安装推理引擎和 PaddleOCR</td>
-<td>支持并提供步骤</td>
-<td>请继续阅读本节的 1.2。</td>
+<td><strong>PP-OCRv6_tiny</strong></td>
+<td><a href="https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx">Detection model</a> / <a href="https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx">Recognition model</a></td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_tiny_det_onnx_infer.tar">Detection model</a> / <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_tiny_rec_onnx_infer.tar">Recognition model</a></td>
+</tr>
+<tr>
+<td><strong>PP-OCRv5_mobile</strong></td>
+<td><a href="https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_det_onnx">Detection model</a> / <a href="https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec_onnx">Recognition model</a></td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv5_mobile_det_onnx_infer.tar">Detection model</a> / <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv5_mobile_rec_onnx_infer.tar">Recognition model</a></td>
 </tr>
 </tbody>
 </table>
-<p>此步骤主要介绍如何搭建 PaddleOCR-VL 的本地运行环境，有以下两种方式，任选一种即可：</p>
+<p>After downloading and extracting, place the files in <code>ppocr-sdk/src/main/assets/models/</code>:</p>
 <ul>
-<li>
-<p>方法一：使用官方 Docker 镜像。</p>
-</li>
-<li>
-<p>方法二：手动安装推理引擎和 PaddleOCR。</p>
-</li>
+<li>Detection model: place <code>inference.onnx</code> in <code>models/det/</code></li>
+<li>Recognition model: place <code>inference.onnx</code> and <code>inference.yml</code> in <code>models/rec/</code></li>
 </ul>
-<p><strong>我们强烈推荐采用 Docker 镜像的方式，以最大程度减少可能出现的环境问题。</strong></p>
-<h3 id="11-docker">1.1 方法一：使用 Docker 镜像<a class="headerlink" href="#11-docker" title="Permanent link">&para;</a></h3>
-<p>我们推荐使用官方 Docker 镜像（要求 Docker 版本 &gt;= 19.03，机器装配有 GPU 且 NVIDIA 驱动支持 CUDA 12.9 或以上版本）：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>-it<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>--gpus<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>--user<span class="w"> </span>root<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-nvidia-gpu-sm120<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span>/bin/bash
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># 在容器中调用 PaddleOCR CLI 或 Python API</span>
+<h3 id="3-build-and-run">3. Build and Run<a class="headerlink" href="#3-build-and-run" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Build Debug APK</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./gradlew<span class="w"> </span>:app:assembleDebug
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Install to device</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>./gradlew<span class="w"> </span>:app:installDebug
 </span></code></pre></div>
-<p>如果您希望在无法连接互联网的环境中使用 PaddleOCR-VL，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-nvidia-gpu-sm120</code>（镜像的大小约为 10 GB）更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-nvidia-gpu-sm120-offline</code>（镜像的大小约为 12 GB）。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>
-标签后缀为 <code>latest-xxx</code> 的镜像对应最新版本。
-如果本地已经存在对应的 <code>latest</code> 镜像，但希望使用最新功能或修复，建议在继续使用前重新执行一次 <code>docker pull</code> 更新镜像。
-如果希望使用特定版本的 PaddleOCR 镜像，可以将标签中的 <code>latest</code> 替换为对应版本号：<code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>。
-例如：
-<code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:paddleocr3.3-nvidia-gpu-sm120-offline</code></p>
-</div>
-<h3 id="12-paddleocr">1.2 方法二：手动安装推理引擎和 PaddleOCR<a class="headerlink" href="#12-paddleocr" title="Permanent link">&para;</a></h3>
-<p>如果您无法使用 Docker，也可以手动安装推理引擎和 PaddleOCR。本文档验证过的 Python 版本范围为 3.9–3.13。</p>
-<p>本教程提供 PaddlePaddle 安装步骤；若需使用 Transformers 等其他推理引擎，请参考 <a href="PaddleOCR-VL.html#manual-install-inference-engine-and-paddleocr">主教程第 1.2 节</a>。</p>
-<p><strong>我们强烈推荐您在虚拟环境中安装 PaddleOCR-VL，以避免发生依赖冲突。</strong> 例如，使用 Python venv 标准库创建虚拟环境：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 创建虚拟环境</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv_paddleocr
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># 激活环境</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">source</span><span class="w"> </span>.venv_paddleocr/bin/activate
-</span></code></pre></div>
-<p>执行如下命令完成安装：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 注意这里安装的是 cu129 的 PaddlePaddle</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>paddlepaddle-gpu<span class="o">==</span><span class="m">3</span>.2.1<span class="w"> </span>-i<span class="w"> </span>https://www.paddlepaddle.org.cn/packages/stable/cu129/
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="s2">&quot;paddleocr[doc-parser]&quot;</span>
-</span></code></pre></div>
-<blockquote>
-<p><strong>请注意安装 3.2.1 及以上版本的飞桨框架。</strong></p>
-</blockquote>
-<h2 id="2">2. 快速开始<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>请参考 <a href="PaddleOCR-VL.html#2">PaddleOCR-VL 使用教程 - 2. 快速开始</a>。</p>
-<h2 id="3-vlm">3. 使用 VLM 推理服务<a class="headerlink" href="#3-vlm" title="Permanent link">&para;</a></h2>
-<p>本节介绍如何通过 VLM 推理服务接入专用后端。对于当前硬件，这通常用于提升默认配置下的推理性能，以更好满足生产需求。在当前硬件文档中，示例使用 vLLM 和 SGLang 作为 VLM 推理服务后端。</p>
-<h3 id="31-vlm">3.1 启动 VLM 推理服务<a class="headerlink" href="#31-vlm" title="Permanent link">&para;</a></h3>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>
-按照本节说明启动的服务仅负责 PaddleOCR-VL 流程中的 VLM 推理环节，不提供完整的端到端文档解析 API。强烈不建议直接通过 HTTP 请求或使用 OpenAI 客户端调用该服务处理文档图像。若您需要部署具备 PaddleOCR-VL 完整能力的服务，请参考后文的服务化部署部分。</p>
-</div>
-<p><strong>当前硬件支持的启动方式</strong></p>
-<table>
-<thead>
-<tr>
-<th>启动方式</th>
-<th>状态</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>官方 Docker 镜像</td>
-<td>支持并提供步骤</td>
-<td>请继续阅读本节的 3.1.1。</td>
-</tr>
-<tr>
-<td>通过 PaddleOCR CLI 安装依赖后启动</td>
-<td>支持并提供步骤</td>
-<td>请继续阅读本节的 3.1.2。</td>
-</tr>
-<tr>
-<td>直接使用推理加速框架启动</td>
-<td>未验证</td>
-<td>当前硬件可通过 vLLM 或 SGLang 后端启动 VLM 推理服务，但尚未验证直接使用原生框架启动的路径。</td>
-</tr>
-</tbody>
-</table>
-<p>启动 VLM 推理服务有以下两种方式，任选一种即可：</p>
-<ul>
-<li>
-<p>方法一：使用官方 Docker 镜像启动服务。</p>
-</li>
-<li>
-<p>方法二：通过 PaddleOCR CLI 手动安装依赖后启动服务。</p>
-</li>
-</ul>
-<p><strong>我们强烈推荐采用 Docker 镜像的方式，以最大程度减少可能出现的环境问题。</strong></p>
-<h4 id="311-docker">3.1.1 方法一：使用 Docker 镜像<a class="headerlink" href="#311-docker" title="Permanent link">&para;</a></h4>
-<p>PaddleOCR 提供了 Docker 镜像，用于快速启动 vLLM 推理服务。可使用以下命令启动服务（要求 Docker 版本 &gt;= 19.03，机器装配有 GPU 且 NVIDIA 驱动支持 CUDA 12.9 或以上版本）：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span>-it<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span>--gpus<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.6-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>vllm
-</span></code></pre></div>
-<p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120</code>（镜像的大小约为 13 GB）更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120-offline</code>（镜像的大小约为 15 GB）。</p>
-<p>启动 vLLM 推理服务时，我们提供了一套默认参数设置。如果您有调整显存占用等更多参数的需求，可以自行配置更多参数。请参考 <a href="PaddleOCR-VL.html#331">3.3.1 服务端参数调整</a> 创建配置文件，然后将该文件挂载到容器中，并在启动服务的命令中使用 <code>backend_config</code> 指定配置文件，例如：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>-it<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>--gpus<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span>-v<span class="w"> </span>./vllm_config.yml:/tmp/vllm_config.yml<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.6-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>vllm<span class="w"> </span>--backend_config<span class="w"> </span>/tmp/vllm_config.yml
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>
-标签后缀为 <code>latest-xxx</code> 的镜像对应最新版本。
-如果本地已经存在对应的 <code>latest</code> 镜像，但希望使用最新功能或修复，建议在继续使用前重新执行一次 <code>docker pull</code> 更新镜像。
-如果希望使用特定版本的 PaddleOCR 镜像，可以将标签中的 <code>latest</code> 替换为对应版本号：<code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>。
-例如：
-<code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:paddleocr3.3-nvidia-gpu-sm120-offline</code></p>
-</div>
-<h4 id="312-paddleocr-cli">3.1.2 方法二：通过 PaddleOCR CLI 安装和使用<a class="headerlink" href="#312-paddleocr-cli" title="Permanent link">&para;</a></h4>
-<p>由于推理加速框架可能与当前环境中的包存在依赖冲突，建议在虚拟环境中安装：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 如果当前存在已激活的虚拟环境，先通过 `deactivate` 取消激活</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># 创建虚拟环境</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv_vlm
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># 激活环境</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">source</span><span class="w"> </span>.venv_vlm/bin/activate
-</span></code></pre></div>
-<p>vLLM 和 SGLang 依赖 FlashAttention，而安装 FlashAttention 时可能需要使用 nvcc 等 CUDA 编译工具。如果您的环境中没有这些工具（例如在使用 <code>paddleocr-vl</code> 镜像），可以从 <a href="https://github.com/mjun0812/flash-attention-prebuild-wheels">此仓库</a> 获取 FlashAttention 的预编译版本（要求 2.8.3 版本），先安装预编译包，再执行后续命令。例如，在 <code>paddleocr-vl</code> 镜像中，执行 <code>python -m pip install https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.3.14/flash_attn-2.8.3+cu128torch2.8-cp310-cp310-linux_x86_64.whl</code>。对于 FastDeploy，无需执行此步骤。</p>
-<p>安装 PaddleOCR 及推理加速服务依赖，以 vLLM 为例：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 安装 PaddleOCR</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;paddleocr[doc-parser]&quot;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># 安装推理加速服务依赖</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>paddleocr<span class="w"> </span>install_genai_server_deps<span class="w"> </span>vllm
-</span></code></pre></div>
-<p><code>paddleocr install_genai_server_deps</code> 命令用法：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>paddleocr<span class="w"> </span>install_genai_server_deps<span class="w"> </span>&lt;推理加速框架名称&gt;
-</span></code></pre></div>
-<p>当前支持的框架名称为 <code>vllm</code> 和 <code>sglang</code>，分别对应 vLLM 和 SGLang。</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>
-目前 vLLM 和 SGLang 与 Transformers 引擎所需的 transformers 库版本存在冲突，因此同一环境中无法同时安装 Transformers 引擎与 vLLM 或 SGLang。如果使用 Transformers + vLLM 或 Transformers + SGLang 的推理方式，请将版面分析模型和 VLM 服务部署在不同环境中。</p>
-</div>
-<p>安装完成后，可通过 <code>paddleocr genai_server</code> 命令启动服务：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.6-0.9B<span class="w"> </span>--backend<span class="w"> </span>vllm<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span>
-</span></code></pre></div>
-<p>该命令支持的参数如下：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--model_name</code></td>
-<td>模型名称</td>
-</tr>
-<tr>
-<td><code>--model_dir</code></td>
-<td>模型目录</td>
-</tr>
-<tr>
-<td><code>--host</code></td>
-<td>服务器主机名</td>
-</tr>
-<tr>
-<td><code>--port</code></td>
-<td>服务器端口号</td>
-</tr>
-<tr>
-<td><code>--backend</code></td>
-<td>后端名称，即使用的推理加速框架名称，可选 <code>vllm</code> 或 <code>sglang</code></td>
-</tr>
-<tr>
-<td><code>--backend_config</code></td>
-<td>可指定 YAML 文件，包含后端配置</td>
-</tr>
-</tbody>
-</table>
-<h3 id="32">3.2 客户端使用方法<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
-<p>客户端调用方式请参考 <a href="PaddleOCR-VL.html#32">PaddleOCR-VL 使用教程 - 3.2 客户端使用方法</a>。如需在当前硬件上运行客户端，请注意指定 <code>device="gpu"</code>。</p>
-<h3 id="33">3.3 性能调优<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#33">PaddleOCR-VL 使用教程 - 3.3 性能调优</a>。</p>
-<h2 id="4">4. 服务化部署<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p><strong>当前硬件支持的部署方式</strong></p>
-<table>
-<thead>
-<tr>
-<th>部署方式</th>
-<th>状态</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Docker Compose 部署</td>
-<td>支持并提供步骤</td>
-<td>请继续阅读本节的 4.1。</td>
-</tr>
-<tr>
-<td>手动部署</td>
-<td>支持</td>
-<td>请先完成第 1 节“本地运行环境准备”，再继续阅读本节的 4.2。</td>
-</tr>
-</tbody>
-</table>
-<p>此步骤主要介绍如何将 PaddleOCR-VL 部署为服务并调用，有以下两种方式，任选一种即可：</p>
-<ul>
-<li>
-<p>方法一：使用 Docker Compose 部署。</p>
-</li>
-<li>
-<p>方法二：手动安装依赖部署。</p>
-</li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>
-本节所介绍的 PaddleOCR-VL 服务与上一节中的 VLM 推理服务有所区别：后者仅负责完整流程中的一个环节（即 VLM 推理），并作为前者的底层服务被调用。</p>
-</div>
-<h3 id="41-docker-compose">4.1 方法一：使用 Docker Compose 部署<a class="headerlink" href="#41-docker-compose" title="Permanent link">&para;</a></h3>
+<p>Or run directly from Android Studio.</p>
+<h3 id="4-try-the-demo">4. Try the Demo<a class="headerlink" href="#4-try-the-demo" title="Permanent link">&para;</a></h3>
 <ol>
-<li>
-<p>分别从 <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/nvidia-gpu-sm120/compose.yaml">此处</a> 和 <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/nvidia-gpu-sm120/.env">此处</a> 获取 Compose 文件与环境变量配置文件并下载到本地。</p>
-</li>
-<li>
-<p>在 <code>compose.yaml</code> 和 <code>.env</code> 文件所在目录下执行以下命令启动服务器，默认监听 <strong>8080</strong> 端口：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 必须在 compose.yaml 和 .env 文件所在的目录中执行</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
-</span></code></pre></div>
-<blockquote>
-<p>提示：
-<code>compose.yaml</code> 中使用的镜像标签通常由 <code>.env</code> 中的 <code>API_IMAGE_TAG_SUFFIX</code> 和 <code>VLM_IMAGE_TAG_SUFFIX</code> 控制，默认使用 <code>latest-nvidia-gpu-offline</code> 等标签。如需确保拉取到最新的 <code>latest</code> 镜像，可先在当前目录执行 <code>docker compose pull</code>，再执行 <code>docker compose up</code>。
-如果希望使用特定版本的 PaddleOCR 镜像，可将这两个环境变量中的 <code>latest</code> 替换为对应版本号 <code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>，例如 <code>paddleocr3.3-nvidia-gpu-offline</code>。</p>
-</blockquote>
-<p>启动后将看到类似如下输出：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>paddleocr-vl-api             | INFO:     Started server process [1]
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>paddleocr-vl-api             | INFO:     Waiting for application startup.
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>paddleocr-vl-api             | INFO:     Application startup complete.
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>paddleocr-vl-api             | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
-</span></code></pre></div>
-</li>
+<li>Open "PP-OCRv6 Demo" application</li>
+<li>Wait for model loading to complete</li>
+<li>Tap "Select from Gallery" to choose an image</li>
+<li>View recognition results and timing statistics</li>
 </ol>
-<p>此方式基于 vLLM 框架对 VLM 推理进行加速，更适合生产环境部署。</p>
-<p>此外，使用此方式启动服务器后，除拉取镜像外，无需连接互联网。如需在离线环境中部署，可先在联网机器上拉取 Compose 文件中涉及的镜像，导出并传输至离线机器中导入，即可在离线环境下启动服务。</p>
-<p>Docker Compose 通过读取 <code>.env</code> 和 <code>compose.yaml</code> 文件中配置，先后启动 2 个容器，分别运行底层 VLM 推理服务，以及 PaddleOCR-VL 服务（产线服务）。</p>
-<p><code>.env</code> 文件中包含的各环境变量含义如下：</p>
-<ul>
-<li><code>API_IMAGE_TAG_SUFFIX</code>：启动产线服务使用的镜像的标签后缀。</li>
-<li><code>VLM_BACKEND</code>：VLM 推理后端。</li>
-<li><code>VLM_IMAGE_TAG_SUFFIX</code>：启动 VLM 推理服务使用的镜像的标签后缀。</li>
-</ul>
-<p>您可以通过修改 <code>compose.yaml</code> 来满足自定义需求，例如：</p>
-<details>
-<summary>1. 更改 PaddleOCR-VL 服务的端口</summary>
-
-编辑 <code>compose.yaml</code> 文件中的 <code>paddleocr-vl-api.ports</code> 来更改端口。例如，如果您需要将服务端口更换为 8111，可以进行以下修改：
-
-<div class="language-diff highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w"> </span> paddleocr-vl-api:
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w"> </span>   ...
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w"> </span>   ports:
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="gd">-     - 8080:8080</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="gi">+     - 8111:8080</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w"> </span>   ...
+<h2 id="sdk-integration">SDK Integration<a class="headerlink" href="#sdk-integration" title="Permanent link">&para;</a></h2>
+<h3 id="option-1-source-code-dependency">Option 1: Source Code Dependency<a class="headerlink" href="#option-1-source-code-dependency" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Copy <code>ppocr-sdk/</code> to your project root</li>
+<li>Add to <code>settings.gradle.kts</code>:
+   <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">include</span><span class="p">(</span><span class="s">&quot;:ppocr-sdk&quot;</span><span class="p">)</span>
+</span></code></pre></div></li>
+<li>Add to your app module's <code>build.gradle.kts</code>:
+   <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">implementation</span><span class="p">(</span><span class="n">project</span><span class="p">(</span><span class="s">&quot;:ppocr-sdk&quot;</span><span class="p">))</span>
+</span></code></pre></div></li>
+</ol>
+<h3 id="option-2-aar-dependency">Option 2: AAR Dependency<a class="headerlink" href="#option-2-aar-dependency" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Build AAR</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>./gradlew<span class="w"> </span>:ppocr-sdk:assembleRelease
 </span></code></pre></div>
-
-</details>
-
-<details>
-<summary>2. 指定 PaddleOCR-VL 服务所使用的 GPU</summary>
-
-编辑 <code>compose.yaml</code> 文件中的 <code>environment</code> 来更改所使用的 GPU。例如，如果您需要使用卡 1 进行部署，可以进行以下修改：
-
-<div class="language-diff highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w"> </span> paddleocr-vl-api:
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w"> </span>   ...
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w"> </span>   deploy:
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w"> </span>     resources:
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w"> </span>       reservations:
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w"> </span>         devices:
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w"> </span>           - driver: nvidia
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="gd">-             device_ids: [&quot;0&quot;]</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="gi">+             device_ids: [&quot;1&quot;]</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w"> </span>             capabilities: [gpu]
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w"> </span>   ...
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w"> </span> paddleocr-vlm-server:
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w"> </span>   ...
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w"> </span>   deploy:
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w"> </span>     resources:
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w"> </span>       reservations:
-</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w"> </span>         devices:
-</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w"> </span>           - driver: nvidia
-</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="gd">-             device_ids: [&quot;0&quot;]</span>
-</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="gi">+             device_ids: [&quot;1&quot;]</span>
-</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w"> </span>             capabilities: [gpu]
-</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w"> </span>   ...
+<p>AAR output: <code>ppocr-sdk/build/outputs/aar/ppocr-sdk-release.aar</code></p>
+<p>Add to your app module's <code>build.gradle.kts</code>:</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="n">files</span><span class="p">(</span><span class="s">&quot;libs/ppocr-sdk-release.aar&quot;</span><span class="p">))</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="c1">// AAR doesn&#39;t transit dependencies, add manually</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.microsoft.onnxruntime:onnxruntime-android:1.21.1&quot;</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;com.quickbirdstudios:opencv:4.5.3&quot;</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0&quot;</span><span class="p">)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">}</span>
 </span></code></pre></div>
-
-</details>
-
-<details>
-<summary>3. 调整 VLM 服务端配置</summary>
-
-若您想调整 VLM 服务端的配置，可以参考 <a href="./PaddleOCR-VL.md#331">3.3.1 服务端参数调整</a> 生成配置文件。
-
-生成配置文件后，将以下的 <code>paddleocr-vlm-server.volumes</code> 和 <code>paddleocr-vlm-server.command</code> 字段增加到您的 <code>compose.yaml</code> 中。请将 <code>/path/to/your_config.yaml</code> 替换为您的实际配置文件路径。
-
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span><span class="nt">paddleocr-vlm-server</span><span class="p">:</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/your_config.yaml:/home/paddleocr/vlm_server_config.yaml</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">paddleocr genai_server --model_name PaddleOCR-VL-1.6-0.9B --host 0.0.0.0 --port 8118 --backend vllm --backend_config /home/paddleocr/vlm_server_config.yaml</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<h2 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h2>
+<h3 id="create-instance">Create Instance<a class="headerlink" href="#create-instance" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Default configuration</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">ocr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PaddleOCR</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">// Custom configuration</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">ocr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PaddleOCR</span><span class="p">.</span><span class="na">create</span><span class="p">(</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PaddleOCRConfig</span><span class="p">(</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="n">detThresh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3f</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="n">detBoxThresh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6f</span><span class="p">,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="n">recScoreThresh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0f</span><span class="p">,</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="n">recBatchSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="n">engineConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EngineConfig</span><span class="p">(</span><span class="n">numThreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">),</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="n">detModelAssetPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;models/det/inference.onnx&quot;</span><span class="p">,</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="n">recModelAssetPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;models/rec/inference.onnx&quot;</span><span class="p">,</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="n">recConfigAssetPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;models/rec/inference.yml&quot;</span><span class="p">,</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">)</span>
 </span></code></pre></div>
-
-</details>
-
-<details>
-<summary>4. 调整产线相关配置（如模型路径、批处理大小、部署设备等）</summary>
-
-参考 <a href="./PaddleOCR-VL.md#44">4.4 产线配置调整说明</a> 小节。
-
-</details>
-
-<h3 id="42">4.2 方法二：手动部署<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
-<p>请先完成第 1 节“本地运行环境准备”，再参考<a href="PaddleOCR-VL.html#42">PaddleOCR-VL 使用教程 - 4.2 方法二：手动部署</a>。</p>
-<h3 id="43">4.3 客户端调用方式<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#43">PaddleOCR-VL 使用教程 - 4.3 客户端调用方式</a>。</p>
-<h3 id="44">4.4 产线配置调整说明<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#44">PaddleOCR-VL 使用教程 - 4.4 产线配置调整说明</a>。</p>
-<h2 id="5">5. 模型微调<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<p>请参考<a href="PaddleOCR-VL.html#5">PaddleOCR-VL 使用教程 - 5. 模型微调</a>。</p>
+<h3 id="perform-ocr">Perform OCR<a class="headerlink" href="#perform-ocr" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// Pass Bitmap</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ocr</span><span class="p">.</span><span class="na">recognize</span><span class="p">(</span><span class="n">bitmap</span><span class="p">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">// Pass image bytes (recommended, consistent with Python pipeline)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ocr</span><span class="p">.</span><span class="na">recognize</span><span class="p">(</span><span class="n">imageBytes</span><span class="p">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">// Read results</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">result</span><span class="p">.</span><span class="na">results</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">-&gt;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Text: </span><span class="si">${</span><span class="n">item</span><span class="p">.</span><span class="na">text</span><span class="si">}</span><span class="s">, Confidence: </span><span class="si">${</span><span class="n">item</span><span class="p">.</span><span class="na">confidence</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Box: </span><span class="si">${</span><span class="n">item</span><span class="p">.</span><span class="na">box</span><span class="p">.</span><span class="na">points</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">}</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Detection: </span><span class="si">${</span><span class="n">result</span><span class="p">.</span><span class="na">detectionTimeMs</span><span class="si">}</span><span class="s">ms, Recognition: </span><span class="si">${</span><span class="n">result</span><span class="p">.</span><span class="na">recognitionTimeMs</span><span class="si">}</span><span class="s">ms&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="release-resources">Release Resources<a class="headerlink" href="#release-resources" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">ocr</span><span class="p">.</span><span class="na">release</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="configuration-parameters">Configuration Parameters<a class="headerlink" href="#configuration-parameters" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">PaddleOCRConfig</span><span class="p">(</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detImgMode</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;BGR&quot;</span><span class="p">,</span><span class="w">         </span><span class="c1">// Input color mode</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detLimitSideLen</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">64</span><span class="p">,</span><span class="w">          </span><span class="c1">// Detection side length limit</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detLimitType</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;min&quot;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Limit strategy</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detMaxSideLimit</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4000</span><span class="p">,</span><span class="w">        </span><span class="c1">// Maximum side length</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detThresh</span><span class="p">:</span><span class="w"> </span><span class="kt">Float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3f</span><span class="p">,</span><span class="w">            </span><span class="c1">// Binarization threshold</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detBoxThresh</span><span class="p">:</span><span class="w"> </span><span class="kt">Float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6f</span><span class="p">,</span><span class="w">         </span><span class="c1">// Detection box confidence threshold</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detUnclipRatio</span><span class="p">:</span><span class="w"> </span><span class="kt">Float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5f</span><span class="p">,</span><span class="w">       </span><span class="c1">// Detection box expansion ratio</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detMaxCandidates</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3000</span><span class="p">,</span><span class="w">       </span><span class="c1">// Maximum candidate boxes</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detUseDilation</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">    </span><span class="c1">// Whether to dilate</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detScoreMode</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;fast&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1">// Scoring mode</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detBoxType</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;quad&quot;</span><span class="p">,</span><span class="w">        </span><span class="c1">// Detection box type</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">recScoreThresh</span><span class="p">:</span><span class="w"> </span><span class="kt">Float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0f</span><span class="p">,</span><span class="w">       </span><span class="c1">// Recognition confidence threshold</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">recBatchSize</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w">              </span><span class="c1">// Recognition batch size</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="result-models">Result Models<a class="headerlink" href="#result-models" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">OCRRunResult</span><span class="p">(</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">results</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">OCRResult</span><span class="o">&gt;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Recognition result list</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">detectionTimeMs</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w">          </span><span class="c1">// Detection time</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">recognitionTimeMs</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w">        </span><span class="c1">// Recognition time</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">totalTimeMs</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w">              </span><span class="c1">// Total time</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">lineCount</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w">                 </span><span class="c1">// Number of lines</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="c1">// Detailed timing...</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">)</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">OCRResult</span><span class="p">(</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">box</span><span class="p">:</span><span class="w"> </span><span class="n">OCRBox</span><span class="p">,</span><span class="w">                    </span><span class="c1">// Detection box coordinates</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">text</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w">                   </span><span class="c1">// Recognized text</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">confidence</span><span class="p">:</span><span class="w"> </span><span class="kt">Float</span><span class="p">,</span><span class="w">              </span><span class="c1">// Confidence score</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="performance-testing">Performance Testing<a class="headerlink" href="#performance-testing" title="Permanent link">&para;</a></h2>
+<p>The project provides an automated performance testing script:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Run benchmark (10 tests, 3 warmup)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>./run_benchmark.sh<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">3</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Sample output</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>╔═════════════════════════════════════════════════════════════════════════╗
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>║<span class="w">  </span>PP-OCRv6<span class="w"> </span>Speed<span class="w"> </span>Benchmark<span class="w"> </span>Results<span class="w">                                       </span>║
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>╠═════════════════════════════════════════════════════════════════════════╣
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>║<span class="w">  </span>Device:<span class="w"> </span>GM1900<span class="w">  </span><span class="p">|</span><span class="w">  </span>OS:<span class="w"> </span>Android<span class="w"> </span><span class="m">9</span><span class="w">  </span><span class="p">|</span><span class="w">  </span>Lines:<span class="w"> </span><span class="m">5</span><span class="w">                          </span>║
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>║<span class="w">  </span>Cold<span class="w"> </span>load:<span class="w"> </span>158ms<span class="w">  </span><span class="p">|</span><span class="w">  </span>Warmup:<span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="p">|</span><span class="w">  </span>Measured:<span class="w"> </span><span class="m">10</span><span class="w">                        </span>║
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>╠═════════════════════════════════════════════════════════════════════════╣
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>+-----------------------------+----------+----------+----------+----------+
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">|</span><span class="w"> </span>Stage<span class="w">                       </span><span class="p">|</span><span class="w">  </span>Mean<span class="w"> </span>ms<span class="w"> </span><span class="p">|</span><span class="w">    </span>Stdev<span class="w"> </span><span class="p">|</span><span class="w">      </span>P90<span class="w"> </span><span class="p">|</span><span class="w">    </span>Min<span class="w"> </span>ms<span class="p">|</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>+-----------------------------+----------+----------+----------+----------+
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">|</span><span class="w"> </span>Total<span class="w"> </span>pipeline<span class="w">              </span><span class="p">|</span><span class="w">   </span><span class="m">420</span>.40<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">6</span>.37<span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="m">427</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="m">413</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>+-----------------------------+----------+----------+----------+----------+
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">|</span><span class="w">   </span>Detection<span class="w"> </span><span class="o">(</span>total<span class="o">)</span><span class="w">         </span><span class="p">|</span><span class="w">   </span><span class="m">348</span>.70<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">4</span>.67<span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="m">356</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="m">343</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="p">|</span><span class="w">     </span>Preprocess<span class="w">              </span><span class="p">|</span><span class="w">    </span><span class="m">33</span>.30<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">2</span>.90<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">36</span><span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">28</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="p">|</span><span class="w">     </span>Inference<span class="w">               </span><span class="p">|</span><span class="w">   </span><span class="m">311</span>.00<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">2</span>.93<span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="m">315</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="m">304</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="p">|</span><span class="w">     </span>Postprocess<span class="w">             </span><span class="p">|</span><span class="w">     </span><span class="m">4</span>.40<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">0</span>.49<span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">5</span><span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">4</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">|</span><span class="w">   </span>Recognition<span class="w"> </span><span class="o">(</span>total<span class="o">)</span><span class="w">       </span><span class="p">|</span><span class="w">    </span><span class="m">66</span>.20<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">3</span>.16<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">68</span><span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">64</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="p">|</span><span class="w">     </span>Preprocess<span class="w">              </span><span class="p">|</span><span class="w">     </span><span class="m">3</span>.00<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">0</span>.89<span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">4</span><span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">2</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="p">|</span><span class="w">     </span>Inference<span class="w">               </span><span class="p">|</span><span class="w">    </span><span class="m">60</span>.60<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">3</span>.14<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">63</span><span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">58</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="p">|</span><span class="w">     </span>Postprocess<span class="w">             </span><span class="p">|</span><span class="w">     </span><span class="m">2</span>.60<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">0</span>.92<span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">4</span><span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">1</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="p">|</span><span class="w">   </span>Pipeline<span class="w"> </span>overhead<span class="w">         </span><span class="p">|</span><span class="w">     </span><span class="m">5</span>.50<span class="w"> </span><span class="p">|</span><span class="w">     </span><span class="m">0</span>.50<span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">6</span><span class="w"> </span><span class="p">|</span><span class="w">        </span><span class="m">5</span><span class="w"> </span><span class="p">|</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>+-----------------------------+----------+----------+----------+----------+
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>╚═════════════════════════════════════════════════════════════════════════╝
+</span></code></pre></div>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>OpenCV Initialization</strong>: Call <code>OpenCVUtils.init(context)</code> before <code>PaddleOCR.create()</code></li>
+<li><strong>Coroutine Usage</strong>: <code>create()</code> and <code>recognize()</code> are suspend functions, call them in coroutines</li>
+<li><strong>Memory Management</strong>: Call <code>release()</code> when no longer needed</li>
+<li><strong>ProGuard Rules</strong>: Refer to <code>ppocr-sdk/proguard-rules.pro</code></li>
+</ol>
 
 <!-- Source file information -->
 
@@ -6179,9 +6086,6 @@ You're not viewing the latest version.
 
 
 
-  
-  
-
 
 
 <!-- Was this page helpful? -->
@@ -6190,51 +6094,6 @@ You're not viewing the latest version.
 
 
 <!-- Comment system -->
-
-<h2 id="__comments">评论</h2>
-<!-- Insert generated snippet here -->
-
-<script src="https://giscus.app/client.js" data-repo="PaddlePaddle/PaddleOCR"
-    data-repo-id="MDEwOlJlcG9zaXRvcnkyNjIyOTYxMjI=" data-category="Q&A" data-category-id="DIC_kwDOD6JSOs4COrbO"
-    data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top"
-    data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
-</script>
-
-<!-- Synchronize Giscus theme with palette -->
-<script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-        // Instruct Giscus to set theme
-        giscus.setAttribute("data-theme", theme)
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function () {
-        var ref = document.querySelector("[data-md-component=palette]")
-        ref.addEventListener("change", function () {
-            var palette = __md_get("__palette")
-            if (palette && typeof palette.color === "object") {
-                var theme = palette.color.scheme === "slate"
-                    ? "transparent_dark"
-                    : "light"
-
-                // Instruct Giscus to change theme
-                var frame = document.querySelector(".giscus-frame")
-                frame.contentWindow.postMessage(
-                    { giscus: { setConfig: { theme } } },
-                    "https://giscus.app"
-                )
-            }
-        })
-    })
-</script>
 
                 
               </article>
@@ -6249,7 +6108,7 @@ You're not viewing the latest version.
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -6258,33 +6117,33 @@ You're not viewing the latest version.
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: PaddleOCR-VL简介">
+          <a href="on_device_deployment.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: On-Device Deployment">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                上一页
+                Previous
               </span>
               <div class="md-ellipsis">
-                PaddleOCR-VL简介
+                On-Device Deployment
               </div>
             </div>
           </a>
         
         
           
-          <a href="PaddleOCR-VL-Kunlunxin-XPU.html" class="md-footer__link md-footer__link--next" aria-label="下一页: PaddleOCR-VL 昆仑芯 XPU 使用教程">
+          <a href="browser.html" class="md-footer__link md-footer__link--next" aria-label="Next: Browser Deployment">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                下一页
+                Next
               </span>
               <div class="md-ellipsis">
-                PaddleOCR-VL 昆仑芯 XPU 使用教程
+                Browser Deployment
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -6352,12 +6211,12 @@ You're not viewing the latest version.
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/katex.min.js"></script>
+        <script src="../../../../javascripts/katex.min.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
